@@ -10,8 +10,7 @@ namespace FullCalendar.UI
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery-ui-{version}.js",
                 "~/Scripts/moment.js",
-                "~/Scripts/fullcalendar.js",
-                "~/Scripts/fullcalendar.helper.js"
+                "~/Scripts/fullcalendar*"
                 ));
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(

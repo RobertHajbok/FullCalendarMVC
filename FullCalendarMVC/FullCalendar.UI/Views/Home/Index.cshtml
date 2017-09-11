@@ -4,6 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>FullCalendar</title>
+    @Scripts.Render("~/bundles/scripts")
+    @Styles.Render("~/bundles/styles")
 </head>
 <body>
     <div class="header">
@@ -14,8 +16,5 @@
     <div class="content">
         @Html.FullCalendar()
     </div>
-
-    @Scripts.Render("~/bundles/scripts")
-    @Styles.Render("~/bundles/styles")
 </body>
 </html>
