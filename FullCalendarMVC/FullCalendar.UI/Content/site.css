@@ -1,0 +1,17 @@
+﻿body, h1 {
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    background-color: steelblue;
+    height: 100px;
+}
+
+.header h1 {
+    padding-top: 25px;
+}
+
+.content {
+    margin: 50px;
+}
