@@ -9,7 +9,12 @@
         shownoncurrentdates: { name: 'showNonCurrentDates', type: 'boolean' },
 
         // Agenda Options
-        alldayslot: { name: 'allDaySlot', type: 'boolean' }
+        alldayslot: { name: 'allDaySlot', type: 'boolean' },
+
+        // Selection
+        selectable: { name: 'selectable', type: 'boolean' },
+        selecthelper: { name: 'selectHelper', type: 'boolean' },
+        unselectauto: { name: 'unselectAuto', type: 'boolean' }
     }
 
     $(function () {

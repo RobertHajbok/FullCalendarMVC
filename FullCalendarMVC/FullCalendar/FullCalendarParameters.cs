@@ -50,5 +50,29 @@
         public bool AllDaySlot { get; set; } = true;
 
         #endregion
+
+        #region Selection
+
+        /// <summary>
+        /// Allows a user to highlight multiple days or timeslots by clicking and dragging.
+        /// To let the user make selections by clicking and dragging, this option must be set to true.
+        /// </summary>
+        public bool Selectable { get; set; }
+
+        /// <summary>
+        /// Whether to draw a "placeholder" event while the user is dragging.
+        /// This option only applies to the agenda views. A value of true will draw a "placeholder" event while the user is dragging 
+        /// (similar to what Google Calendar does for its week and day views). A value of false (the default) will draw the standard 
+        /// highlighting over each cell.
+        /// </summary>
+        public bool SelectHelper { get; set; }
+
+        /// <summary>
+        /// Whether clicking elsewhere on the page will cause the current selection to be cleared.
+        /// This option can only take effect when selectable is set to true.
+        /// </summary>
+        public bool UnselectAuto { get; set; } = true;
+
+        #endregion
     }
 }

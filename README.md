@@ -104,9 +104,9 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | eventMouseout (callback)      |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | -----------------------       | ------------------------------------------------------ | --------------------------                                             |
 | Touch Support                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| selectable                    |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| selectHelper                  |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| unselectAuto                  |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| selectable                    |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| selectHelper                  |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| unselectAuto                  |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | unselectCancel                |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | selectOverlap                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | selectConstraint              |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
