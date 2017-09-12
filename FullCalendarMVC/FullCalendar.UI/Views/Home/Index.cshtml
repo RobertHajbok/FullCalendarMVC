@@ -14,7 +14,11 @@
         </h1>
     </div>
     <div class="content">
-        @Html.FullCalendar()
+        @Html.FullCalendar(settings =>
+        {
+            //settings.IsRTL = true;
+            //settings.FixedWeekCount = false;
+        })
     </div>
 </body>
 </html>

@@ -67,6 +67,9 @@
     <Compile Include="..\FullCalendar\FullCalendarHelper.cs">
       <Link>FullCalendarHelper.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\FullCalendarParameters.cs">
+      <Link>FullCalendarParameters.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
