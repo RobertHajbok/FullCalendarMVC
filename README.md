@@ -13,14 +13,14 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | bootstrapGlyphicons           |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | firstDay                      |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | isRTL                         |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
-| weekends                      |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| weekends                      |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | hiddenDays                    |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | fixedWeekCount                |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
-| weekNumbers                   |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| weekNumbersWithinDays         |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| weekNumbers                   |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| weekNumbersWithinDays         |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | weekNumberCalculation         |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | businessHours                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| showNonCurrentDates           |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| showNonCurrentDates           |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | height                        |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | contentHeight                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | aspectRatio                   |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
@@ -47,7 +47,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | getView (method)              |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | changeView (method)           |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | -----------------------       | ------------------------------------------------------ | --------------------------                                             |
-| allDaySlot                    |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| allDaySlot                    |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | allDayText                    |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | slotDuration                  |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | slotLabelFormat               |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
