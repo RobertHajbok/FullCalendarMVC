@@ -15,6 +15,15 @@
 
         // Agenda Options
         alldayslot: { name: 'allDaySlot', type: 'boolean' },
+        alldaytext: { name: 'allDayText', type: 'string' },
+        slotduration: { name: 'slotDuration', type: 'duration' },
+        slotlabelformat: { name: 'slotLabelFormat', type: 'string' },
+        slotlabelinterval: { name: 'slotLabelInterval', type: 'duration' },
+        snapduration: { name: 'snapDuration', type: 'duration' },
+        scrolltime: { name: 'scrollTime', type: 'duration' },
+        mintime: { name: 'minTime', type: 'duration' },
+        maxtime: { name: 'maxTime', type: 'duration' },
+        sloteventoverlap: { name: 'slotEventOverlap', type: 'boolean' },
 
         // Selection
         selectable: { name: 'selectable', type: 'boolean' },
@@ -45,6 +54,8 @@
             case 'boolean':
             case 'string':
                 return data;
+            case 'duration':
+                return moment.duration(data);
             case 'object':
                 return JSON.parse(data.replace(/\'/g, '"'));
         }        

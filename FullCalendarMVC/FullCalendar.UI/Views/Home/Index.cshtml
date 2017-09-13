@@ -27,6 +27,12 @@
             settings.Editable = true;
             settings.AllDaySlot = false;
             settings.Selectable = true;
+            settings.SlotDuration = TimeSpan.FromMinutes(15);
+            //settings.SlotLabelInterval = TimeSpan.FromHours(3);
+            //settings.SnapDuration = TimeSpan.FromMinutes(10);
+            //settings.ScrollTime = TimeSpan.FromHours(8);
+            //settings.MinTime = TimeSpan.FromHours(1);
+            //settings.MaxTime = TimeSpan.FromHours(20);
             //settings.Footer = new Footer
             //{
             //    Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
@@ -42,6 +48,9 @@
             //settings.ShowNonCurrentDates = false;
             //settings.SelectHelper = true;
             //settings.UnselectAuto = false;
+            //settings.SlotEventOverlap = false;
+            //settings.SlotLabelFormat = "H:mm";
+            settings.AllDayText = "Day";
         })
     </div>
 </body>

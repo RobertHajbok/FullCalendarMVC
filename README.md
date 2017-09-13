@@ -48,15 +48,15 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | changeView (method)           |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | -----------------------       | ------------------------------------------------------ | --------------------------                                             |
 | allDaySlot                    |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
-| allDayText                    |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| slotDuration                  |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| slotLabelFormat               |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| slotLabelInterval             |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| snapDuration                  |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| scrollTime                    |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| minTime                       |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| maxTime                       |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| slotEventOverlap              |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| allDayText                    |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| slotDuration                  |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| slotLabelFormat               |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| slotLabelInterval             |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| snapDuration                  |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| scrollTime                    |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| minTime                       |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| maxTime                       |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| slotEventOverlap              |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | -----------------------       | ------------------------------------------------------ | --------------------------                                             |
 | What is List View?            |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | listDayFormat                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |

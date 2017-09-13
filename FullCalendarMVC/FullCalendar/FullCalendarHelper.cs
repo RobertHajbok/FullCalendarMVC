@@ -26,6 +26,20 @@ namespace FullCalendar
                     // boolean + enum
                     attributes.Add("data-fc-" + property.Name, property.GetValue(fullCalendarParameters, null).ToString().FirstCharToLower());
                 }
+                else if (property.PropertyType == typeof(TimeSpan))
+                {
+                    // timespan
+                    object value = property.GetValue(fullCalendarParameters, null);
+                    if (value != null && (TimeSpan)value != default(TimeSpan))
+                        attributes.Add("data-fc-" + property.Name, ((TimeSpan)value).TotalMilliseconds.ToString());
+                }
+                else if (property.PropertyType == typeof(string))
+                {
+                    // string
+                    object value = property.GetValue(fullCalendarParameters, null);
+                    if (value != null && !string.IsNullOrEmpty(value.ToString()))
+                        attributes.Add("data-fc-" + property.Name, value.ToString());
+                }
                 else
                 {
                     // object

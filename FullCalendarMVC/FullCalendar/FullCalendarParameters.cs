@@ -1,4 +1,6 @@
-﻿namespace FullCalendar
+﻿using System;
+
+namespace FullCalendar
 {
     public class FullCalendarParameters
     {
@@ -70,6 +72,60 @@
         /// When hidden with false, all-day events will not be displayed in agenda views.
         /// </summary>
         public bool AllDaySlot { get; set; } = true;
+
+        /// <summary>
+        /// The text titling the "all-day" slot at the top of the calendar.
+        /// The default value depends on the current locale.
+        /// </summary>
+        public string AllDayText { get; set; }
+
+        /// <summary>
+        /// The frequency for displaying time slots.
+        /// </summary>
+        public TimeSpan SlotDuration { get; set; }
+
+        /// <summary>
+        /// Determines the time-text that will be displayed on the vertical axis of the agenda views.
+        /// The default value depends on the current locale.
+        /// The default English value - h(:mm)a - will produce times that look like "5pm" and "5:30pm".
+        /// </summary>
+        public string SlotLabelFormat { get; set; }
+
+        /// <summary>
+        /// Determines how often the time-axis is labeled with text displaying the date/time of slots.
+        /// If not specified, this value is automatically computed from slotDuration. With slotDuration's default value of 30 minutes, this value will be 1 hour.
+        /// </summary>
+        public TimeSpan SlotLabelInterval { get; set; }
+
+        /// <summary>
+        /// The time interval at which a dragged event will snap to the agenda view time grid. Also affects the granularity at which selections can be made.
+        /// The default value will be whatever slotDuration is, which defaults to half an hour.
+        /// </summary>
+        public TimeSpan SnapDuration { get; set; }
+
+        /// <summary>
+        /// Determines how far down the scroll pane is initially scrolled down.
+        /// The user will be able to scroll upwards to see events before this time. If you want to prevent users from doing this, use the minTime option instead.
+        /// </summary>
+        public TimeSpan ScrollTime { get; set; }
+
+        /// <summary>
+        /// Determines the starting time that will be displayed, even when the scrollbars have been scrolled all the way up.
+        /// The default "00:00:00" means the start time will be at the very beginning of the day (midnight).
+        /// </summary>
+        public TimeSpan MinTime { get; set; }
+
+        /// <summary>
+        /// Determines the end time (exclusively) that will be displayed, even when the scrollbars have been scrolled all the way down.
+        /// The default "24:00:00" means the end time will be at the very end of the day (midnight).
+        /// </summary>
+        public TimeSpan MaxTime { get; set; }
+
+        /// <summary>
+        /// Determines if timed events in agenda view should visually overlap.
+        /// When set to true (the default), events will overlap each other. At most half of each event will be obscured.
+        /// </summary>
+        public bool SlotEventOverlap { get; set; } = true;
 
         #endregion
 
