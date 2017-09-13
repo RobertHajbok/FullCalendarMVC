@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace FullCalendar
+﻿namespace FullCalendar
 {
     public class ControlsBuilder
     {
@@ -61,7 +59,7 @@ namespace FullCalendar
         /// <returns>Instance of the <see cref="ControlsBuilder"/></returns>
         public ControlsBuilder AddButton(HeaderButton headerButton)
         {
-            _buildedString += headerButton.ToString().First().ToString().ToLower() + headerButton.ToString().Substring(1);
+            _buildedString += headerButton.ToString().FirstCharToLower();
             return this;
         }
 
@@ -72,7 +70,7 @@ namespace FullCalendar
         /// <returns>Instance of the <see cref="ControlsBuilder"/></returns>
         public ControlsBuilder AddView(CalendarView calendarView)
         {
-            _buildedString += calendarView.ToString().First().ToString().ToLower() + calendarView.ToString().Substring(1);
+            _buildedString += calendarView.ToString().FirstCharToLower();
             return this;
         }
 

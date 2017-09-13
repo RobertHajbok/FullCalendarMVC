@@ -1,11 +1,12 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace FullCalendar
 {
     /// <summary>
-    /// General entity extensions
+    /// General string extensions
     /// </summary>
-    public static class EntityExtensions
+    public static class StringExtensions
     {
         /// <summary>
         /// Changes double quotes to single quotes in a text. This is mainly used to format serialized strings in data- attributes
@@ -20,6 +21,16 @@ namespace FullCalendar
                 if (match.Groups[2].Value == "'") return "\\'"; // Escape '
                 return match.Value;                             // Leave \\ and \' unchanged
             });
+        }
+
+        /// <summary>
+        /// Changes first character of a text to lower-case
+        /// </summary>
+        /// <param name="text">Text to be formatted</param>
+        /// <returns>The initial text with first character changed to lower-case</returns>
+        public static string FirstCharToLower(this string text)
+        {
+            return text.First().ToString().ToLower() + text.Substring(1);
         }
     }
 }

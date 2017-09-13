@@ -10,13 +10,19 @@
         weeknumberswithindays: { name: 'weekNumbersWithinDays', type: 'boolean' },
         shownoncurrentdates: { name: 'showNonCurrentDates', type: 'boolean' },
 
+        // Views
+        defaultview: { name: 'defaultView', type: 'string' },
+
         // Agenda Options
         alldayslot: { name: 'allDaySlot', type: 'boolean' },
 
         // Selection
         selectable: { name: 'selectable', type: 'boolean' },
         selecthelper: { name: 'selectHelper', type: 'boolean' },
-        unselectauto: { name: 'unselectAuto', type: 'boolean' }
+        unselectauto: { name: 'unselectAuto', type: 'boolean' },
+
+        // Event Dragging & Resizing
+        editable: { name: 'editable', type: 'boolean' }
     }
 
     $(function () {
@@ -37,6 +43,7 @@
     function parseData(data, type) {
         switch (type) {
             case 'boolean':
+            case 'string':
                 return data;
             case 'object':
                 return JSON.parse(data.replace(/\'/g, '"'));

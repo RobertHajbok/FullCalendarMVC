@@ -23,6 +23,10 @@
                 Center = new ControlsBuilder().AddTitle(),
                 Right = new ControlsBuilder("month,agendaWeek ").AddView(CalendarView.AgendaDay)
             };
+            settings.DefaultView = CalendarView.AgendaDay;
+            settings.Editable = true;
+            settings.AllDaySlot = false;
+            settings.Selectable = true;
             //settings.Footer = new Footer
             //{
             //    Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
@@ -36,8 +40,6 @@
             //settings.WeekNumbersWithinDays = true;
             //settings.Weekends = false;
             //settings.ShowNonCurrentDates = false;
-            //settings.AllDaySlot = false;
-            //settings.Selectable = true;
             //settings.SelectHelper = true;
             //settings.UnselectAuto = false;
         })

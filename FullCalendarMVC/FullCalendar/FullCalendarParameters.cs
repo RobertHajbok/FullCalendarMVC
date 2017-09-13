@@ -54,6 +54,15 @@
 
         #endregion
 
+        #region Views
+
+        /// <summary>
+        /// The initial view when the calendar loads. Any of the Available Views.
+        /// </summary>
+        public CalendarView DefaultView { get; set; } = CalendarView.Month;
+
+        #endregion
+
         #region Agenda Options
 
         /// <summary>
@@ -85,6 +94,18 @@
         /// This option can only take effect when selectable is set to true.
         /// </summary>
         public bool UnselectAuto { get; set; } = true;
+
+        #endregion
+
+        #region Event Dragging & Resizing
+
+        /// <summary>
+        /// Determines whether the events on the calendar can be modified.
+        /// This determines if the events can be dragged and resized. Enables/disables both at the same time. 
+        /// If you don't want both, use the more specific eventStartEditable and eventDurationEditable instead.
+        /// This option can be overridden on a per-event basis with the Event Object editable property.
+        /// </summary>
+        public bool Editable { get; set; }
 
         #endregion
     }

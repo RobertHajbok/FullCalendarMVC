@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -22,10 +21,10 @@ namespace FullCalendar
             Dictionary<string, string> attributes = new Dictionary<string, string>();
             foreach (var property in typeof(FullCalendarParameters).GetProperties())
             {
-                if (property.PropertyType == typeof(bool))
+                if (property.PropertyType == typeof(bool) || property.PropertyType.BaseType == typeof(Enum))
                 {
-                    // boolean
-                    attributes.Add("data-fc-" + property.Name, property.GetValue(fullCalendarParameters, null).ToString().ToLower());
+                    // boolean + enum
+                    attributes.Add("data-fc-" + property.Name, property.GetValue(fullCalendarParameters, null).ToString().FirstCharToLower());
                 }
                 else
                 {

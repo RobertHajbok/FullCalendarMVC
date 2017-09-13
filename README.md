@@ -43,7 +43,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | Generic Views                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | View-Specific Options         |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | View Object                   |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| defaultView                   |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| defaultView                   |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | getView (method)              |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | changeView (method)           |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | -----------------------       | ------------------------------------------------------ | --------------------------                                             |
@@ -172,7 +172,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | -----------------------        | ------------------------------------------------------ | --------------------------                                             |
 | Requirements                   |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | Touch Support                  |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| editable                       |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| editable                       |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | eventStartEditable             |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | eventDurationEditable          |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | dragRevertDuration             |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
