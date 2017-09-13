@@ -16,10 +16,24 @@
     <div class="content">
         @Html.FullCalendar(settings =>
         {
+            settings.Header = new Header
+            {
+                Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
+                        .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
+                Center = new ControlsBuilder().AddTitle(),
+                Right = new ControlsBuilder("month,agendaWeek ").AddView(CalendarView.AgendaDay)
+            };
+            //settings.Footer = new Footer
+            //{
+            //    Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
+            //            .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
+            //    Center = new ControlsBuilder().AddTitle(),
+            //    Right = new ControlsBuilder("month,agendaWeek ").AddView(CalendarView.AgendaDay)
+            //};
             //settings.IsRTL = true;
             //settings.FixedWeekCount = false;
             //settings.WeekNumbers = true;
-            //settings.WeekNumbersWithinDays = true;B
+            //settings.WeekNumbersWithinDays = true;
             //settings.Weekends = false;
             //settings.ShowNonCurrentDates = false;
             //settings.AllDaySlot = false;

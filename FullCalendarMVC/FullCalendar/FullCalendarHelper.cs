@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -20,11 +21,22 @@ namespace FullCalendar
 
             Dictionary<string, string> attributes = new Dictionary<string, string>();
             foreach (var property in typeof(FullCalendarParameters).GetProperties())
-            { 
-                attributes.Add("data-fc-" + property.Name, property.GetValue(fullCalendarParameters, null).ToString().ToLower());
+            {
+                if (property.PropertyType == typeof(bool))
+                {
+                    // boolean
+                    attributes.Add("data-fc-" + property.Name, property.GetValue(fullCalendarParameters, null).ToString().ToLower());
+                }
+                else
+                {
+                    // object
+                    object value = property.GetValue(fullCalendarParameters, null);
+                    if (value != null)
+                        attributes.Add("data-fc-" + property.Name, value.ToString());
+                }
             }
 
-            return MvcHtmlString.Create(string.Format("<div class='fc' {0}></div>", string.Join(" ", attributes.Select(x => x.Key + "=" + x.Value))));
+            return MvcHtmlString.Create(string.Format("<div class=\"fc\" {0}></div>", string.Join(" ", attributes.Select(x => x.Key + "=\"" + x.Value + "\""))));
         }
     }
 }

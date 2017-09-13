@@ -1,6 +1,8 @@
 ﻿(function ($) {
     var fullCalendarParameters = {
         // General Display
+        header: { name: 'header', type: 'object' },
+        footer: { name: 'footer', type: 'object' },
         isrtl: { name: 'isRTL', type: 'boolean' },
         weekends: { name: 'weekends', type: 'boolean' },
         fixedweekcount: { name: 'fixedWeekCount', type: 'boolean' },
@@ -23,11 +25,21 @@
             var calendarObj = {};
             var data = $(calendars[i]).data();
             for (item in data) {
-                calendarObj[fullCalendarParameters[item.substring(2).toLowerCase()].name] = data[item];
+                var calendarParameter = fullCalendarParameters[item.substring(2).toLowerCase()]
+                calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter.type);
                 $(calendars[i]).removeAttr("data-fc-" + item.substring(2));
             }
             //console.log(calendarObj);
             $(calendars[i]).fullCalendar(calendarObj);
         }
     });
+
+    function parseData(data, type) {
+        switch (type) {
+            case 'boolean':
+                return data;
+            case 'object':
+                return JSON.parse(data.replace(/\'/g, '"'));
+        }        
+    }
 }(jQuery));

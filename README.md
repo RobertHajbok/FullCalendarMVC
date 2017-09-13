@@ -4,8 +4,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 ### What are the available options?
 | Option                        | Comment                                                | Status                                                                 |
 |-------------------------------|--------------------------------------------------------|------------------------------------------------------------------------|
-| header                        |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
-| footer                        |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| header                        |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
+| footer                        |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | customButtons                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | buttonIcons                   |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | themeSystem                   |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
@@ -38,7 +38,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | timezone                      |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | now                           |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | -----------------------       | ------------------------------------------------------ | --------------------------                                             |
-| Available Views               |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
+| Available Views               |                                                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported     |
 | Custom Views                  |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | Generic Views                 |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |
 | View-Specific Options         |                                                        | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported |

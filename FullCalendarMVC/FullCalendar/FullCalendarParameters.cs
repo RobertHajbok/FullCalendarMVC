@@ -5,6 +5,19 @@
         #region General Display
 
         /// <summary>
+        /// Defines the buttons and title at the top of the calendar.
+        /// Setting the header options to null will display no header.
+        /// </summary>
+        public Header Header { get; set; }
+
+        /// <summary>
+        /// Renders a set of controls at the bottom of the calendar.
+        /// This settings accepts the same exact values as the header option.
+        /// It is null by default, meaning no controls will be rendered at the foot of the calendar.
+        /// </summary>
+        public Footer Footer { get; set; }
+
+        /// <summary>
         /// Displays the calendar in right-to-left mode.
         /// This option is useful for right-to-left languages such as Arabic and Hebrew.
         /// </summary>
