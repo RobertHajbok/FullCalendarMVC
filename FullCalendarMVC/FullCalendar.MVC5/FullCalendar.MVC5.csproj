@@ -68,6 +68,9 @@
     <Compile Include="..\FullCalendar\Abstract\ControlsContainer.cs">
       <Link>Abstract\ControlsContainer.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Abstract\PropertyParserFactory.cs">
+      <Link>Abstract\PropertyParserFactory.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Enums\CalendarView.cs">
       <Link>Enums\CalendarView.cs</Link>
     </Compile>
@@ -94,6 +97,39 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\Header.cs">
       <Link>Infrastructure\Header.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ArrayPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ArrayPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BoolPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\BoolPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DateTimePropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\DateTimePropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DayOfWeekPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\DayOfWeekPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DoublePropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\DoublePropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EnumPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\EnumPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\IntegerPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\IntegerPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ObjectPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ObjectPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\StringPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\StringPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Interfaces\IPropertyParser.cs">
+      <Link>Interfaces\IPropertyParser.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

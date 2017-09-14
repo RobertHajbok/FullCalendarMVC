@@ -53,9 +53,9 @@
             for (item in data) {
                 var calendarParameter = fullCalendarParameters[item.substring(2).toLowerCase()]
                 calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter.type);
-                //$(calendars[i]).removeAttr("data-fc-" + item.substring(2));
+                $(calendars[i]).removeAttr("data-fc-" + item.substring(2));
             }
-            console.log(calendarObj);
+            //console.log(calendarObj);
             $(calendars[i]).fullCalendar(calendarObj);
         }
     });
