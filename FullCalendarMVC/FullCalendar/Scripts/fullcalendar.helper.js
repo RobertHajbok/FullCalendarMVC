@@ -30,6 +30,9 @@
         selecthelper: { name: 'selectHelper', type: 'boolean' },
         unselectauto: { name: 'unselectAuto', type: 'boolean' },
 
+        // Event Data
+        events: { name: 'events', type: 'string' },
+
         // Event Dragging & Resizing
         editable: { name: 'editable', type: 'boolean' }
     }

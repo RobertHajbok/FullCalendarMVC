@@ -30,6 +30,9 @@
         selecthelper: { name: 'selectHelper', type: 'boolean' },
         unselectauto: { name: 'unselectAuto', type: 'boolean' },
 
+        // Event Data
+        events: { name: 'events', type: 'string' },
+
         // Event Dragging & Resizing
         editable: { name: 'editable', type: 'boolean' }
     }
@@ -42,9 +45,9 @@
             for (item in data) {
                 var calendarParameter = fullCalendarParameters[item.substring(2).toLowerCase()]
                 calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter.type);
-                //$(calendars[i]).removeAttr("data-fc-" + item.substring(2));
+                $(calendars[i]).removeAttr("data-fc-" + item.substring(2));
             }
-            console.log(calendarObj);
+            //console.log(calendarObj);
             $(calendars[i]).fullCalendar(calendarObj);
         }
     });

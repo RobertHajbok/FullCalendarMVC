@@ -153,6 +153,19 @@ namespace FullCalendar
 
         #endregion
 
+        #region Event Data
+
+        /// <summary>
+        /// A URL of a JSON feed that the calendar will fetch Event Objects from. 
+        /// FullCalendar will visit the URL whenever it needs new event data. This happens when the user clicks prev/next or changes views.
+        /// FullCalendar will determine the date-range it needs events for and will pass that information along in GET parameters.
+        /// The GET parameter names will be determined by the startParam and endParam options. ("start" and "end" by default).
+        /// The values of these parameters will be ISO8601 date strings(like 2013-12-01). For precise behavior, see the timezone docs.
+        /// </summary>
+        public string Events { get; set; }
+
+        #endregion
+
         #region Event Dragging & Resizing
 
         /// <summary>
