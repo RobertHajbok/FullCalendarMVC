@@ -24,7 +24,7 @@ namespace FullCalendar
         /// The default value depends on the current locale.
         /// If weekNumberCalculation is set to 'ISO', this option defaults to 1 (Monday).
         /// </summary>
-        public DayOfWeek FirstDay { get; set; }        
+        public DayOfWeek FirstDay { get; set; }
 
         /// <summary>
         /// Displays the calendar in right-to-left mode.
@@ -169,6 +169,73 @@ namespace FullCalendar
         /// When set to true (the default), events will overlap each other. At most half of each event will be obscured.
         /// </summary>
         public bool SlotEventOverlap { get; set; } = true;
+
+        #endregion
+
+        #region List View
+
+        /// <summary>
+        /// A date formatting string that affects the text on the left side of the day headings in list view.
+        /// </summary>
+        public string ListDayFormat { get; set; }
+
+        /// <summary>
+        /// A date formatting string that affects the text on the right side of the day headings in list view.
+        /// </summary>
+        public string ListDayAltFormat { get; set; }
+
+        /// <summary>
+        /// The text that is displayed in the middle of list view, alerting the user that there are no events within the given range.
+        /// </summary>
+        public string NoEventsMessage { get; set; }
+
+        #endregion
+
+        #region Text/Time Customization
+
+        /// <summary>
+        /// Determines the time-text that will be displayed on each event.
+        /// Each view has a specific default. Get fine-tuned control with View-Specific Options. A single string alone will set the value for all views.
+        /// The default values will change based on the current locale.
+        /// Time-text will only be displayed for Event Objects that have allDay equal to false.
+        /// </summary>
+        public string TimeFormat { get; set; }
+
+        /// <summary>
+        /// Determines the text that will be displayed on the calendar's column headings.
+        /// Each view has a specific default. Get fine-tuned control with View-Specific Options. A single string alone will set the value for all views.
+        /// The default values will change based on the current locale.
+        /// </summary>
+        public string ColumnFormat { get; set; }
+
+        /// <summary>
+        /// Determines the text that will be displayed in the header's title.
+        /// As noted above, each view has a specific default. Get fine-tuned control with View-Specific Options. A single string alone will set the value for all views.
+        /// The default values will change based on the current locale.
+        /// </summary>
+        public string TitleFormat { get; set; }
+
+        /// <summary>
+        /// The heading text for week numbers.
+        /// This text will go above the week number column in the month/basic views. It will go alongside the week number text in the top-left cell for agenda views.
+        /// The default value will change based on the current locale.
+        /// </summary>
+        public string WeekNumberTitle { get; set; }
+
+        /// <summary>
+        /// Whether or not to display the text for an event's time.
+        /// This setting only applies to events that have times (allDay equal to false). If set to true, time text will always be displayed on the event. If set to false, time text will never be displayed on the event.
+        /// Events that are all-day will never display time text anyhow.
+        /// When this setting is not specified, the default that is computed is based off of the current view. For example, time text will be displayed in all month, basic, and agenda views by default, for timeline views, it depends on the duration.
+        /// </summary>
+        public bool? DisplayEventTime { get; set; }
+
+        /// <summary>
+        /// Whether or not to display an event's end time text when it is rendered on the calendar.
+        /// Each view has a specific default. Get fine-tuned control with View-Specific Options. A single boolean alone will set the value for all views.
+        /// If an event does not have an end date/time, or displayEventTime is false, it won't be displayed anyway, regardless of this setting.
+        /// </summary>
+        public bool? DisplayEventEnd { get; set; }
 
         #endregion
 

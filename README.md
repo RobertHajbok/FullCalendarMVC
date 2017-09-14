@@ -59,9 +59,9 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | slotEventOverlap              |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | What is List View?            |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| listDayFormat                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| listDayAltFormat              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| noEventsMessage               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| listDayFormat                 | Using empty string for the false value (no text displayed) | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| listDayAltFormat              | Using empty string for the false value (no text displayed) | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| noEventsMessage               |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | defaultDate                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | nowIndicator                  |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
@@ -81,17 +81,17 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | getDate (method)              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | locale                        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| timeFormat                    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| columnFormat                  |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| titleFormat                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| timeFormat                    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| columnFormat                  |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| titleFormat                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | buttonText                    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | monthNames                    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | monthNamesShort               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | dayNames                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | dayNamesShort                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| weekNumberTitle               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| displayEventTime              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| displayEventEnd               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| weekNumberTitle               |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| displayEventTime              |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| displayEventEnd               |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventLimitText                |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | dayPopoverFormat              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |

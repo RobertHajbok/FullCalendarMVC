@@ -33,6 +33,19 @@
         sloteventoverlap: { name: 'slotEventOverlap', type: 'boolean' },
         handlewindowresize: { name: 'handleWindowResize', type: 'boolean' },
 
+        // List View
+        listdayformat: { name: 'listDayFormat', type: 'string' },
+        listdayaltformat: { name: 'listDayAltFormat', type: 'string' },
+        noeventsmessage: { name: 'noEventsMessage', type: 'string' },
+
+        // Text/Time Customization
+        timeformat: { name: 'timeFormat', type: 'string' },
+        columnformat: { name: 'columnFormat', type: 'string' },
+        titleformat: { name: 'titleFormat', type: 'string' },
+        weeknumbertitle: { name: 'weekNumberTitle', type: 'string' },
+        displayeventtime: { name: 'displayEventTime', type: 'boolean' },
+        displayeventend: { name: 'displayEventEnd', type: 'boolean' },
+
         // Selection
         selectable: { name: 'selectable', type: 'boolean' },
         selecthelper: { name: 'selectHelper', type: 'boolean' },

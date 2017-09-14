@@ -13,7 +13,7 @@ namespace FullCalendar.Abstract
 
             if (property.PropertyType == typeof(DayOfWeek))
                 propertyParser = new DayOfWeekPropertyParser(property);
-            else if (property.PropertyType == typeof(bool))
+            else if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
                 propertyParser = new BoolPropertyParser(property);
             else if (property.PropertyType.BaseType == typeof(Enum))
                 propertyParser = new EnumPropertyParser(property);
