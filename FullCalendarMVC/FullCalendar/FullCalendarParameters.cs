@@ -20,6 +20,13 @@ namespace FullCalendar
         public Footer Footer { get; set; }
 
         /// <summary>
+        /// The day that each week begins.
+        /// The default value depends on the current locale.
+        /// If weekNumberCalculation is set to 'ISO', this option defaults to 1 (Monday).
+        /// </summary>
+        public DayOfWeek FirstDay { get; set; }        
+
+        /// <summary>
         /// Displays the calendar in right-to-left mode.
         /// This option is useful for right-to-left languages such as Arabic and Hebrew.
         /// </summary>
@@ -29,6 +36,11 @@ namespace FullCalendar
         /// Whether to include Saturday/Sunday columns in any of the calendar views.
         /// </summary>
         public bool Weekends { get; set; } = true;
+
+        /// <summary>
+        /// Exclude certain days-of-the-week from being displayed.
+        /// </summary>
+        public DayOfWeek[] HiddenDays { get; set; }
 
         /// <summary>
         /// Determines the number of weeks displayed in a month view.
@@ -53,6 +65,37 @@ namespace FullCalendar
         /// Days that are disabled will not render events.
         /// </summary>
         public bool ShowNonCurrentDates { get; set; } = true;
+
+        /// <summary>
+        /// Determines the width-to-height aspect ratio of the calendar.
+        /// A calendar is a block-level element that fills its entire avaiable width. The calendar’s height, however, is determined by this ratio of width-to-height. (Hint: larger numbers make smaller heights).
+        /// More precisely, this is the aspect ratio of the calendar's "content" area (the area with a className of "fc-view-container").
+        /// </summary>
+        public double AspectRatio { get; set; }
+
+        /// <summary>
+        /// Whether to automatically resize the calendar when the browser window resizes.
+        /// If true, the calendar will automatically resize when the window resizes, and the windowResize callback will be called. If false, none of this will happen.
+        /// </summary>
+        public bool HandleWindowResize { get; set; } = true;
+
+        /// <summary>
+        /// Time, in milliseconds, the calendar will wait to adjust its size after a window resize event occurs.
+        /// This delay exists in order to prevent overly frequent size adjustments while the user drags and resizes their browser window.
+        /// </summary>
+        public int WindowResizeDelay { get; set; }
+
+        #endregion
+
+        #region Timezone
+
+        /// <summary>
+        /// Explicitly sets the "today" date of the calendar. This is the day that is normally highlighted in yellow.
+        /// Normally, the local browser's current date is used.
+        /// Overriding the current date is particularly useful when your calendar is using a custom timezone parameter. 
+        /// The current year/month/date in the custom timezone might be different than the local computer's current date.
+        /// </summary>
+        public DateTime Now { get; set; }
 
         #endregion
 
