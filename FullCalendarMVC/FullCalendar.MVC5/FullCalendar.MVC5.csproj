@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -80,6 +81,9 @@
     <Compile Include="..\FullCalendar\Enums\HeaderSeparator.cs">
       <Link>Enums\HeaderSeparator.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Extensions\ColorExtensions.cs">
+      <Link>Extensions\ColorExtensions.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Extensions\StringExtensions.cs">
       <Link>Extensions\StringExtensions.cs</Link>
     </Compile>
@@ -103,6 +107,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BoolPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\BoolPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ColorPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ColorPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DateTimePropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\DateTimePropertyParser.cs</Link>

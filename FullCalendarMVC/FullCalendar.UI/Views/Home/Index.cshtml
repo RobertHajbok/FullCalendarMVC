@@ -29,6 +29,13 @@
             settings.Selectable = true;
             settings.SlotDuration = TimeSpan.FromMinutes(15);
             settings.Events = Url.Action("GetDiaryEvents", "Home");
+            //settings.EventSources = new string[] { Url.Action("GetDiaryEvents", "Home"), Url.Action("GetDiaryEvents", "Home") };
+            //settings.EventRenderWait = 2000;
+            //settings.NextDayThreshold = TimeSpan.FromHours(11);
+            //settings.EventTextColor = Color.Gray;
+            //settings.EventBorderColor = Color.DarkRed;
+            //settings.EventBackgroundColor = Color.Brown;
+            //settings.EventColor = Color.SlateBlue;
             //settings.Now = DateTime.Today.AddDays(3);
             //settings.WindowResizeDelay = 3000;
             //settings.HandleWindowResize = false;
@@ -67,6 +74,13 @@
             //settings.TimeFormat = "H:mm";
             //settings.TitleFormat = "MMMM YYYY";
             //settings.WeekNumberTitle = "Week no.";
+            //settings.AllDayDefault = true;
+            //settings.StartParam = "startDate";
+            //settings.EndParam = "endDate";
+            //settings.LazyFetching = false;
+            //settings.ForceEventDuration = true;
+            //settings.DefaultTimedEventDuration = TimeSpan.FromHours(3);
+            //settings.DefaultAllDayEventDuration = TimeSpan.FromDays(2);
         })
     </div>
 </body>

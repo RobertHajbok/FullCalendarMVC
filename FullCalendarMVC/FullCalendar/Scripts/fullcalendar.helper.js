@@ -53,6 +53,22 @@
 
         // Event Data
         events: { name: 'events', type: 'string' },
+        eventsources: { name: 'eventSources', type: 'array' },
+        alldaydefault: { name: 'allDayDefault', type: 'boolean' },
+        startparam: { name: 'startParam', type: 'string' },
+        endparam: { name: 'endParam', type: 'string' },
+        lazyfetching: { name: 'lazyFetching', type: 'boolean' },
+        defaulttimedeventduration: { name: 'defaultTimedEventDuration', type: 'duration' },
+        defaultalldayeventduration: { name: 'defaultAllDayEventDuration', type: 'duration' },
+        forceeventduration: { name: 'forceEventDuration', type: 'boolean' },
+
+        // Event Rendering
+        eventcolor: { name: 'eventColor', type: 'string' },
+        eventbackgroundcolor: { name: 'eventBackgroundColor', type: 'string' },
+        eventbordercolor: { name: 'eventBorderColor', type: 'string' },
+        eventtextcolor: { name: 'eventTextColor', type: 'string' },
+        nextdaythreshold: { name: 'nextDayThreshold', type: 'duration' },
+        eventrenderwait: { name: 'eventRenderWait', type: 'integer' },
 
         // Event Dragging & Resizing
         editable: { name: 'editable', type: 'boolean' }
@@ -79,14 +95,14 @@
             case 'string':
             case 'integer':
             case 'float':
-            case 'array':
                 return data;
-            case 'duration':            
+            case 'duration':
                 return moment.duration(data);
             case 'moment':
                 return moment(data, "MM/DD/YYYY hh:mm:ss");
+            case 'array':
             case 'object':
-                return JSON.parse(data.replace(/\'/g, '"'));
+                return $.isArray(data) ? data : JSON.parse(data.replace(/\'/g, '"'));
         }
     }
 }(jQuery));

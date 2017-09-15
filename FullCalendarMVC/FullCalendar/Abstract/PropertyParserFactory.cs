@@ -1,6 +1,7 @@
 ﻿using FullCalendar.Infrastructure.PropertyParsers;
 using FullCalendar.Interfaces;
 using System;
+using System.Drawing;
 using System.Reflection;
 
 namespace FullCalendar.Abstract
@@ -25,8 +26,10 @@ namespace FullCalendar.Abstract
                 propertyParser = new StringPropertyParser(property);
             else if (property.PropertyType == typeof(double))
                 propertyParser = new DoublePropertyParser(property);
-            else if (property.PropertyType == typeof(int))
+            else if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
                 propertyParser = new IntegerPropertyParser(property);
+            else if (property.PropertyType == typeof(Color))
+                propertyParser = new ColorPropertyParser(property);
             else if (property.PropertyType.IsArray)
                 propertyParser = new ArrayPropertyParser(property);
             else

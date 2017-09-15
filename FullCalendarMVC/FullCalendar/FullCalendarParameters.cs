@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace FullCalendar
 {
@@ -273,6 +274,104 @@ namespace FullCalendar
         /// The values of these parameters will be ISO8601 date strings(like 2013-12-01). For precise behavior, see the timezone docs.
         /// </summary>
         public string Events { get; set; }
+
+        /// <summary>
+        /// A way to specify multiple event sources.
+        /// This option is used instead of the events option.
+        /// You can put any number of event arrays, functions, JSON feed URLs, or full-out Event Source Objects into the eventSources array.
+        /// </summary>
+        public string[] EventSources { get; set; }
+
+        /// <summary>
+        /// Determines the default value for each Event Object's allDay property when it is unspecified.
+        /// By default, allDayDefault is not set. As a result, any Event Objects that do not specify an allDay property will be subject the guessing behavior mentioned in the Event Object article.
+        /// Set this option to true or false to make it affect Event Objects without an allDay property.
+        /// </summary>
+        public bool? AllDayDefault { get; set; }
+
+        /// <summary>
+        /// A parameter of this name will be sent to each JSON event feed. It describes the start of the interval being fetched.
+        /// The actual value of this parameter will be an ISO8601 date string.
+        /// </summary>
+        public string StartParam { get; set; }
+
+        /// <summary>
+        /// A parameter of this name will be sent to each JSON event feed. It describes the exclusive end of the interval being fetched.
+        /// The actual value of this parameter will be an ISO8601 date string.
+        /// </summary>
+        public string EndParam { get; set; }
+
+        /// <summary>
+        /// Determines when event fetching should occur.
+        /// When set to true (the default), the calendar will only fetch events when it absolutely needs to, minimizing AJAX calls. 
+        /// For example, say your calendar starts out in month view, in February. FullCalendar will fetch events for the entire month of February and store them in its internal cache. 
+        /// Then, say the user switches to week view and begins browsing the weeks in February. The calendar will avoid fetching events because it already has this information stored.
+        /// When set to false, the calendar will fetch events any time the view is switched, or any time the current date changes(for example, as a result of the user clicking prev/next).
+        /// </summary>
+        public bool LazyFetching { get; set; } = true;
+
+        /// <summary>
+        /// A fallback duration for timed Event Objects without a specified end value.
+        /// If an event does not have an end specified, it will appear to be this duration when rendered.
+        /// The actual end of the event will remain unset unless forceEventDuration has been set to true.
+        /// This setting only affects events with allDay equal to false. For all-day events, use defaultAllDayEventDuration.
+        /// </summary>
+        public TimeSpan DefaultTimedEventDuration { get; set; }
+
+        /// <summary>
+        /// A fallback duration for all-day Event Objects without a specified end value.
+        /// If an event does not have an end specified, it will appear to be this duration when rendered.
+        /// The actual end of the event will remain unset unless forceEventDuration has been set to true.
+        /// This setting only affects events with allDay equal to true. For timed events, use defaultTimedEventDuration.
+        /// </summary>
+        public TimeSpan DefaultAllDayEventDuration { get; set; }
+
+        /// <summary>
+        /// A flag to force calculation of an event's end if it is unspecified.
+        /// If an event's end is not specified, it will be calculated and assigned to the Event Object using defaultTimedEventDuration or defaultAllDayEventDuration.
+        /// </summary>
+        public bool ForceEventDuration { get; set; }
+
+        #endregion
+
+        #region Event Rendering
+
+        /// <summary>
+        /// Sets the background and border colors for all events on the calendar.
+        /// This option can be overridden on a per-source basis with the color Event Source Object option or on a per-event basis with the color Event Object option.
+        /// </summary>
+        public Color EventColor { get; set; }
+
+        /// <summary>
+        /// Sets the background color for all events on the calendar.
+        /// This option can be overridden on a per-source basis with the backgroundColor Event Source Object option or on a per-event basis with the backgroundColor Event Object option.
+        /// </summary>
+        public Color EventBackgroundColor { get; set; }
+
+        /// <summary>
+        /// Sets the border color for all events on the calendar.
+        /// This option can be overridden on a per-source basis with the borderColor Event Source Object option or on a per-event basis with the borderColor Event Object option.
+        /// </summary>
+        public Color EventBorderColor { get; set; }
+
+        /// <summary>
+        /// Sets the text color for all events on the calendar.
+        /// This option can be overridden on a per-source basis with the textColor Event Source Object option or on a per-event basis with the textColor Event Object option.
+        /// </summary>
+        public Color EventTextColor { get; set; }
+
+        /// <summary>
+        /// When an event's end time spans into another day, the minimum time it must be in order for it to render as if it were on that day.
+        /// Only affects timed events that appear on whole-days. Whole-day cells occur in month view, basicDay, basicWeek and the all-day slots in the agenda views.
+        /// </summary>
+        public TimeSpan NextDayThreshold { get; set; }
+
+        /// <summary>
+        /// The amount of milliseconds to wait after an operation, before rendering events.
+        /// When this value is specified as a millisecond number value, the calendar will begin to wait after any operation that might result in an event rerendering, such as renderEvent and updateEvent. After this time has passed, the calendar will render all events together. This reduces the number of rerenders, for performance reasons.
+        /// This setting is experimental. It is turned off by default.
+        /// </summary>
+        public int? EventRenderWait { get; set; }
 
         #endregion
 
