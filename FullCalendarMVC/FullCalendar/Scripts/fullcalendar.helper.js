@@ -38,6 +38,10 @@
         listdayaltformat: { name: 'listDayAltFormat', type: 'string' },
         noeventsmessage: { name: 'noEventsMessage', type: 'string' },
 
+        // Current Date
+        defaultdate: { name: 'defaultDate', type: 'moment' },
+        nowindicator: { name: 'nowIndicator', type: 'boolean' },
+
         // Text/Time Customization
         timeformat: { name: 'timeFormat', type: 'string' },
         columnformat: { name: 'columnFormat', type: 'string' },
@@ -50,6 +54,8 @@
         selectable: { name: 'selectable', type: 'boolean' },
         selecthelper: { name: 'selectHelper', type: 'boolean' },
         unselectauto: { name: 'unselectAuto', type: 'boolean' },
+        selectmindistance: { name: 'selectMinDistance', type: 'integer' },
+        selectlongpressdelay: { name: 'selectLongPressDelay', type: 'integer' },
 
         // Event Data
         events: { name: 'events', type: 'string' },
@@ -71,7 +77,14 @@
         eventrenderwait: { name: 'eventRenderWait', type: 'integer' },
 
         // Event Dragging & Resizing
-        editable: { name: 'editable', type: 'boolean' }
+        editable: { name: 'editable', type: 'boolean' },
+        eventstarteditable: { name: 'eventStartEditable', type: 'boolean' },
+        eventdurationeditable: { name: 'eventDurationEditable', type: 'boolean' },
+        dragrevertduration: { name: 'dragRevertDuration', type: 'integer' },
+        dragopacity: { name: 'dragOpacity', type: 'float' },
+        dragscroll: { name: 'dragScroll', type: 'boolean' },
+        longpressdelay: { name: 'longPressDelay', type: 'integer' },
+        eventlongpressdelay: { name: 'eventLongPressDelay', type: 'integer' }
     }
 
     $(function () {

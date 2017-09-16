@@ -82,6 +82,7 @@
     <Compile Include="Infrastructure\PropertyParsers\DayOfWeekPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\DoublePropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\EnumPropertyParser.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\FloatPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\IntegerPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ObjectPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\StringPropertyParser.cs" />

@@ -26,6 +26,8 @@ namespace FullCalendar.Abstract
                 propertyParser = new StringPropertyParser(property);
             else if (property.PropertyType == typeof(double))
                 propertyParser = new DoublePropertyParser(property);
+            else if (property.PropertyType == typeof(float))
+                propertyParser = new FloatPropertyParser(property);
             else if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
                 propertyParser = new IntegerPropertyParser(property);
             else if (property.PropertyType == typeof(Color))

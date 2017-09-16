@@ -63,8 +63,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | listDayAltFormat              | Using empty string for the false value (no text displayed) | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | noEventsMessage               |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
-| defaultDate                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| nowIndicator                  |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| defaultDate                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| nowIndicator                  |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | visibleRange                  |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | validRange                    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | dateIncrement                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
@@ -103,7 +103,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | eventMouseover (callback)     |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | eventMouseout (callback)      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
-| Touch Support                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| Touch Support                 |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectable                    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectHelper                  |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | unselectAuto                  |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -111,8 +111,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | selectOverlap                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | selectConstraint              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | selectAllow                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| selectMinDistance             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| selectLongPressDelay          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| selectMinDistance             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| selectLongPressDelay          |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | select (callback)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | unselect (callback)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | select (method)               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
@@ -170,19 +170,19 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | renderEvents (method)          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | rerenderEvent (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------        | ------------------------------------------------------     | --------------------------                                                   |
-| Requirements                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| Touch Support                  |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| Requirements                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| Touch Support                  |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | editable                       |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventStartEditable             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventDurationEditable          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dragRevertDuration             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dragOpacity                    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dragScroll                     |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventStartEditable             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventDurationEditable          |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| dragRevertDuration             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| dragOpacity                    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| dragScroll                     |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventOverlap                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | eventConstraint                |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | eventAllow                     |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| longPressDelay                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventLongPressDelay            |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| longPressDelay                 |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventLongPressDelay            |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventDragStart (callback)      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | eventDragStop (callback)       |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | eventDrop (callback)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |

@@ -120,6 +120,9 @@
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EnumPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\EnumPropertyParser.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\FloatPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\FloatPropertyParser.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\IntegerPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\IntegerPropertyParser.cs</Link>
     </Compile>

@@ -192,6 +192,22 @@ namespace FullCalendar
 
         #endregion
 
+        #region Current Date
+
+        /// <summary>
+        /// The initial date displayed when the calendar first loads.
+        /// When not specified, this value defaults to the current date.
+        /// </summary>
+        public DateTime DefaultDate { get; set; }
+
+        /// <summary>
+        /// Whether or not to display a marker indicating the current time.
+        /// The indicator will automatically reposition itself while the user is viewing the calendar.
+        /// </summary>
+        public bool NowIndicator { get; set; }
+
+        #endregion
+
         #region Text/Time Customization
 
         /// <summary>
@@ -261,6 +277,21 @@ namespace FullCalendar
         /// This option can only take effect when selectable is set to true.
         /// </summary>
         public bool UnselectAuto { get; set; } = true;
+
+        /// <summary>
+        /// The minimum distance the user's mouse must travel after a mousedown, before a selection is allowed.
+        /// The default value of 0 puts no restriction on the distance the mouse must travel.
+        /// A non-zero value is useful for differentiating a selection from a dayClick.
+        /// This setting is only applicable to mouse-related interaction. For touch interation, see selectLongPressDelay.
+        /// </summary>
+        public int SelectMinDistance { get; set; }
+
+        /// <summary>
+        /// For touch devices, the amount of time the user most hold down before a date becomes selectable.
+        /// This value is specified in milliseconds.
+        /// nly applicable when the calendar is being used on a touch device. Otherwise, there is no delay.
+        /// </summary>
+        public int SelectLongPressDelay { get; set; }
 
         #endregion
 
@@ -384,6 +415,51 @@ namespace FullCalendar
         /// This option can be overridden on a per-event basis with the Event Object editable property.
         /// </summary>
         public bool Editable { get; set; }
+
+        /// <summary>
+        /// Allow events' start times to be editable through dragging.
+        /// This option can be overridden on a per-source basis with the startEditable Event Source Object option or on a per-event basis with the startEditable Event Object option.
+        /// </summary>
+        public bool EventStartEditable { get; set; } = true;
+
+        /// <summary>
+        /// Allow events' durations to be editable through resizing.
+        /// This option can be overridden on a per-source basis with the durationEditable Event Source Object option or on a per-event basis with the durationEditable Event Object option.
+        /// </summary>
+        public bool EventDurationEditable { get; set; } = true;
+
+        /// <summary>
+        /// Time it takes for an event to revert to its original position after an unsuccessful drag.
+        /// Time is in milliseconds (1 second = 1000 milliseconds).
+        /// </summary>
+        public int DragRevertDuration { get; set; }
+
+        /// <summary>
+        /// The opacity of an event while it is being dragged.
+        /// Float values range from 0.0 to 1.0.
+        /// </summary>
+        public float DragOpacity { get; set; } = .75F;
+
+        /// <summary>
+        /// Whether to automatically move scroll containers during event drag-and-drop or while selecting.
+        /// If enabled, the scroll container will automatically scroll once the mouse gets close to the edge.
+        /// </summary>
+        public bool DragScroll { get; set; } = true;
+
+        /// <summary>
+        /// For touch devices, the amount of time the user most hold down before an event becomes draggable or a date becomes selectable.
+        /// This value is specified in milliseconds.
+        /// Only applicable when the calendar is being used on a touch device. Otherwise, there is no delay.
+        /// This setting controls event dragging and date selecting. For further granularity, please see the following settings: eventLongPressDelay, selectLongPressDelay
+        /// </summary>
+        public int LongPressDelay { get; set; }
+
+        /// <summary>
+        /// For touch devices, the amount of time the user most hold down before an event becomes draggable.
+        /// This value is specified in milliseconds.
+        /// Only applicable when the calendar is being used on a touch device. Otherwise, there is no delay.
+        /// </summary>
+        public int EventLongPressDelay { get; set; }
 
         #endregion
     }
