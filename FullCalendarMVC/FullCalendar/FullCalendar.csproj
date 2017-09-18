@@ -70,6 +70,7 @@
     <Compile Include="Enums\HeaderSeparator.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Infrastructure\ClientSideEvents.cs" />
     <Compile Include="Infrastructure\Footer.cs" />
     <Compile Include="Infrastructure\Header.cs" />
     <Compile Include="Infrastructure\ControlsBuilder.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="FullCalendarParameters.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ArrayPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\BoolPropertyParser.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ColorPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\DateTimePropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\DayOfWeekPropertyParser.cs" />

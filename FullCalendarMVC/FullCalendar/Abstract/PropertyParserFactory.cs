@@ -12,7 +12,9 @@ namespace FullCalendar.Abstract
         {
             IPropertyParser propertyParser = null;
 
-            if (property.PropertyType == typeof(DayOfWeek))
+            if (property.PropertyType == typeof(ClientSideEvents))
+                propertyParser = new ClientSideEventsPropertyParser(property);
+            else if (property.PropertyType == typeof(DayOfWeek))
                 propertyParser = new DayOfWeekPropertyParser(property);
             else if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
                 propertyParser = new BoolPropertyParser(property);

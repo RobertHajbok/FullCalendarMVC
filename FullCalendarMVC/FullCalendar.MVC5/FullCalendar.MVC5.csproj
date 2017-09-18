@@ -93,6 +93,9 @@
     <Compile Include="..\FullCalendar\FullCalendarParameters.cs">
       <Link>FullCalendarParameters.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\ClientSideEvents.cs">
+      <Link>Infrastructure\ClientSideEvents.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\ControlsBuilder.cs">
       <Link>Infrastructure\ControlsBuilder.cs</Link>
     </Compile>
@@ -107,6 +110,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BoolPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\BoolPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ColorPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\ColorPropertyParser.cs</Link>

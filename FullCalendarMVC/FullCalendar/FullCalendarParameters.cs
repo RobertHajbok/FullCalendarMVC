@@ -256,6 +256,17 @@ namespace FullCalendar
 
         #endregion
 
+        #region Clicking & Hovering
+
+        /// <summary>
+        /// Determines if day names and week names are clickable.
+        /// When true, day headings and weekNumbers will become clickable. When clicked, these links will bring the user to a view that represents the day/week.
+        /// The destination views are automatically determined by the views that are in the header. However, they can be explicity defined using navLinkDayClick and navLinkWeekClick.
+        /// </summary>
+        public bool NavLinks { get; set; }
+
+        #endregion
+
         #region Selection
 
         /// <summary>
@@ -462,5 +473,10 @@ namespace FullCalendar
         public int EventLongPressDelay { get; set; }
 
         #endregion
+
+        /// <summary>
+        /// Client-side events for the callback functions in the API
+        /// </summary>
+        public ClientSideEvents ClientSideEvents { get; set; } = new ClientSideEvents();
     }
 }

@@ -6,6 +6,18 @@
     <title>FullCalendar</title>
     @Scripts.Render("~/bundles/scripts")
     @Styles.Render("~/bundles/styles")
+    @*<script>
+        var EventClick = function(calEvent, jsEvent, view) {
+
+            alert('Event: ' + calEvent.title);
+            alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+            alert('View: ' + view.name);
+
+            // change the border color just for fun
+            $(this).css('border-color', 'red');
+
+        };
+    </script>*@
 </head>
 <body>
     <div class="header">
@@ -92,6 +104,25 @@
             //settings.DragScroll = false;
             //settings.LongPressDelay = 2000;
             //settings.EventLongPressDelay = 2000;
+            //settings.NavLinks = true;
+            //settings.ClientSideEvents.NavLinkDayClick = @"function(date, jsEvent) {
+            //    console.log('day', date.format()); // date is a moment
+            //    console.log('coords', jsEvent.pageX, jsEvent.pageY);
+            //}";
+            //settings.ClientSideEvents.NavLinkWeekClick = @"function(weekStart, jsEvent) {
+            //    console.log('week start', weekStart.format()); // weekStart is a moment
+            //    console.log('coords', jsEvent.pageX, jsEvent.pageY);
+            //}";
+            //settings.ClientSideEvents.DayClick = @"function(date, jsEvent, view) {
+            //    alert('Clicked on: ' + date.format());
+            //    alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+            //    alert('Current view: ' + view.name);
+            //    // change the day's background color just for fun
+            //    $(this).css('background-color', 'red');
+            //}";
+            //settings.ClientSideEvents.EventClick = "EventClick";
+            //settings.ClientSideEvents.EventMouseover = "function(event, jsEvent, view) { console.log(event); }";
+            //settings.ClientSideEvents.EventMouseout = "function( event, jsEvent, view ) { console.log(jsEvent); }";
         })
     </div>
 </body>

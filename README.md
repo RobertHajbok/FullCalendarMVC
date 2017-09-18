@@ -95,13 +95,13 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | eventLimitText                |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | dayPopoverFormat              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
-| navLinks                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| navLinkDayClick (callback)    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| navLinkWeekClick (callback)   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dayClick (callback)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventClick (callback)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventMouseover (callback)     |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventMouseout (callback)      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| navLinks                      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| navLinkDayClick (callback)    | View name version not supported yet                        | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| navLinkWeekClick (callback)   | View name version not supported yet                        | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| dayClick (callback)           |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventClick (callback)         |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventMouseover (callback)     |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventMouseout (callback)      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | Touch Support                 |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectable                    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -118,9 +118,9 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | select (method)               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | unselect (method)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
-| Moment                        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| Duration                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| date formatting string        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| Moment                        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| Duration                      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| date formatting string        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | formatRange (function)        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | get / set options dynamically |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | on / off                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |

@@ -50,6 +50,15 @@
         displayeventtime: { name: 'displayEventTime', type: 'boolean' },
         displayeventend: { name: 'displayEventEnd', type: 'boolean' },
 
+        // Clicking & Hovering
+        navlinks: { name: 'navLinks', type: 'boolean' },
+        navlinkdayclick: { name: 'navLinkDayClick', type: 'callback' },
+        navlinkweekclick: { name: 'navLinkWeekClick', type: 'callback' },
+        dayclick: { name: 'dayClick', type: 'callback' },
+        eventclick: { name: 'eventClick', type: 'callback' },
+        eventmouseover: { name: 'eventMouseover', type: 'callback' },
+        eventmouseout: { name: 'eventMouseout', type: 'callback' },
+
         // Selection
         selectable: { name: 'selectable', type: 'boolean' },
         selecthelper: { name: 'selectHelper', type: 'boolean' },
@@ -116,6 +125,14 @@
             case 'array':
             case 'object':
                 return $.isArray(data) ? data : JSON.parse(data.replace(/\'/g, '"'));
+            case 'callback':
+                try {
+                    return eval('(' + JSON.parse(data.replace(/\'/g, '"')).function + ')');
+                }
+                catch (e) {
+                    console.error(e);
+                    return null;
+                }
         }
     }
 }(jQuery));
