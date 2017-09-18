@@ -474,6 +474,18 @@ namespace FullCalendar
 
         #endregion
 
+        #region Dropping External Elements
+
+        /// <summary>
+        /// Determines if jQuery UI draggables can be dropped onto the calendar.
+        /// This option operates with jQuery UI draggables. You must download the appropriate jQuery UI files and initialize a draggable element. Additionally, you must set the calendar's droppable option to true.
+        /// When there is no event data associated with the drag, the areas where the drop is allowed are determined by selectOverlap and selectConstraint.
+        /// When there is event data associated with the drag(see eventReceive), normal event overlap/constraint rules apply, such as eventOverlap and eventConstraint.
+        /// </summary>
+        public bool Droppable { get; set; }
+
+        #endregion
+
         /// <summary>
         /// Client-side events for the callback functions in the API
         /// </summary>

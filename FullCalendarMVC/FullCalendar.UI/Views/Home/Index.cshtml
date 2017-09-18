@@ -7,16 +7,23 @@
     @Scripts.Render("~/bundles/scripts")
     @Styles.Render("~/bundles/styles")
     @*<script>
-        var EventClick = function(calEvent, jsEvent, view) {
-
+        var EventClick = function (calEvent, jsEvent, view) {
             alert('Event: ' + calEvent.title);
             alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
             alert('View: ' + view.name);
 
             // change the border color just for fun
             $(this).css('border-color', 'red');
-
         };
+
+        var EventResize = function (event, delta, revertFunc) {
+            alert(event.title + " end is now " + event.end.format());
+
+            if (!confirm("is this okay?")) {
+                revertFunc();
+            }
+
+        }
     </script>*@
 </head>
 <body>
@@ -123,6 +130,44 @@
             //settings.ClientSideEvents.EventClick = "EventClick";
             //settings.ClientSideEvents.EventMouseover = "function(event, jsEvent, view) { console.log(event); }";
             //settings.ClientSideEvents.EventMouseout = "function( event, jsEvent, view ) { console.log(jsEvent); }";
+            //settings.ClientSideEvents.ViewRender = "function() { alert('rendered'); }";
+            //settings.ClientSideEvents.ViewDestroy = @"function(view, element) {
+            //    console.log(view);
+            //    console.log(element);
+            //    alert('destroyed');
+            //}";
+            //settings.ClientSideEvents.DayRender = @"function(date, cell) {
+            //    console.log(date);
+            //    console.log(cell);
+            //}";
+            //settings.ClientSideEvents.WindowResize = "function(view) { alert('The calendar has adjusted to a window resize'); }";
+            //settings.ClientSideEvents.Select = "function() { console.log('Selection made'); }";
+            //settings.ClientSideEvents.Unselect = "function() { console.log('Selection cleared'); }";
+            //settings.ClientSideEvents.EventDataTransform = "function () { alert('Data should be transformed here and event object should be returned'); }";
+            //settings.ClientSideEvents.Loading = "function() { console.info('loading'); }";
+            //settings.ClientSideEvents.EventRender = @"function(event, element) {
+            //    element.qtip({
+            //        content: event.description
+            //    });
+            //}";
+            //settings.ClientSideEvents.EventAfterRender = "function () { console.log('Event after render'); }";
+            //settings.ClientSideEvents.EventAfterAllRender = "function(view) { console.log(view); }";
+            //settings.ClientSideEvents.EventDestroy = "function() { console.info('event destroyed'); }";
+            //settings.ClientSideEvents.EventDragStart = "function() { console.log('event drag start'); }";
+            //settings.ClientSideEvents.EventDragStop = "function() { console.log('event drag stop'); }";
+            //settings.ClientSideEvents.EventDrop = @"function(event, delta, revertFunc) {
+            //    alert(event.title + ' was dropped on ' + event.start.format());
+            //    if (!confirm('Are you sure about this change?'))
+            //    {
+            //        revertFunc();
+            //    }
+            //}";
+            //settings.ClientSideEvents.EventResizeStart = "function() { console.log('Event resize start') }";
+            //settings.ClientSideEvents.EventResizeStop = "function() { console.log('event resize stop'); }";
+            //settings.ClientSideEvents.EventResize = "EventResize";
+            //settings.Droppable = true;
+            //settings.ClientSideEvents.Drop = "function(date, jsEvent, ui, resourceId) { }";
+            //settings.ClientSideEvents.EventReceive = "function(event) { console.log(event); }";
         })
     </div>
 </body>

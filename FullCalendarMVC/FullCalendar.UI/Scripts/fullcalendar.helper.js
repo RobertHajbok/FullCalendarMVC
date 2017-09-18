@@ -13,6 +13,10 @@
         shownoncurrentdates: { name: 'showNonCurrentDates', type: 'boolean' },
         aspectratio: { name: 'aspectRatio', type: 'float' },
         windowresizedelay: { name: 'windowResizeDelay', type: 'integer' },
+        viewrender: { name: 'viewRender', type: 'callback' },
+        viewdestroy: { name: 'viewDestroy', type: 'callback' },
+        dayrender: { name: 'dayRender', type: 'callback' },
+        windowresize: { name: 'windowResize', type: 'callback' },
 
         // Timezone
         now: { name: 'now', type: 'moment' },
@@ -65,6 +69,8 @@
         unselectauto: { name: 'unselectAuto', type: 'boolean' },
         selectmindistance: { name: 'selectMinDistance', type: 'integer' },
         selectlongpressdelay: { name: 'selectLongPressDelay', type: 'integer' },
+        select: { name: 'select', type: 'callback' },
+        unselect: { name: 'unselect', type: 'callback' },
 
         // Event Data
         events: { name: 'events', type: 'string' },
@@ -76,6 +82,8 @@
         defaulttimedeventduration: { name: 'defaultTimedEventDuration', type: 'duration' },
         defaultalldayeventduration: { name: 'defaultAllDayEventDuration', type: 'duration' },
         forceeventduration: { name: 'forceEventDuration', type: 'boolean' },
+        eventdatatransform: { name: 'eventDataTransform', type: 'callback' },
+        loading: { name: 'loading', type: 'callback' },
 
         // Event Rendering
         eventcolor: { name: 'eventColor', type: 'string' },
@@ -84,6 +92,10 @@
         eventtextcolor: { name: 'eventTextColor', type: 'string' },
         nextdaythreshold: { name: 'nextDayThreshold', type: 'duration' },
         eventrenderwait: { name: 'eventRenderWait', type: 'integer' },
+        eventrender: { name: 'eventRender', type: 'callback' },
+        eventafterrender: { name: 'eventAfterRender', type: 'callback' },
+        eventafterallrender: { name: 'eventAfterAllRender', type: 'callback' },
+        eventdestroy: { name: 'eventDestroy', type: 'callback' },
 
         // Event Dragging & Resizing
         editable: { name: 'editable', type: 'boolean' },
@@ -93,7 +105,18 @@
         dragopacity: { name: 'dragOpacity', type: 'float' },
         dragscroll: { name: 'dragScroll', type: 'boolean' },
         longpressdelay: { name: 'longPressDelay', type: 'integer' },
-        eventlongpressdelay: { name: 'eventLongPressDelay', type: 'integer' }
+        eventlongpressdelay: { name: 'eventLongPressDelay', type: 'integer' },
+        eventdragstart: { name: 'eventDragStart', type: 'callback' },
+        eventdragstop: { name: 'eventDragStop', type: 'callback' },
+        eventdrop: { name: 'eventDrop', type: 'callback' },
+        eventresizestart: { name: 'eventResizeStart', type: 'callback' },
+        eventresizestop: { name: 'eventResizeStop', type: 'callback' },
+        eventresize: { name: 'eventResize', type: 'callback' },
+
+        // Dropping External Elements
+        droppable: { name: 'droppable', type: 'boolean' },
+        drop: { name: 'drop', type: 'callback' },
+        eventreceive: { name: 'eventReceive', type: 'callback' }
     }
 
     $(function () {

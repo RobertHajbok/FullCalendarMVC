@@ -28,10 +28,10 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | windowResizeDelay             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventLimit                    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | eventLimitClick               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| viewRender (callback)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| viewDestroy (callback)        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dayRender (callback)          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| windowResize (callback)       |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| viewRender (callback)         |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| viewDestroy (callback)        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| dayRender (callback)          |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| windowResize (callback)       |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | render (method)               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | destroy (method)              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   | 
@@ -113,8 +113,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | selectAllow                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | selectMinDistance             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectLongPressDelay          |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| select (callback)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| unselect (callback)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| select (callback)             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| unselect (callback)           |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | select (method)               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | unselect (method)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
@@ -139,8 +139,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | defaultTimedEventDuration     |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | defaultAllDayEventDuration    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | forceEventDuration            |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventDataTransform (callback) |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| loading (callback)            |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventDataTransform (callback) |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| loading (callback)            |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | updateEvent (method)          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | updateEvents (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | clientEvents (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
@@ -162,10 +162,10 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | nextDayThreshold              |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventOrder                    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | eventRenderWait               |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventRender (callback)        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventAfterRender (callback)   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventAfterAllRender (callback) |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventDestroy (callback)        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventRender (callback)        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventAfterRender (callback)   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventAfterAllRender (callback) |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventDestroy (callback)        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | renderEvent (method)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | renderEvents (method)          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | rerenderEvent (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
@@ -183,14 +183,14 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | eventAllow                     |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | longPressDelay                 |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventLongPressDelay            |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventDragStart (callback)      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventDragStop (callback)       |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventDrop (callback)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventResizeStart (callback)    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventResizeStop (callback)     |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventResize (callback)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventDragStart (callback)      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventDragStop (callback)       |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventDrop (callback)           |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventResizeStart (callback)    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventResizeStop (callback)     |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventResize (callback)         |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------        | ------------------------------------------------------     | --------------------------                                                   |
-| droppable                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| droppable                      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | dropAccept                     |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| drop (callback)                |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventReceive (callback)        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| drop (callback)                |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventReceive (callback)        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
