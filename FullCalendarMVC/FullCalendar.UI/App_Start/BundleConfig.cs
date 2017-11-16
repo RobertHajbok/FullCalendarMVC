@@ -15,6 +15,8 @@ namespace FullCalendar.UI
                 ));
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
+                "~/Content/bootstrap.css",
+                "~/Content/themes/flat/jquery-ui-{version}.css",
                 "~/Content/fullcalendar.css",
                 "~/Content/site.css"
                 ));

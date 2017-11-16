@@ -78,6 +78,9 @@
     <Compile Include="..\FullCalendar\Enums\HeaderSeparator.cs">
       <Link>Enums\HeaderSeparator.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Enums\ThemeSystem.cs">
+      <Link>Enums\ThemeSystem.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Extensions\ColorExtensions.cs">
       <Link>Extensions\ColorExtensions.cs</Link>
     </Compile>
@@ -137,6 +140,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\StringPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\StringPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs</Link>

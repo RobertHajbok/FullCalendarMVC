@@ -16,6 +16,8 @@ namespace FullCalendar.Abstract
                 propertyParser = new ClientSideEventsPropertyParser(property);
             else if (property.PropertyType == typeof(DayOfWeek))
                 propertyParser = new DayOfWeekPropertyParser(property);
+            else if (property.PropertyType == typeof(ThemeSystem))
+                propertyParser = new ThemeSystemPropertyParser(property);
             else if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
                 propertyParser = new BoolPropertyParser(property);
             else if (property.PropertyType.BaseType == typeof(Enum))

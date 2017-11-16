@@ -1,5 +1,5 @@
 ### What is FullCalendarMVC?
-FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalendar/fullcalendar). Current supported version is 3.4.0.
+FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalendar/fullcalendar). Current supported version is 3.5.1.
 
 ### What are the available options?
 | Option                        | Comment                                                    | Status                                                                       |
@@ -8,7 +8,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | footer                        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | customButtons                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | buttonIcons                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| themeSystem                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| themeSystem                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | themeButtonIcons              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | bootstrapGlyphicons           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | firstDay                      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -58,7 +58,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | maxTime                       |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | slotEventOverlap              |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
-| What is List View?            |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| What is List View?            |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | listDayFormat                 | Using empty string for the false value (no text displayed) | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | listDayAltFormat              | Using empty string for the false value (no text displayed) | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | noEventsMessage               |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

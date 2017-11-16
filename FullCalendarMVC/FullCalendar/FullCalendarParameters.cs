@@ -21,6 +21,14 @@ namespace FullCalendar
         public Footer Footer { get; set; }
 
         /// <summary>
+        /// Renders the calendar with a given theme system.
+        /// 'standard' renders a minimal look & feel, the look in most of the demos. Does not require any CSS files beyond the FullCalendar base files.
+        /// 'bootstrap3' prepares the calendar for a Bootstrap 3 theme.The Bootstrap CSS file must be separately loaded in its own<link> tag.
+        /// 'jquery-ui' prepares the calendar for a jQuery UI theme.The jQuery UI CSS file file must be separately loaded in its own <link> tag.
+        /// </summary>
+        public ThemeSystem ThemeSystem { get; set; } = ThemeSystem.Standard;
+
+        /// <summary>
         /// The day that each week begins.
         /// The default value depends on the current locale.
         /// If weekNumberCalculation is set to 'ISO', this option defaults to 1 (Monday).

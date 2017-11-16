@@ -3,6 +3,7 @@
         // General Display
         header: { name: 'header', type: 'object' },
         footer: { name: 'footer', type: 'object' },
+        themesystem: { name: 'themeSystem', type: 'string' },
         firstday: { name: 'firstDay', type: 'integer' },
         isrtl: { name: 'isRTL', type: 'boolean' },
         weekends: { name: 'weekends', type: 'boolean' },

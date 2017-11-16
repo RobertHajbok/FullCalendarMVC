@@ -68,6 +68,7 @@
     <Compile Include="Enums\CalendarView.cs" />
     <Compile Include="Enums\HeaderButton.cs" />
     <Compile Include="Enums\HeaderSeparator.cs" />
+    <Compile Include="Enums\ThemeSystem.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Infrastructure\ClientSideEvents.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Infrastructure\PropertyParsers\IntegerPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ObjectPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\StringPropertyParser.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs" />
     <Compile Include="Interfaces\IPropertyParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
