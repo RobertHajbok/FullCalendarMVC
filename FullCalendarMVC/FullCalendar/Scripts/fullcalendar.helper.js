@@ -14,6 +14,8 @@
         fixedweekcount: { name: 'fixedWeekCount', type: 'boolean' },
         weeknumbers: { name: 'weekNumbers', type: 'boolean' },
         weeknumberswithindays: { name: 'weekNumbersWithinDays', type: 'boolean' },
+        weeknumbercalculation: { name: 'weekNumberCalculation', type: 'function/string' },
+        businesshours: { name: 'businessHours', type: 'boolean/object' },
         shownoncurrentdates: { name: 'showNonCurrentDates', type: 'boolean' },
         aspectratio: { name: 'aspectRatio', type: 'float' },
         windowresizedelay: { name: 'windowResizeDelay', type: 'integer' },
@@ -172,6 +174,14 @@
                 catch (e) {
                     console.error(e);
                     return null;
+                }
+            case 'function/string':
+                var value = JSON.parse(data.replace(/\'/g, '"')).function;
+                try {
+                    return eval('(' + value + ')');
+                }
+                catch (e) {
+                    return value;
                 }
         }
     }

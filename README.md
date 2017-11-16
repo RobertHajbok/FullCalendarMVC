@@ -18,8 +18,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | fixedWeekCount                |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | weekNumbers                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | weekNumbersWithinDays         |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| weekNumberCalculation         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| businessHours                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| weekNumberCalculation         |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| businessHours                 | Null is the default instead of false, empty list is used instead of true value | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | showNonCurrentDates           |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | height                        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | contentHeight                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |

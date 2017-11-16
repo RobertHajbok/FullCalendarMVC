@@ -1,6 +1,7 @@
 ﻿using FullCalendar.Infrastructure.PropertyParsers;
 using FullCalendar.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
 
@@ -15,8 +16,12 @@ namespace FullCalendar.Abstract
             if (property.Name == nameof(FullCalendarParameters.ButtonIcons) || property.Name == nameof(FullCalendarParameters.ThemeButtonIcons) ||
                 property.Name == nameof(FullCalendarParameters.BootstrapGlyphicons))
                 propertyParser = new ButtonIconsParser(property);
+            else if (property.Name == nameof(FullCalendarParameters.WeekNumberCalculation))
+                propertyParser = new FunctionPropertyParser(property);
             else if (property.PropertyType == typeof(ClientSideEvents))
                 propertyParser = new ClientSideEventsPropertyParser(property);
+            else if (property.PropertyType == typeof(IEnumerable<BusinessHour>))
+                propertyParser = new BusinessHoursPropertyParser(property);
             else if (property.PropertyType == typeof(DayOfWeek))
                 propertyParser = new DayOfWeekPropertyParser(property);
             else if (property.PropertyType == typeof(ThemeSystem))

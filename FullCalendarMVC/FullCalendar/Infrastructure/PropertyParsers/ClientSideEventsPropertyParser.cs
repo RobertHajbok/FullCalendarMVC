@@ -31,8 +31,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                     };
 
                     dictionary.Add("data-fc-" + property.Name, new JavaScriptSerializer().Serialize(jsonString).ToSingleQuotes());
-                }
-                
+                }                
             }
         }
     }

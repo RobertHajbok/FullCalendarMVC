@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace FullCalendar
@@ -114,6 +115,23 @@ namespace FullCalendar
         /// Determines the styling for week numbers in month view and the basic views.
         /// </summary>
         public bool WeekNumbersWithinDays { get; set; }
+
+        /// <summary>
+        /// The method for calculating week numbers that are displayed with the weekNumbers setting.
+        /// Specifying "local" causes the locale-specific calculation to be used, as determined by the calendar's locale setting. This is the default.
+        /// Specifiying "ISO" results in ISO8601 week numbers. Since v3.0, specifying "ISO" changes the default value of firstDay to 1 (Monday).
+        /// You may also specify a function, which must accept a single Moment and return an integer week number.
+        /// </summary>
+        public string WeekNumberCalculation { get; set; }
+
+        /// <summary>
+        /// Emphasizes certain time slots on the calendar. By default, Monday-Friday, 9am-5pm.
+        /// If empty list, the default business hours will be emphasized. This only applies to the time slots in the agenda views. 
+        /// If null (the default), there will be no emphasis.
+        /// An object may be given to render business hours with fine-grain control over the days/hours.
+        /// You may also break your business hour declaration into parts for additional control (added in v2.9.1).
+        /// </summary>
+        public IEnumerable<BusinessHour> BusinessHours { get; set; }
 
         /// <summary>
         /// In month view, whether dates in the previous or next month should be rendered at all.

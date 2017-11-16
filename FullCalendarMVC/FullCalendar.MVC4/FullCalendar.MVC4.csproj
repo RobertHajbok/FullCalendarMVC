@@ -93,6 +93,9 @@
     <Compile Include="..\FullCalendar\FullCalendarParameters.cs">
       <Link>FullCalendarParameters.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\BusinessHour.cs">
+      <Link>Infrastructure\BusinessHour.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\ClientSideEvents.cs">
       <Link>Infrastructure\ClientSideEvents.cs</Link>
     </Compile>
@@ -110,6 +113,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BoolPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\BoolPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BusinessHoursPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\BusinessHoursPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ButtonIconsParser.cs">
       <Link>Infrastructure\PropertyParsers\ButtonIconsParser.cs</Link>
@@ -134,6 +140,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\FloatPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\FloatPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\FunctionPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\FunctionPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\IntegerPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\IntegerPropertyParser.cs</Link>
