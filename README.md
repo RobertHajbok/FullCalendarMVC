@@ -32,10 +32,10 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | viewDestroy (callback)        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | dayRender (callback)          |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | windowResize (callback)       |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| render (method)               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| destroy (method)              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| render (method)               | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| destroy (method)              | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   | 
-| timezone                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| timezone                      | Null is the default value instead of false                 | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | now                           | Function is not needed, as server-side is supported by MVC | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | Available Views               |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -44,8 +44,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | View-Specific Options         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | View Object                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | defaultView                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| getView (method)              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| changeView (method)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| getView (method)              | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| changeView (method)           | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | allDaySlot                    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | allDayText                    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -71,14 +71,14 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | dateAlignment                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | duration                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | dayCount                      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| prev (method)                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| next (method)                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| prevYear (method)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| nextYear (method)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| today (method)                |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| gotoDate (method)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| incrementDate (method)        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| getDate (method)              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| prev (method)                 | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| next (method)                 | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| prevYear (method)             | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| nextYear (method)             | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| today (method)                | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| gotoDate (method)             | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| incrementDate (method)        | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| getDate (method)              | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | locale                        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | timeFormat                    |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -115,8 +115,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | selectLongPressDelay          |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | select (callback)             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | unselect (callback)           |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| select (method)               |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| unselect (method)             |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| select (method)               | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| unselect (method)             | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | Moment                        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | Duration                      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -141,17 +141,17 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | forceEventDuration            |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventDataTransform (callback) |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | loading (callback)            |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| updateEvent (method)          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| updateEvents (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| clientEvents (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| removeEvents (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| refetchEvents (method)        |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| refetchEventSources (method)  |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| addEventSource (method)       |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| removeEventSource (method)    |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| removeEventSources (method)   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| getEventSources (method)      |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| getEventSourceById (method)   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| updateEvent (method)          | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| updateEvents (method)         | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| clientEvents (method)         | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| removeEvents (method)         | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| refetchEvents (method)        | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| refetchEventSources (method)  | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| addEventSource (method)       | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| removeEventSource (method)    | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| removeEventSources (method)   | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| getEventSources (method)      | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| getEventSourceById (method)   | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------     | --------------------------                                                   |
 | Colors                        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | Background Events             |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -166,9 +166,9 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | eventAfterRender (callback)   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventAfterAllRender (callback) |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventDestroy (callback)        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| renderEvent (method)           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| renderEvents (method)          |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| rerenderEvent (method)         |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| renderEvent (method)           | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| renderEvents (method)          | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| rerenderEvent (method)         | Added Name and CssClass properties to enable selectors client-side | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------        | ------------------------------------------------------     | --------------------------                                                   |
 | Requirements                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | Touch Support                  |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

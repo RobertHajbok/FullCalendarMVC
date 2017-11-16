@@ -23,11 +23,16 @@ namespace FullCalendar
             Dictionary<string, string> attributes = new Dictionary<string, string>();
             foreach (var property in typeof(FullCalendarParameters).GetProperties())
             {
+                if (property.Name == nameof(FullCalendarParameters.Name) || property.Name == nameof(FullCalendarParameters.CssClass))
+                    continue;
                 IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
                 propertyParser.AddPropertyToDictionary(fullCalendarParameters, ref attributes);
             }
 
-            return MvcHtmlString.Create(string.Format("<div class=\"fc\" {0}></div>", string.Join(" ", attributes.Select(x => x.Key + "=\"" + x.Value + "\""))));
+            return MvcHtmlString.Create(string.Format("<div {0} {1} class=\"fc {2}\" {3}></div>", !string.IsNullOrEmpty(fullCalendarParameters.Name) ?
+                string.Format("id='{0}'", fullCalendarParameters.Name) : "", !string.IsNullOrEmpty(fullCalendarParameters.Name) ?
+                string.Format("name='{0}'", fullCalendarParameters.Name) : "", fullCalendarParameters.CssClass,
+                string.Join(" ", attributes.Select(x => x.Key + "=\"" + x.Value + "\""))));
         }
     }
 }

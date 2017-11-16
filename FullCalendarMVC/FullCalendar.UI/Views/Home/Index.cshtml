@@ -35,6 +35,8 @@
     <div class="content">
         @Html.FullCalendar(settings =>
         {
+            settings.Name = "calendar";
+            settings.CssClass = "css-test";
             settings.Header = new Header
             {
                 Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
@@ -198,6 +200,7 @@
             //        Start = TimeSpan.FromHours(7)
             //    }
             //};
+            settings.Timezone = "America/Chicago";
         })
     </div>
 </body>

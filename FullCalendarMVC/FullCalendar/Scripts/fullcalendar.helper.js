@@ -25,6 +25,7 @@
         windowresize: { name: 'windowResize', type: 'callback' },
 
         // Timezone
+        timezone: { name: 'timezone', type: 'string' },
         now: { name: 'now', type: 'moment' },
 
         // Views

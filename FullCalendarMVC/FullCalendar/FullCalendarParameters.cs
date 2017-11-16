@@ -163,6 +163,16 @@ namespace FullCalendar
         #region Timezone
 
         /// <summary>
+        /// Determines the timezone in which dates throughout the API are parsed and rendered.
+        /// Each of these possible values has an effect on (1) the way event data requests are made, (2) the timezones that event dates are represented in, and (3) the timezones that other dates in the API are represented in.
+        /// null (no timezone, the default) - use this mode if you don't store timezone information for your events and you want all events to render consistently across all client computers, regardless of timezone.
+        /// "local" (the client's timezone) - use this mode if you store timezone information for your events and you want events displayed differently depending on the local timezone of each end-user's computer.
+        /// "UTC" - use this mode if you store timezone information for your events and you want all your events to be displayed in UTC (Coordinated Universal Time).
+        /// Timezone string (like "America/Chicago") - use this mode if you store timezone information for your events and you want them displayed in a timezone that can be customized.
+        /// </summary>
+        public string Timezone { get; set; }
+
+        /// <summary>
         /// Explicitly sets the "today" date of the calendar. This is the day that is normally highlighted in yellow.
         /// Normally, the local browser's current date is used.
         /// Overriding the current date is particularly useful when your calendar is using a custom timezone parameter. 
@@ -557,6 +567,16 @@ namespace FullCalendar
         public bool Droppable { get; set; }
 
         #endregion
+
+        /// <summary>
+        /// The id and name of the calendar
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// The CSS classes of the calendar
+        /// </summary>
+        public string CssClass { get; set; }
 
         /// <summary>
         /// Client-side events for the callback functions in the API
