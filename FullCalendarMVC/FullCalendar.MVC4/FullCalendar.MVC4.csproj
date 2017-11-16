@@ -111,6 +111,9 @@
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BoolPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\BoolPropertyParser.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ButtonIconsParser.cs">
+      <Link>Infrastructure\PropertyParsers\ButtonIconsParser.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs</Link>
     </Compile>

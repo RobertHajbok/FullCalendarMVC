@@ -79,6 +79,7 @@
     <Compile Include="FullCalendarParameters.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ArrayPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\BoolPropertyParser.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ButtonIconsParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ColorPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\DateTimePropertyParser.cs" />

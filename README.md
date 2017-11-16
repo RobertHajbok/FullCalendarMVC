@@ -7,10 +7,10 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | header                        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | footer                        |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | customButtons                 |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| buttonIcons                   |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| buttonIcons                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | themeSystem                   |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| themeButtonIcons              |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| bootstrapGlyphicons           |                                                            | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| themeButtonIcons              |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| bootstrapGlyphicons           |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | firstDay                      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | isRTL                         |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | weekends                      |                                                            | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

@@ -21,12 +21,58 @@ namespace FullCalendar
         public Footer Footer { get; set; }
 
         /// <summary>
+        /// Determines which icons are displayed in buttons of the header.
+        /// This setting only takes affect when theme is false. If you want to change icons when theme is true, use themeButtonIcons instead.
+        /// A hash must be supplied that maps button names (from the header) to icon strings. These icon string are transformed into classNames which are styled by FullCalendar's CSS.
+        /// If a button does not have an entry, it falls back to using buttonText.
+        /// If you would prefer not to display any icons and would rather use buttonText instead, you can set the buttonIcons option to false.
+        /// </summary>
+        public object ButtonIcons { get; set; } = new
+        {
+            prev = "left-single-arrow",
+            next = "right-single-arrow",
+            prevYear = "left-double-arrow",
+            nextYear = "right-double-arrow"
+        };
+
+        /// <summary>
         /// Renders the calendar with a given theme system.
         /// 'standard' renders a minimal look & feel, the look in most of the demos. Does not require any CSS files beyond the FullCalendar base files.
         /// 'bootstrap3' prepares the calendar for a Bootstrap 3 theme.The Bootstrap CSS file must be separately loaded in its own<link> tag.
         /// 'jquery-ui' prepares the calendar for a jQuery UI theme.The jQuery UI CSS file file must be separately loaded in its own <link> tag.
         /// </summary>
-        public ThemeSystem ThemeSystem { get; set; } = ThemeSystem.Standard;
+        public ThemeSystem ThemeSystem { get; set; }
+
+        /// <summary>
+        /// Determines which icons are displayed in buttons of the header when jQuery UI theming is on.
+        /// This option only applies to calendars that have themeSystem set to 'jquery-ui'.
+        /// A hash must be supplied that maps button names (from the header) to icon strings. The icon strings determine the CSS class that will be used on the button. For example, the string 'circle-triangle-w' will result in the class 'ui-icon-circle-triangle-w'.
+        /// If a button does not have an entry, it falls back to using buttonText.
+        /// If you are using a jQuery UI theme and would prefer not to display any icons and would rather use buttonText instead, you can set the themeButtonIcons option to false.
+        /// </summary>
+        public object ThemeButtonIcons { get; set; } = new
+        {
+            prev = "circle-triangle-w",
+            next = "circle-triangle-e",
+            prevYear = "seek-prev",
+            nextYear = "seek-next"
+        };
+
+        /// <summary>
+        /// Determines which icons are displayed in buttons of the header when Bootstrap theming is on.
+        /// This option only applies to calendars that have themeSystem set to 'bootstrap3'.
+        /// A hash must be supplied that maps button names (from the header) to icon strings. See a full list of Bootstrap glyphicons.
+        /// If a button does not have an entry, it falls back to using buttonText.
+        /// If you are using a Bootstrap theme and would prefer not to display any icons and would rather use buttonText instead, you can set the bootstrapGlyphicons option to false.
+        /// </summary>
+        public object BootstrapGlyphicons { get; set; } = new
+        {
+            close = "glyphicon-remove",
+            prev = "glyphicon-chevron-left",
+            next = "glyphicon-chevron-right",
+            prevYear = "glyphicon-backward",
+            nextYear = "glyphicon-forward"
+        };
 
         /// <summary>
         /// The day that each week begins.

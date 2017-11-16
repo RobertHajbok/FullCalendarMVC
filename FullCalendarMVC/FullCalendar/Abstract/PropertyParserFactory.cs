@@ -12,7 +12,10 @@ namespace FullCalendar.Abstract
         {
             IPropertyParser propertyParser = null;
 
-            if (property.PropertyType == typeof(ClientSideEvents))
+            if (property.Name == nameof(FullCalendarParameters.ButtonIcons) || property.Name == nameof(FullCalendarParameters.ThemeButtonIcons) ||
+                property.Name == nameof(FullCalendarParameters.BootstrapGlyphicons))
+                propertyParser = new ButtonIconsParser(property);
+            else if (property.PropertyType == typeof(ClientSideEvents))
                 propertyParser = new ClientSideEventsPropertyParser(property);
             else if (property.PropertyType == typeof(DayOfWeek))
                 propertyParser = new DayOfWeekPropertyParser(property);

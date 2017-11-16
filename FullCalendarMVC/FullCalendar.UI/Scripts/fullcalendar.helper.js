@@ -3,7 +3,10 @@
         // General Display
         header: { name: 'header', type: 'object' },
         footer: { name: 'footer', type: 'object' },
+        buttonicons: { name: 'buttonIcons', type: 'boolean/object' },
         themesystem: { name: 'themeSystem', type: 'string' },
+        themebuttonicons: { name: 'themeButtonIcons', type: 'boolean/object' },
+        bootstrapglyphicons: { name: 'bootstrapGlyphicons', type: 'boolean/object' },
         firstday: { name: 'firstDay', type: 'integer' },
         isrtl: { name: 'isRTL', type: 'boolean' },
         weekends: { name: 'weekends', type: 'boolean' },
@@ -149,6 +152,19 @@
             case 'array':
             case 'object':
                 return $.isArray(data) ? data : JSON.parse(data.replace(/\'/g, '"'));
+            case 'boolean/object':
+                try {
+                    if (typeof (data) === "boolean") {
+                        return data;
+                    }
+                    else {
+                        return $.isArray(data) ? data : JSON.parse(data.replace(/\'/g, '"'))
+                    };
+                }
+                catch (e) {
+                    console.error(e);
+                    return null;
+                }
             case 'callback':
                 try {
                     return eval('(' + JSON.parse(data.replace(/\'/g, '"')).function + ')');
