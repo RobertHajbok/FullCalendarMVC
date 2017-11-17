@@ -11,7 +11,8 @@ namespace FullCalendar.UI
                 "~/Scripts/jquery-ui-{version}.js",
                 "~/Scripts/qTip/jquery.qtip.js",
                 "~/Scripts/moment.js",
-                "~/Scripts/fullcalendar*"
+                "~/Scripts/fullcalendar*",
+                "~/Scripts/locale-all.js"
                 ));
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(

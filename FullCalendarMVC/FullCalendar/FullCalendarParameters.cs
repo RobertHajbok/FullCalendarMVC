@@ -318,6 +318,13 @@ namespace FullCalendar
         #region Text/Time Customization
 
         /// <summary>
+        /// Customize the language and localization options for the calendar.
+        /// This option affects many things such as: (1) the text in buttons, as defined by header, (2) text that contains month or day-of-week strings,
+        /// (3) date formatting strings, such as timeFormat, (4) weekNumberCalculation, (5) firstDay
+        /// </summary>
+        public string Locale { get; set; }
+
+        /// <summary>
         /// Determines the time-text that will be displayed on each event.
         /// Each view has a specific default. Get fine-tuned control with View-Specific Options. A single string alone will set the value for all views.
         /// The default values will change based on the current locale.
@@ -338,6 +345,13 @@ namespace FullCalendar
         /// The default values will change based on the current locale.
         /// </summary>
         public string TitleFormat { get; set; }
+
+        /// <summary>
+        /// Text that will be displayed on buttons of the header.
+        /// buttonIcons and themeButtonIcons affects the appearance of certain other buttons.
+        /// HTML injection is not supported. All special characters will be escaped.
+        /// </summary>
+        public ButtonText ButtonText { get; set; }
 
         /// <summary>
         /// The heading text for week numbers.

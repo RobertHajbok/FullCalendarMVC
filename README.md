@@ -80,11 +80,11 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | incrementDate (method)        | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | getDate (method)              | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------                         | --------------------------                                                   |
-| locale                        |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| locale                        |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | timeFormat                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | columnFormat                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | titleFormat                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| buttonText                    |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| buttonText                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | monthNames                    |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | monthNamesShort               |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | dayNames                      |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |

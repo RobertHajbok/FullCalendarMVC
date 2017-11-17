@@ -57,9 +57,11 @@
         nowindicator: { name: 'nowIndicator', type: 'boolean' },
 
         // Text/Time Customization
+        locale: { name: 'locale', type: 'string' },
         timeformat: { name: 'timeFormat', type: 'string' },
         columnformat: { name: 'columnFormat', type: 'string' },
         titleformat: { name: 'titleFormat', type: 'string' },
+        buttontext: { name: 'buttonText', type: 'object' },
         weeknumbertitle: { name: 'weekNumberTitle', type: 'string' },
         displayeventtime: { name: 'displayEventTime', type: 'boolean' },
         displayeventend: { name: 'displayEventEnd', type: 'boolean' },
@@ -139,7 +141,7 @@
                 calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter);
                 $(calendars[i]).removeAttr("data-fc-" + item.substring(2));
             }
-            console.log(calendarObj);
+            //console.log(calendarObj);
             $(calendars[i]).fullCalendar(calendarObj);
         }
     });

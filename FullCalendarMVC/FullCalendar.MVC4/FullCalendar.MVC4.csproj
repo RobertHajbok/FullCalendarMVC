@@ -69,6 +69,24 @@
     <Compile Include="..\FullCalendar\Abstract\PropertyParserFactory.cs">
       <Link>Abstract\PropertyParserFactory.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Entities\BusinessHour.cs">
+      <Link>Entities\BusinessHour.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\ButtonText.cs">
+      <Link>Entities\ButtonText.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\CustomButton.cs">
+      <Link>Entities\CustomButton.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Footer.cs">
+      <Link>Entities\Footer.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Header.cs">
+      <Link>Entities\Header.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Unit.cs">
+      <Link>Entities\Unit.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Enums\CalendarView.cs">
       <Link>Enums\CalendarView.cs</Link>
     </Compile>
@@ -96,23 +114,11 @@
     <Compile Include="..\FullCalendar\FullCalendarParameters.cs">
       <Link>FullCalendarParameters.cs</Link>
     </Compile>
-    <Compile Include="..\FullCalendar\Infrastructure\BusinessHour.cs">
-      <Link>Infrastructure\BusinessHour.cs</Link>
-    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\ClientSideEvents.cs">
       <Link>Infrastructure\ClientSideEvents.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\ControlsBuilder.cs">
       <Link>Infrastructure\ControlsBuilder.cs</Link>
-    </Compile>
-    <Compile Include="..\FullCalendar\Infrastructure\CustomButton.cs">
-      <Link>Infrastructure\CustomButton.cs</Link>
-    </Compile>
-    <Compile Include="..\FullCalendar\Infrastructure\Footer.cs">
-      <Link>Infrastructure\Footer.cs</Link>
-    </Compile>
-    <Compile Include="..\FullCalendar\Infrastructure\Header.cs">
-      <Link>Infrastructure\Header.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ArrayPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\ArrayPropertyParser.cs</Link>
@@ -170,9 +176,6 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\UnitPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\UnitPropertyParser.cs</Link>
-    </Compile>
-    <Compile Include="..\FullCalendar\Infrastructure\Unit.cs">
-      <Link>Infrastructure\Unit.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Interfaces\IPropertyParser.cs">
       <Link>Interfaces\IPropertyParser.cs</Link>
