@@ -107,7 +107,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | selectable                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectHelper                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | unselectAuto                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| unselectCancel                |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| unselectCancel                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectOverlap                 |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | selectConstraint              |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | selectAllow                   |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |

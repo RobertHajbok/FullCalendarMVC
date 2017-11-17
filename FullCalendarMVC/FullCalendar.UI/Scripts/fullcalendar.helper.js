@@ -79,6 +79,7 @@
         selectable: { name: 'selectable', type: 'boolean' },
         selecthelper: { name: 'selectHelper', type: 'boolean' },
         unselectauto: { name: 'unselectAuto', type: 'boolean' },
+        unselectcancel: { name: 'unselectCancel', type: 'string' },
         selectmindistance: { name: 'selectMinDistance', type: 'integer' },
         selectlongpressdelay: { name: 'selectLongPressDelay', type: 'integer' },
         select: { name: 'select', type: 'callback' },

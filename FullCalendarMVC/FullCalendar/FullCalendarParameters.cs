@@ -411,6 +411,13 @@ namespace FullCalendar
         public bool UnselectAuto { get; set; } = true;
 
         /// <summary>
+        /// A way to specify elements that will ignore the unselectAuto option.
+        /// Clicking on elements that match this jQuery selector will prevent the current selection from being cleared (due to the unselectAuto option).
+        /// This option is useful if you have a "Create an event" form that shows up in response to the user making a selection. When the user clicks on this form, you probably don't want to the current selection to go away. Thus, you should add a class to your form such as "my-form", and set the unselectCancel option to ".my-form".
+        /// </summary>
+        public string UnselectCancel { get; set; }
+
+        /// <summary>
         /// The minimum distance the user's mouse must travel after a mousedown, before a selection is allowed.
         /// The default value of 0 puts no restriction on the distance the mouse must travel.
         /// A non-zero value is useful for differentiating a selection from a dayClick.
