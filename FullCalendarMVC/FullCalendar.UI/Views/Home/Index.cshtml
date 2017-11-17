@@ -40,7 +40,7 @@
             settings.Header = new Header
             {
                 Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
-                        .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
+                            .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
                 Center = new ControlsBuilder().AddTitle(),
                 Right = new ControlsBuilder("month,agendaWeek ").AddView(CalendarView.AgendaDay)
             };
@@ -200,7 +200,22 @@
             //        Start = TimeSpan.FromHours(7)
             //    }
             //};
-            settings.Timezone = "America/Chicago";
+            //settings.Timezone = "America/Chicago";
+            //settings.CustomButtons = new Dictionary<string, CustomButton>
+            //{
+            //    {
+            //        "myCustomButton", new CustomButton
+            //        {
+            //            Text = "custom!",
+            //            Click = @"function() {
+            //                alert('clicked the custom button!');
+            //            }",
+            //            Icon = false
+            //        }
+            //    }
+            //};
+            //settings.Height = Unit.Function("function() { return 200; }");
+            //settings.ContentHeight = Unit.Auto();
         })
     </div>
 </body>

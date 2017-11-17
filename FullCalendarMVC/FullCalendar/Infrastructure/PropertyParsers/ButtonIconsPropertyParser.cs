@@ -5,11 +5,11 @@ using System.Web.Script.Serialization;
 
 namespace FullCalendar.Infrastructure.PropertyParsers
 {
-    public class ButtonIconsParser : IPropertyParser
+    public class ButtonIconsPropertyParser : IPropertyParser
     {
         private PropertyInfo _property;
 
-        public ButtonIconsParser(PropertyInfo property)
+        public ButtonIconsPropertyParser(PropertyInfo property)
         {
             _property = property;
         }

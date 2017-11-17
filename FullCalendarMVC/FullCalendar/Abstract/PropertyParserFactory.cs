@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace FullCalendar.Abstract
 {
-    public class PropertyParserFactory
+    public abstract class PropertyParserFactory
     {
         public static IPropertyParser GetPropertyParser(PropertyInfo property)
         {
@@ -15,11 +15,13 @@ namespace FullCalendar.Abstract
 
             if (property.Name == nameof(FullCalendarParameters.ButtonIcons) || property.Name == nameof(FullCalendarParameters.ThemeButtonIcons) ||
                 property.Name == nameof(FullCalendarParameters.BootstrapGlyphicons))
-                propertyParser = new ButtonIconsParser(property);
+                propertyParser = new ButtonIconsPropertyParser(property);
             else if (property.Name == nameof(FullCalendarParameters.WeekNumberCalculation))
                 propertyParser = new FunctionPropertyParser(property);
             else if (property.PropertyType == typeof(ClientSideEvents))
                 propertyParser = new ClientSideEventsPropertyParser(property);
+            else if (property.PropertyType == typeof(Dictionary<string, CustomButton>))
+                propertyParser = new CustomButtonsPropertyParser(property);
             else if (property.PropertyType == typeof(IEnumerable<BusinessHour>))
                 propertyParser = new BusinessHoursPropertyParser(property);
             else if (property.PropertyType == typeof(DayOfWeek))
@@ -44,6 +46,8 @@ namespace FullCalendar.Abstract
                 propertyParser = new IntegerPropertyParser(property);
             else if (property.PropertyType == typeof(Color))
                 propertyParser = new ColorPropertyParser(property);
+            else if (property.PropertyType == typeof(Unit))
+                propertyParser = new UnitPropertyParser(property);
             else if (property.PropertyType.IsArray)
                 propertyParser = new ArrayPropertyParser(property);
             else

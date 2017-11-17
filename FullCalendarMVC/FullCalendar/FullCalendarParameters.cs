@@ -22,6 +22,12 @@ namespace FullCalendar
         public Footer Footer { get; set; }
 
         /// <summary>
+        /// Defines custom buttons that can be used in the header.
+        /// Specify a hash of custom buttons. Then reference them from the header setting.
+        /// </summary>
+        public Dictionary<string, CustomButton> CustomButtons { get; set; }
+
+        /// <summary>
         /// Determines which icons are displayed in buttons of the header.
         /// This setting only takes affect when theme is false. If you want to change icons when theme is true, use themeButtonIcons instead.
         /// A hash must be supplied that maps button names (from the header) to icon strings. These icon string are transformed into classNames which are styled by FullCalendar's CSS.
@@ -138,6 +144,25 @@ namespace FullCalendar
         /// Days that are disabled will not render events.
         /// </summary>
         public bool ShowNonCurrentDates { get; set; } = true;
+
+        /// <summary>
+        /// Will make the entire calendar (including header) a pixel height.
+        /// By default, this option is unset and the calendar's height is calculated by aspectRatio.
+        /// If an integer is specified, the height of the calendar will be guaranteed to be that exact pixel height. If the contents will not fit within the height, scrollbars will appear (new in version 2.1.0).
+        /// If a function is specified, this function will be called every time a height update is requested. This function should return a pixel value.
+        /// If "parent" is specified, the height of the calendar will match the height of its parent container element.
+        /// If "auto" is specified, the view's contents will assume a natural height and no scrollbars will be used. (new in version 2.1.0).
+        /// </summary>
+        public Unit Height { get; set; }
+
+        /// <summary>
+        /// Will make the calendar's content area a pixel height.
+        /// By default, this option is unset and the calendar's height is calculated by aspectRatio.
+        /// If an integer is specified, the height of the view will be guaranteed to be that exact pixel height. If the contents will not fit within the height, scrollbars will appear (new in version 2.1.0).
+        /// If a function is specified, this function will be called every time a height update is requested. This function should return a pixel value.
+        /// If "auto" is specified, the view's contents will assume a natural height and no scrollbars will be used. (new in version 2.1.0).
+        /// </summary>
+        public Unit ContentHeight { get; set; }
 
         /// <summary>
         /// Determines the width-to-height aspect ratio of the calendar.

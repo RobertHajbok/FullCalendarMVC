@@ -81,6 +81,9 @@
     <Compile Include="..\FullCalendar\Enums\ThemeSystem.cs">
       <Link>Enums\ThemeSystem.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Enums\UnitType.cs">
+      <Link>Enums\UnitType.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Extensions\ColorExtensions.cs">
       <Link>Extensions\ColorExtensions.cs</Link>
     </Compile>
@@ -102,6 +105,9 @@
     <Compile Include="..\FullCalendar\Infrastructure\ControlsBuilder.cs">
       <Link>Infrastructure\ControlsBuilder.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\CustomButton.cs">
+      <Link>Infrastructure\CustomButton.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\Footer.cs">
       <Link>Infrastructure\Footer.cs</Link>
     </Compile>
@@ -117,14 +123,17 @@
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BusinessHoursPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\BusinessHoursPropertyParser.cs</Link>
     </Compile>
-    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ButtonIconsParser.cs">
-      <Link>Infrastructure\PropertyParsers\ButtonIconsParser.cs</Link>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ButtonIconsPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ButtonIconsPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ColorPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\ColorPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\CustomButtonsPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\CustomButtonsPropertyParser.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DateTimePropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\DateTimePropertyParser.cs</Link>
@@ -158,6 +167,12 @@
     </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\UnitPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\UnitPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\Unit.cs">
+      <Link>Infrastructure\Unit.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Interfaces\IPropertyParser.cs">
       <Link>Interfaces\IPropertyParser.cs</Link>

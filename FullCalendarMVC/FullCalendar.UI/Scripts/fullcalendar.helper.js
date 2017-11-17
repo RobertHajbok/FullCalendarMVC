@@ -3,6 +3,7 @@
         // General Display
         header: { name: 'header', type: 'object' },
         footer: { name: 'footer', type: 'object' },
+        custombuttons: { name: 'customButtons', type: 'custom' },
         buttonicons: { name: 'buttonIcons', type: 'boolean/object' },
         themesystem: { name: 'themeSystem', type: 'string' },
         themebuttonicons: { name: 'themeButtonIcons', type: 'boolean/object' },
@@ -17,6 +18,8 @@
         weeknumbercalculation: { name: 'weekNumberCalculation', type: 'function/string' },
         businesshours: { name: 'businessHours', type: 'boolean/object' },
         shownoncurrentdates: { name: 'showNonCurrentDates', type: 'boolean' },
+        height: { name: 'height', type: 'custom' },
+        contentheight: { name: 'contentHeight', type: 'custom' },
         aspectratio: { name: 'aspectRatio', type: 'float' },
         windowresizedelay: { name: 'windowResizeDelay', type: 'integer' },
         viewrender: { name: 'viewRender', type: 'callback' },
@@ -133,16 +136,16 @@
             var data = $(calendars[i]).data();
             for (item in data) {
                 var calendarParameter = fullCalendarParameters[item.substring(2).toLowerCase()]
-                calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter.type);
+                calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter);
                 $(calendars[i]).removeAttr("data-fc-" + item.substring(2));
             }
-            //console.log(calendarObj);
+            console.log(calendarObj);
             $(calendars[i]).fullCalendar(calendarObj);
         }
     });
 
-    function parseData(data, type) {
-        switch (type) {
+    function parseData(data, param) {
+        switch (param.type) {
             case 'boolean':
             case 'string':
             case 'integer':
@@ -154,23 +157,12 @@
                 return moment(data, "MM/DD/YYYY hh:mm:ss");
             case 'array':
             case 'object':
-                return $.isArray(data) ? data : JSON.parse(data.replace(/\'/g, '"'));
+                return parseObjectData(data);
             case 'boolean/object':
-                try {
-                    if (typeof (data) === "boolean") {
-                        return data;
-                    }
-                    else {
-                        return $.isArray(data) ? data : JSON.parse(data.replace(/\'/g, '"'))
-                    };
-                }
-                catch (e) {
-                    console.error(e);
-                    return null;
-                }
+                return parseBooleanObjectData(data);
             case 'callback':
                 try {
-                    return eval('(' + JSON.parse(data.replace(/\'/g, '"')).function + ')');
+                    return parseFunctionData(JSON.parse(data.replace(/\'/g, '"')).function);
                 }
                 catch (e) {
                     console.error(e);
@@ -179,11 +171,64 @@
             case 'function/string':
                 var value = JSON.parse(data.replace(/\'/g, '"')).function;
                 try {
-                    return eval('(' + value + ')');
+                    return parseFunctionData(value);
                 }
                 catch (e) {
                     return value;
                 }
+            case 'custom':
+                return parseCustomData(data, param.name);
+        }
+    }
+
+    function parseObjectData(data) {
+        return $.isArray(data) ? data : JSON.parse(data.replace(/\'/g, '"'));
+    }
+
+    function parseBooleanObjectData(data) {
+        try {
+            if (typeof (data) === "boolean") {
+                return data;
+            }
+            else {
+                return parseObjectData(data);
+            };
+        }
+        catch (e) {
+            console.error(e);
+            return null;
+        }
+    }
+
+    function parseFunctionData(data) {
+        return eval('(' + data + ')');
+    }
+
+    function parseCustomData(data, name) {
+        switch (name) {
+            case 'customButtons':
+                var obj = JSON.parse(data.replace(/\'/g, '"'));
+                var objectToReturn = new Object();
+                Object.keys(obj).forEach(function (key) {
+                    objectToReturn[key] = new Object();
+                    Object.keys(obj[key]).forEach(function (childKey) {
+                        if (obj[key][childKey] && childKey == 'text')
+                            objectToReturn[key][childKey] = obj[key][childKey];
+                        else if (obj[key][childKey] && childKey == 'click')
+                            objectToReturn[key][childKey] = parseFunctionData(obj[key][childKey]);
+                        else if (obj[key][childKey] !== null)
+                            objectToReturn[key][childKey] = parseBooleanObjectData(obj[key][childKey]);
+                    });
+                });
+                return objectToReturn;
+            case 'height':
+            case 'contentHeight':
+                if (data === 'auto' || data === 'parent')
+                    return data;
+                else if (data.match(/px$/))
+                    return parseInt(data.slice(0, -2));
+                else
+                    return parseFunctionData(data);
         }
     }
 }(jQuery));
