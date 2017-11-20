@@ -476,6 +476,15 @@ namespace FullCalendar
         public string UnselectCancel { get; set; }
 
         /// <summary>
+        /// Determines whether the user is allowed to select periods of time that are occupied by events.
+        /// When the selectable option is activated, and false is given, the user will not be allowed to select periods of time that intersect with events on the calendar. If true is given (the default), the user will be able to freely select any period of time.
+        /// If a function is given, the function will be called once for every time the user's selection intersects with an event. If the function returns true, the selection will be allowed. If false, the selection will not be allowed.
+        /// The selectOverlap setting does not differentiate between background events or normal events. It treats both types of events the same unless you write custom logic in your callback function.
+        /// If selecting time slots in one of the agenda views, and there is an all-day event for that specific day, this will be considered an intersection, even though the events don't appear to visually overlap because the all-day slot is separate from the time slots.
+        /// </summary>
+        public string SelectOverlap { get; set; }
+
+        /// <summary>
         /// The minimum distance the user's mouse must travel after a mousedown, before a selection is allowed.
         /// The default value of 0 puts no restriction on the distance the mouse must travel.
         /// A non-zero value is useful for differentiating a selection from a dayClick.
@@ -648,6 +657,15 @@ namespace FullCalendar
         /// If enabled, the scroll container will automatically scroll once the mouse gets close to the edge.
         /// </summary>
         public bool DragScroll { get; set; } = true;
+
+        /// <summary>
+        /// Determines if events on the calendar, when dragged and resized, are allowed to overlap each other.
+        /// If false, no events are allowed to overlap. If true, all events are allowed to overlap (the default).
+        /// If given a function, the function will be called every time there is a pair of intersecting events, whether upon a user drag or resize. The function must return true if the overlap should be allowed and false otherwise. 
+        /// The eventOverlap setting does not differentiate between background events or normal events. It treats both types of events the same way.
+        /// If you need more granular control for which events are allowed to overlap, you can do this with each Event Source's overlap property or with each Event Object's overlap property.
+        /// </summary>
+        public string EventOverlap { get; set; }
 
         /// <summary>
         /// For touch devices, the amount of time the user most hold down before an event becomes draggable or a date becomes selectable.

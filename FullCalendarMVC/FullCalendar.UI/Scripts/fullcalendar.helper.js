@@ -88,6 +88,8 @@
         selecthelper: { name: 'selectHelper', type: 'boolean' },
         unselectauto: { name: 'unselectAuto', type: 'boolean' },
         unselectcancel: { name: 'unselectCancel', type: 'string' },
+        selectoverlap: { name: 'selectOverlap', type: 'boolean/function' }, 
+        selectallow: { name: 'selectAllow', type: 'callback' }, 
         selectmindistance: { name: 'selectMinDistance', type: 'integer' },
         selectlongpressdelay: { name: 'selectLongPressDelay', type: 'integer' },
         select: { name: 'select', type: 'callback' },
@@ -126,6 +128,8 @@
         dragrevertduration: { name: 'dragRevertDuration', type: 'integer' },
         dragopacity: { name: 'dragOpacity', type: 'float' },
         dragscroll: { name: 'dragScroll', type: 'boolean' },
+        eventoverlap: { name: 'eventOverlap', type: 'boolean/function' }, 
+        eventallow: { name: 'eventAllow', type: 'callback' }, 
         longpressdelay: { name: 'longPressDelay', type: 'integer' },
         eventlongpressdelay: { name: 'eventLongPressDelay', type: 'integer' },
         eventdragstart: { name: 'eventDragStart', type: 'callback' },
@@ -173,6 +177,8 @@
                 return parseObjectData(data);
             case 'boolean/object':
                 return parseBooleanObjectData(data);
+            case 'boolean/function':
+                return parseBooleanFunctionData(data);
             case 'integer/boolean':
                 return (typeof (data) === "number" || typeof (data) == "boolean") ? data : data == "True";
             case 'callback':
@@ -184,13 +190,6 @@
                     return null;
                 }
             case 'callback/string':
-                var value = JSON.parse(data.replace(/\'/g, '"')).function;
-                try {
-                    return parseFunctionData(value);
-                }
-                catch (e) {
-                    return value;
-                }
             case 'function/string':
                 var value = JSON.parse(data.replace(/\'/g, '"')).function;
                 try {
@@ -219,6 +218,20 @@
         }
         catch (e) {
             console.error(e);
+            return null;
+        }
+    }
+
+    function parseBooleanFunctionData(data) {
+        try {
+            if (typeof (data) === "boolean") {
+                return data;
+            }
+            else {
+                return parseFunctionData(data);
+            };
+        }
+        catch (e) {
             return null;
         }
     }

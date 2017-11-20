@@ -108,9 +108,9 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | selectHelper                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | unselectAuto                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | unselectCancel                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| selectOverlap                 |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| selectOverlap                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectConstraint              |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| selectAllow                   |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| selectAllow                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectMinDistance             |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectLongPressDelay          |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | select (callback)             |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -178,9 +178,9 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | dragRevertDuration             |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | dragOpacity                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | dragScroll                     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventOverlap                   |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventOverlap                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventConstraint                |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventAllow                     |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventAllow                     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | longPressDelay                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventLongPressDelay            |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventDragStart (callback)      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

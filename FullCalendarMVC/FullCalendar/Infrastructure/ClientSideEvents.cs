@@ -76,6 +76,13 @@
         #region Selection
 
         /// <summary>
+        /// Exact programmatic control over where the user can select.
+        /// This callback will be called for every new potential selection as the user is dragging.
+        /// The callback function will receive information about where the user is attempting to select (selectInfo) and must return either true or false.
+        /// </summary>
+        public string SelectAllow { get; set; }
+
+        /// <summary>
         /// A callback that will fire after a selection is made.
         /// </summary>
         public string Select { get; set; }
@@ -140,6 +147,13 @@
         #endregion
 
         #region Event Dragging & Resizing
+
+        /// <summary>
+        /// Exact programmatic control over where an event can be dropped.
+        /// After it has been determined that the eventOverlap and eventConstraint settings will allow the user to drop an event at a given position on the calendar, the eventAllow callback will be called. It will be called for every new potential droppable position as the user is dragging.
+        /// If specified, it must return either true or false as to whether the calendar will allow the given event (draggedEvent) to be dropped at the given location (dropInfo).
+        /// </summary>
+        public string EventAllow { get; set; }
 
         /// <summary>
         /// Triggered when event dragging begins.
