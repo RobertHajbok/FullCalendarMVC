@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Abstract\ControlsContainer.cs" />
     <Compile Include="Abstract\PropertyParserFactory.cs" />
+    <Compile Include="Entities\DayNames.cs" />
     <Compile Include="Enums\UnitType.cs" />
     <Compile Include="Entities\ButtonText.cs" />
     <Compile Include="Infrastructure\PropertyParsers\UnitPropertyParser.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs" />
     <Compile Include="Interfaces\IPropertyParser.cs" />
+    <Compile Include="Entities\MonthNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

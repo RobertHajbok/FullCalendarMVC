@@ -22,6 +22,8 @@
         contentheight: { name: 'contentHeight', type: 'custom' },
         aspectratio: { name: 'aspectRatio', type: 'float' },
         windowresizedelay: { name: 'windowResizeDelay', type: 'integer' },
+        eventlimit: { name: 'eventLimit', type: 'integer/boolean' },
+        eventlimitclick: { name: 'eventLimitClick', type: 'function/string' },
         viewrender: { name: 'viewRender', type: 'callback' },
         viewdestroy: { name: 'viewDestroy', type: 'callback' },
         dayrender: { name: 'dayRender', type: 'callback' },
@@ -62,9 +64,15 @@
         columnformat: { name: 'columnFormat', type: 'string' },
         titleformat: { name: 'titleFormat', type: 'string' },
         buttontext: { name: 'buttonText', type: 'object' },
+        monthnames: { name: 'monthNames', type: 'array' },
+        monthnamesshort: { name: 'monthNamesShort', type: 'array' },
+        daynames: { name: 'dayNames', type: 'array' },
+        daynamesshort: { name: 'dayNamesShort', type: 'array' },
         weeknumbertitle: { name: 'weekNumberTitle', type: 'string' },
         displayeventtime: { name: 'displayEventTime', type: 'boolean' },
         displayeventend: { name: 'displayEventEnd', type: 'boolean' },
+        eventlimittext: { name: 'eventLimitText', type: 'function/string' }, 
+        daypopoverformat: { name: 'dayPopoverFormat', type: 'string' }, 
 
         // Clicking & Hovering
         navlinks: { name: 'navLinks', type: 'boolean' },
@@ -163,6 +171,8 @@
                 return parseObjectData(data);
             case 'boolean/object':
                 return parseBooleanObjectData(data);
+            case 'integer/boolean':
+                return (typeof (data) === "number" || typeof (data) == "boolean") ? data : data == "True";
             case 'callback':
                 try {
                     return parseFunctionData(JSON.parse(data.replace(/\'/g, '"')).function);

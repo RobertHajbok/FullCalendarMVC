@@ -26,8 +26,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | aspectRatio                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | handleWindowResize            |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | windowResizeDelay             |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventLimit                    |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventLimitClick               |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventLimit                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| eventLimitClick               |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | viewRender (callback)         |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | viewDestroy (callback)        |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | dayRender (callback)          |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -85,15 +85,15 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | columnFormat                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | titleFormat                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | buttonText                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| monthNames                    |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| monthNamesShort               |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dayNames                      |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dayNamesShort                 |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| monthNames                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| monthNamesShort               |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| dayNames                      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| dayNamesShort                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | weekNumberTitle               |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | displayEventTime              |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | displayEventEnd               |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventLimitText                |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dayPopoverFormat              |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventLimitText                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| dayPopoverFormat              |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------                         | --------------------------                                                   |
 | navLinks                      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | navLinkDayClick (callback)    | View name version not supported yet                                            | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |

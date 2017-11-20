@@ -183,6 +183,26 @@ namespace FullCalendar
         /// </summary>
         public int WindowResizeDelay { get; set; }
 
+        /// <summary>
+        /// Limits the number of events displayed on a day.
+        /// When there are too many events, a link that looks like "+2 more" is displayed. The exact action that happens when the user clicks the link is determined by eventLimitClick.
+        /// A value of false (the default) will display all events as-is.
+        /// A value of true will limit the number of events to the height of the day cell.
+        /// An integer value will limit the events to a specific number of rows.
+        /// For the all-day section in the agenda views, a value of true will limit the number of events to 5.
+        /// </summary>
+        public object EventLimit { get; set; }
+
+        /// <summary>
+        /// Determines the action taken when the user clicks on a "more" link created by the eventLimit option.
+        /// "popover" (the default) - Displays a rectangular panel over the cell with a full list of events for that day.
+        /// "week" - Goes to a week view, as determined by the views in the header.
+        /// "day" - Goes to a day view, as determined by the views in the header.
+        /// view name - A literal string name of any of the Available Views.
+        /// function - A callback function, for executing arbitrary code.
+        /// </summary>
+        public string EventLimitClick { get; set; }
+
         #endregion
 
         #region Timezone
@@ -354,6 +374,30 @@ namespace FullCalendar
         public ButtonText ButtonText { get; set; }
 
         /// <summary>
+        /// Full names of months.
+        /// The default value will change based on the current locale.
+        /// </summary>
+        public MonthNames MonthNames { get; set; }
+
+        /// <summary>
+        /// Abbreviated names of months.
+        /// The default value will change based on the current locale.
+        /// </summary>
+        public MonthNames MonthNamesShort { get; set; }
+
+        /// <summary>
+        /// Full names of days-of-week.
+        /// The default value will change based on the current locale.
+        /// </summary>
+        public DayNames DayNames { get; set; }
+
+        /// <summary>
+        /// Abbreviated names of days-of-week.
+        /// The default value will change based on the current locale.
+        /// </summary>
+        public DayNames DayNamesShort { get; set; }
+
+        /// <summary>
         /// The heading text for week numbers.
         /// This text will go above the week number column in the month/basic views. It will go alongside the week number text in the top-left cell for agenda views.
         /// The default value will change based on the current locale.
@@ -374,6 +418,20 @@ namespace FullCalendar
         /// If an event does not have an end date/time, or displayEventTime is false, it won't be displayed anyway, regardless of this setting.
         /// </summary>
         public bool? DisplayEventEnd { get; set; }
+
+        /// <summary>
+        /// Determines the text of the link created by eventLimit setting.
+        /// If a string is specified, the resulting text will be prepended with the number of events being obscured, like "+2", resulting in something like "+2 more".
+        /// If a function is specified, the function will be given a single argument, the number of events being obscured, and must return the final text string to be used.
+        /// The default value of this option is affected by the current locale.
+        /// </summary>
+        public string EventLimitText { get; set; }
+
+        /// <summary>
+        /// Determines the date format of title of the popover created by the eventLimitClick option.
+        /// Must be a date formatting string. The default value is "dddd, MMMM D" for English and "LL" for other languages.
+        /// </summary>
+        public string DayPopoverFormat { get; set; }
 
         #endregion
 
@@ -428,7 +486,7 @@ namespace FullCalendar
         /// <summary>
         /// For touch devices, the amount of time the user most hold down before a date becomes selectable.
         /// This value is specified in milliseconds.
-        /// nly applicable when the calendar is being used on a touch device. Otherwise, there is no delay.
+        /// Only applicable when the calendar is being used on a touch device. Otherwise, there is no delay.
         /// </summary>
         public int SelectLongPressDelay { get; set; }
 

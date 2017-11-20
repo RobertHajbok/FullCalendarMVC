@@ -16,7 +16,8 @@ namespace FullCalendar.Abstract
             if (property.Name == nameof(FullCalendarParameters.ButtonIcons) || property.Name == nameof(FullCalendarParameters.ThemeButtonIcons) ||
                 property.Name == nameof(FullCalendarParameters.BootstrapGlyphicons))
                 propertyParser = new ButtonIconsPropertyParser(property);
-            else if (property.Name == nameof(FullCalendarParameters.WeekNumberCalculation))
+            else if (property.Name == nameof(FullCalendarParameters.WeekNumberCalculation) || property.Name == nameof(FullCalendarParameters.EventLimitText) ||
+                property.Name == nameof(FullCalendarParameters.EventLimitClick))
                 propertyParser = new FunctionPropertyParser(property);
             else if (property.PropertyType == typeof(ClientSideEvents))
                 propertyParser = new ClientSideEventsPropertyParser(property);

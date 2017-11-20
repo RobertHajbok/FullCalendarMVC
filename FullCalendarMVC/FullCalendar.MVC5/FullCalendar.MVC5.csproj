@@ -81,11 +81,17 @@
     <Compile Include="..\FullCalendar\Entities\CustomButton.cs">
       <Link>Entities\CustomButton.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Entities\DayNames.cs">
+      <Link>Entities\DayNames.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Entities\Footer.cs">
       <Link>Entities\Footer.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Entities\Header.cs">
       <Link>Entities\Header.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\MonthNames.cs">
+      <Link>Entities\MonthNames.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Entities\Unit.cs">
       <Link>Entities\Unit.cs</Link>
