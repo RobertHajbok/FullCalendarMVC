@@ -96,8 +96,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | dayPopoverFormat              |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------                         | --------------------------                                                   |
 | navLinks                      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| navLinkDayClick (callback)    | View name version not supported yet                                            | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
-| navLinkWeekClick (callback)   | View name version not supported yet                                            | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| navLinkDayClick (callback)    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| navLinkWeekClick (callback)   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | dayClick (callback)           |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventClick (callback)         |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventMouseover (callback)     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -122,8 +122,8 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | Duration                      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | date formatting string        |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | formatRange (function)        |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| get / set options dynamically |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| on / off                      |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| get / set options dynamically | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+| on / off                      | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------                         | --------------------------                                                   |
 | Event Object                  |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
 | Event Source Object           |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
@@ -134,7 +134,7 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | allDayDefault                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | startParam                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | endParam                      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| timezoneParam                 |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| timezoneParam                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | lazyFetching                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | defaultTimedEventDuration     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | defaultAllDayEventDuration    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -191,6 +191,6 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | eventResize (callback)         |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------        | ------------------------------------------------------                         | --------------------------                                                   |
 | droppable                      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| dropAccept                     |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| dropAccept                     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | drop (callback)                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventReceive (callback)        |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

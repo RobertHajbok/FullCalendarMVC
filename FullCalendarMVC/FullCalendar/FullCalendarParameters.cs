@@ -530,6 +530,12 @@ namespace FullCalendar
         public string EndParam { get; set; }
 
         /// <summary>
+        /// A parameter of this name will be sent to each JSON event feed. It describes the timezone of the startParam and endParam values, as well as the desired timezone of the returned events.
+        /// The value of this parameter will be a timezone string like "America/Chicago" or "UTC". It may also be unspecified. The precise behavior is determined by the timezone option.
+        /// </summary>
+        public string TimezoneParam { get; set; }
+
+        /// <summary>
         /// Determines when event fetching should occur.
         /// When set to true (the default), the calendar will only fetch events when it absolutely needs to, minimizing AJAX calls. 
         /// For example, say your calendar starts out in month view, in February. FullCalendar will fetch events for the entire month of February and store them in its internal cache. 
@@ -669,6 +675,13 @@ namespace FullCalendar
         /// When there is event data associated with the drag(see eventReceive), normal event overlap/constraint rules apply, such as eventOverlap and eventConstraint.
         /// </summary>
         public bool Droppable { get; set; }
+
+        /// <summary>
+        /// Provides a way to filter which elements can be dropped onto the calendar.
+        /// By default, after setting a calendar' droppable option to true, the calendar will accept any draggables that are dropped onto the calendar. The dropAccept option allows the calendar be more selective about which elements can/can't be dropped.
+        /// The value of dropAccept can be a string jQuery selector. It can also be a function that accepts the draggable item as a single argument, and returns true if the element can be dropped onto the calendar.
+        /// </summary>
+        public string DropAccept { get; set; }
 
         #endregion
 

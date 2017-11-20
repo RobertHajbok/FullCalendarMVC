@@ -76,8 +76,8 @@
 
         // Clicking & Hovering
         navlinks: { name: 'navLinks', type: 'boolean' },
-        navlinkdayclick: { name: 'navLinkDayClick', type: 'callback' },
-        navlinkweekclick: { name: 'navLinkWeekClick', type: 'callback' },
+        navlinkdayclick: { name: 'navLinkDayClick', type: 'callback/string' },
+        navlinkweekclick: { name: 'navLinkWeekClick', type: 'callback/string' },
         dayclick: { name: 'dayClick', type: 'callback' },
         eventclick: { name: 'eventClick', type: 'callback' },
         eventmouseover: { name: 'eventMouseover', type: 'callback' },
@@ -99,6 +99,7 @@
         alldaydefault: { name: 'allDayDefault', type: 'boolean' },
         startparam: { name: 'startParam', type: 'string' },
         endparam: { name: 'endParam', type: 'string' },
+        timezoneparam: { name: 'timezoneParam', type: 'string' },
         lazyfetching: { name: 'lazyFetching', type: 'boolean' },
         defaulttimedeventduration: { name: 'defaultTimedEventDuration', type: 'duration' },
         defaultalldayeventduration: { name: 'defaultAllDayEventDuration', type: 'duration' },
@@ -136,6 +137,7 @@
 
         // Dropping External Elements
         droppable: { name: 'droppable', type: 'boolean' },
+        dropaccept: { name: 'dropAccept', type: 'function/string' },
         drop: { name: 'drop', type: 'callback' },
         eventreceive: { name: 'eventReceive', type: 'callback' }
     }
@@ -180,6 +182,14 @@
                 catch (e) {
                     console.error(e);
                     return null;
+                }
+            case 'callback/string':
+                var value = JSON.parse(data.replace(/\'/g, '"')).function;
+                try {
+                    return parseFunctionData(value);
+                }
+                catch (e) {
+                    return value;
                 }
             case 'function/string':
                 var value = JSON.parse(data.replace(/\'/g, '"')).function;
