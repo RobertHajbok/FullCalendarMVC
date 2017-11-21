@@ -77,12 +77,10 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
     settings.Selectable = true;
     settings.SlotDuration = TimeSpan.FromMinutes(15);
     settings.Events = Url.Action("GetDiaryEvents", "Home");
+})
 ```
 
-- The calendar should be rendered. Check the options below to see if the option you want to use is supported by the HTML helper. For details about these,
-  check the [full documentation](https://fullcalendar.io/docs/) on the FullCalendar website, or play with some settings in the [FullCalendar.UI](https://github.com/HajbokRobert/FullCalendarMVC/tree/master/FullCalendarMVC/FullCalendar.UI)
-  project of the source code. Also, [this](https://www.codeproject.com/Articles/638674/Full-calendar-A-complete-web-diary-system-for-jQue#_articleTop) CodeProject article might
-  help you understand how the jQuery plugin is linked to ASP.NET MVC.
+- The calendar should be rendered. Check the options below to see if the option you want to use is supported by the HTML helper. For details about these, check the [full documentation](https://fullcalendar.io/docs/) on the FullCalendar website, or play with some settings in the [FullCalendar.UI](https://github.com/HajbokRobert/FullCalendarMVC/tree/master/FullCalendarMVC/FullCalendar.UI) project of the source code. Also, [this](https://www.codeproject.com/Articles/638674/Full-calendar-A-complete-web-diary-system-for-jQue#_articleTop) CodeProject article might help you understand how the jQuery plugin is linked to ASP.NET MVC.
 
 ### What are the available options?
 | Option                        | Comment                                                                        | Status                                                                       |
@@ -282,4 +280,4 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 Have a bug or a feature request? Please search for existing and closed issues before submitting a new one. If your problem or idea is not addressed yet, please open a new issue.
 
 ### License, etc.
-FullCalendarMVC is Copyright © 2017 Hajbok Robert under the [MIT](http://opensource.org/licenses/MIT) license.
+FullCalendarMVC is Copyright Â© 2017 Hajbok Robert under the [MIT](http://opensource.org/licenses/MIT) license.
