@@ -1,6 +1,89 @@
 ### What is FullCalendarMVC?
 FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalendar/fullcalendar). Current supported version is 3.5.1.
 
+### Where can I get it?
+First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [FullCalendar.MVC5](https://www.nuget.org/packages/FullCalendar.MVC5/) from the package manager console:
+
+```
+PM> Install-Package FullCalendar.MVC5
+```
+
+or [FullCalendar.MVC4](https://www.nuget.org/packages/FullCalendar.MVC4/) if you are using MVC 4:
+
+```
+PM> Install-Package FullCalendar.MVC4
+```
+
+### How to use it?
+- Reference the script and CSS files in your Bundle.config:
+
+``` csharp
+public static void RegisterBundles(BundleCollection bundles)
+{
+    bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
+        "~/Scripts/jquery-{version}.js",
+        "~/Scripts/moment.js",
+        "~/Scripts/fullcalendar*"));
+
+    bundles.Add(new StyleBundle("~/bundles/styles").Include(
+        "~/Content/fullcalendar.css"));
+}
+```
+
+or in the view (Shared/_Layout.cshtml for example):
+
+``` html
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/Scripts/fullcalendar.min.js"></script>
+<script src="~/Scripts/fullcalendar.helper.min.js"></script>
+<link href="~/Content/fullcalendar.min.css" rel="stylesheet" />
+```
+
+- Create an Action in your Controller to get the data:
+``` csharp
+public JsonResult GetDiaryEvents(DateTime start, DateTime end)
+{
+    return Json(LoadAllAppointmentsInDateRange(start, end).Select(x => new
+    {
+        id = x.ID,
+        title = x.Title,
+        start = x.StartDateString,
+        end = x.EndDateString,
+        color = x.StatusColor,
+        className = x.ClassName,
+        someKey = x.SomeImportantKeyID,
+        allDay = false
+    }).ToArray(), JsonRequestBehavior.AllowGet);
+}
+```
+
+- Use the HTML helper in your view, like below (notice the Events property referencing the Action above):
+``` csharp
+@Html.FullCalendar(settings =>
+{
+    settings.Name = "calendar";
+    settings.CssClass = "css-test";
+    settings.Header = new Header
+    {
+        Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
+                    .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
+        Center = new ControlsBuilder().AddTitle(),
+        Right = new ControlsBuilder("month,agendaWeek ").AddView(CalendarView.AgendaDay)
+    };
+    settings.DefaultView = CalendarView.AgendaDay;
+    settings.Editable = true;
+    settings.AllDaySlot = false;
+    settings.Selectable = true;
+    settings.SlotDuration = TimeSpan.FromMinutes(15);
+    settings.Events = Url.Action("GetDiaryEvents", "Home");
+```
+
+- The calendar should be rendered. Check the options below to see if the option you want to use is supported by the HTML helper. For details about these,
+  check the [full documentation](https://fullcalendar.io/docs/) on the FullCalendar website, or play with some settings in the [FullCalendar.UI](https://github.com/HajbokRobert/FullCalendarMVC/tree/master/FullCalendarMVC/FullCalendar.UI)
+  project of the source code. Also, [this](https://www.codeproject.com/Articles/638674/Full-calendar-A-complete-web-diary-system-for-jQue#_articleTop) CodeProject article might
+  help you understand how the jQuery plugin is linked to ASP.NET MVC.
+
 ### What are the available options?
 | Option                        | Comment                                                                        | Status                                                                       |
 |-------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------------|
@@ -194,3 +277,9 @@ FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalen
 | dropAccept                     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | drop (callback)                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventReceive (callback)        |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
+
+### Do you have an issue?
+Have a bug or a feature request? Please search for existing and closed issues before submitting a new one. If your problem or idea is not addressed yet, please open a new issue.
+
+### License, etc.
+FullCalendarMVC is Copyright © 2017 Hajbok Robert under the [MIT](http://opensource.org/licenses/MIT) license.
