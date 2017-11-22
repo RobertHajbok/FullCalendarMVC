@@ -485,6 +485,13 @@ namespace FullCalendar
         public string SelectOverlap { get; set; }
 
         /// <summary>
+        /// Limits user selection to certain windows of time.
+        /// This value behaves identically to the way eventConstraint limits where events can go. It accepts the same values.
+        /// Only applicable when the selectable option is activated.
+        /// </summary>
+        public SelectConstraint SelectConstraint { get; set; }
+
+        /// <summary>
         /// The minimum distance the user's mouse must travel after a mousedown, before a selection is allowed.
         /// The default value of 0 puts no restriction on the distance the mouse must travel.
         /// A non-zero value is useful for differentiating a selection from a dayClick.
@@ -666,6 +673,11 @@ namespace FullCalendar
         /// If you need more granular control for which events are allowed to overlap, you can do this with each Event Source's overlap property or with each Event Object's overlap property.
         /// </summary>
         public string EventOverlap { get; set; }
+
+        /// <summary>
+        /// Limits event dragging and resizing to certain windows of time.
+        /// </summary>
+        public EventConstraint EventConstraint { get; set;}
 
         /// <summary>
         /// For touch devices, the amount of time the user most hold down before an event becomes draggable or a date becomes selectable.

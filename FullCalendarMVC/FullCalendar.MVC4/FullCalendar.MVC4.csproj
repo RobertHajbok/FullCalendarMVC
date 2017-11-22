@@ -82,6 +82,9 @@
     <Compile Include="..\FullCalendar\Entities\DayNames.cs">
       <Link>Entities\DayNames.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Entities\EventConstraint.cs">
+      <Link>Entities\EventConstraint.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Entities\Footer.cs">
       <Link>Entities\Footer.cs</Link>
     </Compile>
@@ -90,6 +93,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Entities\MonthNames.cs">
       <Link>Entities\MonthNames.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\SelectConstraint.cs">
+      <Link>Entities\SelectConstraint.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Entities\Unit.cs">
       <Link>Entities\Unit.cs</Link>
@@ -186,6 +192,12 @@
     </Compile>
     <Compile Include="..\FullCalendar\Interfaces\IPropertyParser.cs">
       <Link>Interfaces\IPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\NullPropertiesConverter.cs">
+      <Link>Serialization\NullPropertiesConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableBusinessHour.cs">
+      <Link>Serialization\SerializableObjects\SerializableBusinessHour.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

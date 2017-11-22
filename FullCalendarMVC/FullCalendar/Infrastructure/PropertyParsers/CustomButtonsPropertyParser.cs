@@ -1,6 +1,5 @@
 ﻿using FullCalendar.Interfaces;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Reflection;
 using System.Web.Script.Serialization;
 

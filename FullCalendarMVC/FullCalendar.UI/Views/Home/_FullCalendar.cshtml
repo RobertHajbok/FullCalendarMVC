@@ -158,7 +158,7 @@
     //{
     //    new BusinessHour
     //    {
-    //        Dow = new List<DayOfWeek> { DayOfWeek.Thursday, DayOfWeek.Friday},
+    //        Dow = new List<DayOfWeek> { DayOfWeek.Thursday, DayOfWeek.Friday },
     //        Start = TimeSpan.FromHours(10),
     //        End = TimeSpan.FromHours(15)
     //    },
@@ -234,4 +234,11 @@
     //    return stillEvent.allDay && movingEvent.allDay;
     //}";
     //settings.SelectOverlap = "function(event) { return event.rendering === 'background'; }";
+    //settings.EventConstraint = new EventConstraint(new BusinessHour
+    //{
+    //    Dow = new List<DayOfWeek> { DayOfWeek.Thursday, DayOfWeek.Friday },
+    //    Start = TimeSpan.FromHours(10),
+    //    End = TimeSpan.FromHours(15)
+    //});
+    //settings.SelectConstraint = new SelectConstraint("businessHours");
 })

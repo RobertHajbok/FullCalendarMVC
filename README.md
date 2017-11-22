@@ -192,7 +192,7 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 | unselectAuto                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | unselectCancel                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectOverlap                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| selectConstraint              |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| selectConstraint              |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectAllow                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectMinDistance             |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | selectLongPressDelay          |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -262,7 +262,7 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 | dragOpacity                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | dragScroll                     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventOverlap                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventConstraint                |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventConstraint                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventAllow                     |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | longPressDelay                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventLongPressDelay            |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

@@ -66,6 +66,8 @@
     <Compile Include="Abstract\ControlsContainer.cs" />
     <Compile Include="Abstract\PropertyParserFactory.cs" />
     <Compile Include="Entities\DayNames.cs" />
+    <Compile Include="Entities\EventConstraint.cs" />
+    <Compile Include="Entities\SelectConstraint.cs" />
     <Compile Include="Enums\UnitType.cs" />
     <Compile Include="Entities\ButtonText.cs" />
     <Compile Include="Infrastructure\PropertyParsers\UnitPropertyParser.cs" />
@@ -102,9 +104,11 @@
     <Compile Include="Infrastructure\PropertyParsers\StringPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs" />
+    <Compile Include="Serialization\SerializableObjects\SerializableBusinessHour.cs" />
     <Compile Include="Interfaces\IPropertyParser.cs" />
     <Compile Include="Entities\MonthNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\NullPropertiesConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bundleconfig.json" />
