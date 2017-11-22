@@ -232,7 +232,7 @@ namespace FullCalendar
         /// <summary>
         /// The initial view when the calendar loads. Any of the Available Views.
         /// </summary>
-        public CalendarView DefaultView { get; set; } = CalendarView.Month;
+        public string DefaultView { get; set; }
 
         #endregion
 
@@ -332,6 +332,46 @@ namespace FullCalendar
         /// The indicator will automatically reposition itself while the user is viewing the calendar.
         /// </summary>
         public bool NowIndicator { get; set; }
+
+        /// <summary>
+        /// Sets the exact date range that is visible in a view.
+        /// </summary>
+        public VisibleRange VisibleRange { get; set; }
+
+        /// <summary>
+        /// Limits which dates the user can navigate to and where events can go.
+        /// Dates outside of the valid range will be grayed-out. The user will not be able to drag or resize events into these areas.
+        /// The prev/next buttons in the header will be grayed out to prevent the user from navigating to an invalid range.
+        /// </summary>
+        public ValidRange ValidRange { get; set; }
+
+        /// <summary>
+        /// How far into the future/past the calendar navigates when prev/next is executed.
+        /// Determines how far the calendar will jump when the user presses the prev/next buttons in the header or when the prev or next methods are executed.
+        /// When using a Standard View, it is unnecessary to specify dateIncrement.
+        /// When using a Custom View or Generic View with a specified duration, the duration value will be the default for dateIncrement.
+        /// </summary>
+        public Duration DateIncrement { get; set; }
+
+        /// <summary>
+        /// Determines the first visible day for a Custom or Generic view.
+        /// When a Custom View or Generic View is being used, and you'd like to guarantee that the view begins at a certain interval, like the start-of-week or start-of-month, specify a value like "week" or "month".
+        /// If not specified, a reasonable default will be generated based on the view's duration.
+        /// If a view's range is explicity defined with visibleRange, dateAlignment will be ignored.
+        /// </summary>
+        public DateAlignment? DateAlignment { get; set; }
+
+        /// <summary>
+        /// Sets the exact duration of a Custom or Generic view.
+        /// If the duration is specified like {weeks:1}, then the dateAlignment will automatically default to start-of-week. However, if it is specified as {days:7}, then no such alignment will happen.
+        /// </summary>
+        public Duration Duration { get; set; }
+
+        /// <summary>
+        /// Sets the exact number of days displayed in a Custom or Generic view, regardless of weekends or hiddenDays.
+        /// When a view's range is specified with a duration, hidden days will simply be omitted, and the view will stretch to fill the missing space. However, if you specify dayCount, you are guaranteed to see a certain number of days.
+        /// </summary>
+        public int DayCount { get; set; }
 
         #endregion
 

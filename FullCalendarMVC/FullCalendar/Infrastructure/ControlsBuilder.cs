@@ -66,11 +66,17 @@
         /// <summary>
         /// Adds a button that will switch the calendar to any of the Available Views to the stirng.
         /// </summary>
-        /// <param name="calendarView">Calendar view</param>
+        /// <param name="availableView">Calendar view</param>
         /// <returns>Instance of the <see cref="ControlsBuilder"/></returns>
-        public ControlsBuilder AddView(CalendarView calendarView)
+        public ControlsBuilder AddView(AvailableView availableView)
         {
-            _buildedString += calendarView.ToString().FirstCharToLower();
+            _buildedString += availableView.ToString().FirstCharToLower();
+            return this;
+        }
+
+        public ControlsBuilder AddView(GenericView genericView)
+        {
+            _buildedString += genericView.ToString().FirstCharToLower();
             return this;
         }
 

@@ -121,9 +121,9 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 | -----------------------       | ------------------------------------------------------                         | --------------------                                                   |
 | Available Views               |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | Custom Views                  |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| Generic Views                 |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| Generic Views                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | View-Specific Options         |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| View Object                   |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| View Object                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | defaultView                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | getView (method)              | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | changeView (method)           | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
@@ -146,12 +146,12 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 | -----------------------       | ------------------------------------------------------                         | --------------------                                                   |
 | defaultDate                   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | nowIndicator                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| visibleRange                  |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| validRange                    |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dateIncrement                 |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dateAlignment                 |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| duration                      |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| dayCount                      |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| visibleRange                  | Custom views not supported yet                                                 | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| validRange                    | Custom views not supported yet                                                 | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| dateIncrement                 | Custom views not supported yet                                                 | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| dateAlignment                 | Custom views not supported yet                                                 | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| duration                      | Custom views not supported yet                                                 | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| dayCount                      | Custom views not supported yet                                                 | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
 | prev (method)                 | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | next (method)                 | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | prevYear (method)             | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

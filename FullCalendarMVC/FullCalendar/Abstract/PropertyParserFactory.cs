@@ -31,7 +31,7 @@ namespace FullCalendar.Abstract
                 propertyParser = new ThemeSystemPropertyParser(property);
             else if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
                 propertyParser = new BoolPropertyParser(property);
-            else if (property.PropertyType.BaseType == typeof(Enum))
+            else if (property.PropertyType.BaseType == typeof(Enum) || Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)
                 propertyParser = new EnumPropertyParser(property);
             else if (property.PropertyType == typeof(TimeSpan))
                 propertyParser = new TimeSpanPropertyParser(property);

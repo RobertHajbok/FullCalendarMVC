@@ -34,7 +34,7 @@
         now: { name: 'now', type: 'moment' },
 
         // Views
-        defaultview: { name: 'defaultView', type: 'string' },
+        defaultview: { name: 'defaultView', type: 'custom' },
 
         // Agenda Options
         alldayslot: { name: 'allDaySlot', type: 'boolean' },
@@ -57,6 +57,12 @@
         // Current Date
         defaultdate: { name: 'defaultDate', type: 'moment' },
         nowindicator: { name: 'nowIndicator', type: 'boolean' },
+        visiblerange: { name: 'visibleRange', type: 'function/object' },
+        validrange: { name: 'validRange', type: 'function/object' },
+        dateincrement: { name: 'dateIncrement', type: 'object' },
+        datealignment: { name: 'dateAlignment', type: 'string' },
+        duration: { name: 'duration', type: 'object' },
+        daycount: { name: 'dayCount', type: 'integer' },
 
         // Text/Time Customization
         locale: { name: 'locale', type: 'string' },
@@ -71,8 +77,8 @@
         weeknumbertitle: { name: 'weekNumberTitle', type: 'string' },
         displayeventtime: { name: 'displayEventTime', type: 'boolean' },
         displayeventend: { name: 'displayEventEnd', type: 'boolean' },
-        eventlimittext: { name: 'eventLimitText', type: 'function/string' }, 
-        daypopoverformat: { name: 'dayPopoverFormat', type: 'string' }, 
+        eventlimittext: { name: 'eventLimitText', type: 'function/string' },
+        daypopoverformat: { name: 'dayPopoverFormat', type: 'string' },
 
         // Clicking & Hovering
         navlinks: { name: 'navLinks', type: 'boolean' },
@@ -88,9 +94,9 @@
         selecthelper: { name: 'selectHelper', type: 'boolean' },
         unselectauto: { name: 'unselectAuto', type: 'boolean' },
         unselectcancel: { name: 'unselectCancel', type: 'string' },
-        selectoverlap: { name: 'selectOverlap', type: 'boolean/function' }, 
-        selectconstraint: { name: 'selectConstraint', type: 'object' }, 
-        selectallow: { name: 'selectAllow', type: 'callback' }, 
+        selectoverlap: { name: 'selectOverlap', type: 'boolean/function' },
+        selectconstraint: { name: 'selectConstraint', type: 'object' },
+        selectallow: { name: 'selectAllow', type: 'callback' },
         selectmindistance: { name: 'selectMinDistance', type: 'integer' },
         selectlongpressdelay: { name: 'selectLongPressDelay', type: 'integer' },
         select: { name: 'select', type: 'callback' },
@@ -129,9 +135,9 @@
         dragrevertduration: { name: 'dragRevertDuration', type: 'integer' },
         dragopacity: { name: 'dragOpacity', type: 'float' },
         dragscroll: { name: 'dragScroll', type: 'boolean' },
-        eventoverlap: { name: 'eventOverlap', type: 'boolean/function' }, 
-        eventconstraint: { name: 'eventConstraint', type: 'object' }, 
-        eventallow: { name: 'eventAllow', type: 'callback' }, 
+        eventoverlap: { name: 'eventOverlap', type: 'boolean/function' },
+        eventconstraint: { name: 'eventConstraint', type: 'object' },
+        eventallow: { name: 'eventAllow', type: 'callback' },
         longpressdelay: { name: 'longPressDelay', type: 'integer' },
         eventlongpressdelay: { name: 'eventLongPressDelay', type: 'integer' },
         eventdragstart: { name: 'eventDragStart', type: 'callback' },
@@ -186,8 +192,7 @@
             case 'callback':
                 try {
                     return parseFunctionData(JSON.parse(data.replace(/\'/g, '"')).function);
-                }
-                catch (e) {
+                } catch (e) {
                     console.error(e);
                     return null;
                 }
@@ -196,9 +201,17 @@
                 var value = JSON.parse(data.replace(/\'/g, '"')).function;
                 try {
                     return parseFunctionData(value);
-                }
-                catch (e) {
+                } catch (e) {
                     return value;
+                }
+            case 'function/object':
+                var returnValue = null;
+                try {
+                    returnValue = parseFunctionData(data);
+                } catch (e) {
+                    returnValue = parseObjectData(data);
+                } finally {
+                    return returnValue;
                 }
             case 'custom':
                 return parseCustomData(data, param.name);
@@ -217,8 +230,7 @@
             else {
                 return parseObjectData(data);
             };
-        }
-        catch (e) {
+        } catch (e) {
             console.error(e);
             return null;
         }
@@ -232,8 +244,7 @@
             else {
                 return parseFunctionData(data);
             };
-        }
-        catch (e) {
+        } catch (e) {
             return null;
         }
     }
@@ -244,6 +255,8 @@
 
     function parseCustomData(data, name) {
         switch (name) {
+            case 'defaultView':
+                return data.charAt(0).toLowerCase() + data.slice(1);
             case 'customButtons':
                 var obj = JSON.parse(data.replace(/\'/g, '"'));
                 var objectToReturn = new Object();

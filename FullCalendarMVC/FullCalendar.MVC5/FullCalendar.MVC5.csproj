@@ -85,6 +85,9 @@
     <Compile Include="..\FullCalendar\Entities\DayNames.cs">
       <Link>Entities\DayNames.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Entities\Duration.cs">
+      <Link>Entities\Duration.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Entities\EventConstraint.cs">
       <Link>Entities\EventConstraint.cs</Link>
     </Compile>
@@ -103,8 +106,20 @@
     <Compile Include="..\FullCalendar\Entities\Unit.cs">
       <Link>Entities\Unit.cs</Link>
     </Compile>
-    <Compile Include="..\FullCalendar\Enums\CalendarView.cs">
-      <Link>Enums\CalendarView.cs</Link>
+    <Compile Include="..\FullCalendar\Entities\ValidRange.cs">
+      <Link>Entities\ValidRange.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\VisibleRange.cs">
+      <Link>Entities\VisibleRange.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\AvailableView.cs">
+      <Link>Enums\AvailableView.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\DateAlignment.cs">
+      <Link>Enums\DateAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\GenericView.cs">
+      <Link>Enums\GenericView.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Enums\HeaderButton.cs">
       <Link>Enums\HeaderButton.cs</Link>
@@ -201,6 +216,12 @@
     </Compile>
     <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableBusinessHour.cs">
       <Link>Serialization\SerializableObjects\SerializableBusinessHour.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableDuration.cs">
+      <Link>Serialization\SerializableObjects\SerializableDuration.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableValidRange.cs">
+      <Link>Serialization\SerializableObjects\SerializableValidRange.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

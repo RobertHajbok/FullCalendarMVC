@@ -1,6 +1,6 @@
 ﻿namespace FullCalendar
 {
-    public enum CalendarView
+    public enum AvailableView
     {
         Month,
         BasicWeek,
