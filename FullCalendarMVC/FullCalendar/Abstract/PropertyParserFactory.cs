@@ -23,6 +23,8 @@ namespace FullCalendar.Abstract
                 propertyParser = new ClientSideEventsPropertyParser(property);
             else if (property.PropertyType == typeof(Dictionary<string, CustomButton>))
                 propertyParser = new CustomButtonsPropertyParser(property);
+            else if (property.PropertyType == typeof(Dictionary<string, View>))
+                propertyParser = new CustomViewPropertyParser(property);
             else if (property.PropertyType == typeof(IEnumerable<BusinessHour>))
                 propertyParser = new BusinessHoursPropertyParser(property);
             else if (property.PropertyType == typeof(DayOfWeek))

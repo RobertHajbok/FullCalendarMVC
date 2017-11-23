@@ -230,6 +230,14 @@ namespace FullCalendar
         #region Views
 
         /// <summary>
+        /// It is possible to customize the existing Available Views in addition to programming your own from scratch.
+        /// We use the views option similar to how View-Specific Options work but with the very important addition of the type property. Also, a date-range parameter is required, whether is be duration, visibleRange, or dayCount.
+        /// It is advised to choose view names with the numbers spelled out like "four" instead of "4" because JavaScript disallows identifiers beginning with numbers, like "4day".
+        /// If your calendar hosts only one custom view, a Generic View is a simpler way to define it.
+        /// </summary>
+        public Dictionary<string, View> Views { get; set; }
+
+        /// <summary>
         /// The initial view when the calendar loads. Any of the Available Views.
         /// </summary>
         public string DefaultView { get; set; }

@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Abstract\ControlsContainer.cs" />
     <Compile Include="Abstract\PropertyParserFactory.cs" />
+    <Compile Include="Entities\View.cs" />
     <Compile Include="Entities\DayNames.cs" />
     <Compile Include="Entities\Duration.cs" />
     <Compile Include="Entities\EventConstraint.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Enums\GenericView.cs" />
     <Compile Include="Enums\UnitType.cs" />
     <Compile Include="Entities\ButtonText.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\CustomViewPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\UnitPropertyParser.cs" />
     <Compile Include="Entities\Unit.cs" />
     <Compile Include="Enums\AvailableView.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="Serialization\NullPropertiesConverter.cs" />
     <Compile Include="Serialization\SerializableObjects\SerializableDuration.cs" />
     <Compile Include="Serialization\SerializableObjects\SerializableValidRange.cs" />
+    <Compile Include="Serialization\SerializableObjects\SerializableView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bundleconfig.json" />

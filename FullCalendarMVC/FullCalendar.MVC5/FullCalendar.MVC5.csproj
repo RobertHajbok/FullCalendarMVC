@@ -109,6 +109,9 @@
     <Compile Include="..\FullCalendar\Entities\ValidRange.cs">
       <Link>Entities\ValidRange.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Entities\View.cs">
+      <Link>Entities\View.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Entities\VisibleRange.cs">
       <Link>Entities\VisibleRange.cs</Link>
     </Compile>
@@ -172,6 +175,9 @@
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\CustomButtonsPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\CustomButtonsPropertyParser.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\CustomViewPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\CustomViewPropertyParser.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DateTimePropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\DateTimePropertyParser.cs</Link>
     </Compile>
@@ -222,6 +228,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableValidRange.cs">
       <Link>Serialization\SerializableObjects\SerializableValidRange.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableView.cs">
+      <Link>Serialization\SerializableObjects\SerializableView.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

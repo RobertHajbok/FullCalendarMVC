@@ -34,6 +34,7 @@
         now: { name: 'now', type: 'moment' },
 
         // Views
+        views: { name: 'views', type: 'custom' },
         defaultview: { name: 'defaultView', type: 'custom' },
 
         // Agenda Options
@@ -280,6 +281,18 @@
                     return parseInt(data.slice(0, -2));
                 else
                     return parseFunctionData(data);
+            case 'views':
+                var obj = parseObjectData(data);
+                Object.keys(obj).forEach(function (key) {
+                    Object.keys(obj[key]).forEach(function (childKey) {
+                        if (obj[key][childKey] && childKey == 'visibleRange') {
+                            try {
+                                obj[key][childKey] = parseFunctionData(obj[key][childKey]);
+                            } catch (e) { }
+                        }
+                    });
+                });
+                return obj;
         }
     }
 }(jQuery));
