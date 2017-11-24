@@ -88,6 +88,9 @@
     <Compile Include="..\FullCalendar\Entities\EventConstraint.cs">
       <Link>Entities\EventConstraint.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Entities\EventSource.cs">
+      <Link>Entities\EventSource.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Entities\Footer.cs">
       <Link>Entities\Footer.cs</Link>
     </Compile>
@@ -126,6 +129,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Enums\HeaderSeparator.cs">
       <Link>Enums\HeaderSeparator.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\Rendering.cs">
+      <Link>Enums\Rendering.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Enums\ThemeSystem.cs">
       <Link>Enums\ThemeSystem.cs</Link>
@@ -187,6 +193,9 @@
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EnumPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\EnumPropertyParser.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EventSourcesPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\EventSourcesPropertyParser.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\FloatPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\FloatPropertyParser.cs</Link>
     </Compile>
@@ -222,6 +231,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableDuration.cs">
       <Link>Serialization\SerializableObjects\SerializableDuration.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableEventSource.cs">
+      <Link>Serialization\SerializableObjects\SerializableEventSource.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableValidRange.cs">
       <Link>Serialization\SerializableObjects\SerializableValidRange.cs</Link>

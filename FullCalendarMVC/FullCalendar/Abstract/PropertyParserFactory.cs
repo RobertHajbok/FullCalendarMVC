@@ -27,6 +27,8 @@ namespace FullCalendar.Abstract
                 propertyParser = new CustomViewPropertyParser(property);
             else if (property.PropertyType == typeof(IEnumerable<BusinessHour>))
                 propertyParser = new BusinessHoursPropertyParser(property);
+            else if (property.PropertyType == typeof(IEnumerable<EventSource>))
+                propertyParser = new EventSourcesPropertyParser(property);
             else if (property.PropertyType == typeof(DayOfWeek))
                 propertyParser = new DayOfWeekPropertyParser(property);
             else if (property.PropertyType == typeof(ThemeSystem))

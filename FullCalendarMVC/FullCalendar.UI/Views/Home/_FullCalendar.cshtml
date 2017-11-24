@@ -15,7 +15,40 @@
     settings.Selectable = true;
     settings.SlotDuration = TimeSpan.FromMinutes(15);
     settings.Events = Url.Action("GetDiaryEvents", "Home");
-    //settings.EventSources = new string[] { Url.Action("GetDiaryEvents", "Home"), Url.Action("GetDiaryEvents", "Home") };
+    //settings.EventSources = new List<EventSource>
+    //{
+    //    new EventSource
+    //    {
+    //        Id = 1,
+    //        BackgroundColor = Color.DarkGray,
+    //        BorderColor = Color.Blue,
+    //        TextColor = Color.Gold,
+    //        ClassName = "test",
+    //        Rendering = Rendering.Background,
+    //        Constraint = new EventConstraint(new BusinessHour
+    //        {
+    //            Dow = new List<DayOfWeek> { DayOfWeek.Thursday, DayOfWeek.Friday },
+    //            Start = TimeSpan.FromHours(10),
+    //            End = TimeSpan.FromHours(15)
+    //        }),
+    //        AllDayDefault = true,
+    //        Url = Url.Action("GetDiaryEvents", "Home"),
+    //    },
+    //    new EventSource
+    //    {
+    //        Id = 2,
+    //        Url = Url.Action("GetDiaryEvents", "Home"),
+    //        Type = "POST",
+    //        Error = @"function() {
+    //            alert('there was an error while fetching events!');
+    //        }",
+    //        Data = new Dictionary<string, string>
+    //        {
+    //            { "custom_param1", "something" },
+    //            { "custom_param2", "somethingelse" }
+    //        }
+    //    }
+    //};
     //settings.EventRenderWait = 2000;
     //settings.NextDayThreshold = TimeSpan.FromHours(11);
     //settings.EventTextColor = Color.Gray;

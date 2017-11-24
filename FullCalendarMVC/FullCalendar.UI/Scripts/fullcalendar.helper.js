@@ -105,7 +105,7 @@
 
         // Event Data
         events: { name: 'events', type: 'string' },
-        eventsources: { name: 'eventSources', type: 'array' },
+        eventsources: { name: 'eventSources', type: 'custom' },
         alldaydefault: { name: 'allDayDefault', type: 'boolean' },
         startparam: { name: 'startParam', type: 'string' },
         endparam: { name: 'endParam', type: 'string' },
@@ -191,12 +191,7 @@
             case 'integer/boolean':
                 return (typeof (data) === "number" || typeof (data) == "boolean") ? data : data == "True";
             case 'callback':
-                try {
-                    return parseFunctionData(JSON.parse(data.replace(/\'/g, '"')).function);
-                } catch (e) {
-                    console.error(e);
-                    return null;
-                }
+                parseCallbackData(JSON.parse(data.replace(/\'/g, '"')).function);
             case 'callback/string':
             case 'function/string':
                 var value = JSON.parse(data.replace(/\'/g, '"')).function;
@@ -254,6 +249,15 @@
         return eval('(' + data + ')');
     }
 
+    function parseCallbackData(data) {
+        try {
+            return parseFunctionData(data);
+        } catch (e) {
+            console.error(e);
+            return null;
+        }
+    }
+
     function parseCustomData(data, name) {
         switch (name) {
             case 'defaultView':
@@ -289,6 +293,29 @@
                             try {
                                 obj[key][childKey] = parseFunctionData(obj[key][childKey]);
                             } catch (e) { }
+                        }
+                    });
+                });
+                return obj;
+            case 'eventSources':
+                var obj = parseObjectData(data);
+                Object.keys(obj).forEach(function (key) {
+                    Object.keys(obj[key]).forEach(function (childKey) {
+                        if (obj[key][childKey] && childKey == 'constraint') {
+                            try {
+                                obj[key][childKey] = parseObjectData(obj[key][childKey]);
+                            } catch (e) { }
+                        } else if (obj[key][childKey] && (childKey == 'eventDataTransform' || childKey == 'success' || childKey == 'error')) {
+                            obj[key][childKey] = parseCallbackData(obj[key][childKey]);
+                        } else if (obj[key][childKey] && childKey == 'data') {
+                            var returnValue = null;
+                            try {
+                                returnValue = parseFunctionData(obj[key][childKey]);
+                            } catch (e) {
+                                returnValue = obj[key][childKey];
+                            } finally {
+                                obj[key][childKey] = returnValue;
+                            }
                         }
                     });
                 });

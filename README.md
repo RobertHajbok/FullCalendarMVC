@@ -207,11 +207,11 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 | on / off                      | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------                         | --------------------                                                         |
 | Event Object                  |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| Event Source Object           |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| Event Source Object           | Class for Event Source Options                                                 | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
 | events (as an array)          |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| events (as a json feed)       |  Extended Form is not supported yet                                            | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| events (as a json feed)       | Might need to add some AJAX parameters to Extended Form                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | events (as a function)        |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
-| eventSources                  |  Only JSON feed URL version is supported for now                               | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| eventSources                  | Only JSON feed URL version is supported for now                                | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
 | allDayDefault                 |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | startParam                    |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | endParam                      |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

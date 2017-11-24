@@ -572,7 +572,7 @@ namespace FullCalendar
         /// This option is used instead of the events option.
         /// You can put any number of event arrays, functions, JSON feed URLs, or full-out Event Source Objects into the eventSources array.
         /// </summary>
-        public string[] EventSources { get; set; }
+        public IEnumerable<EventSource> EventSources { get; set; }
 
         /// <summary>
         /// Determines the default value for each Event Object's allDay property when it is unspecified.
