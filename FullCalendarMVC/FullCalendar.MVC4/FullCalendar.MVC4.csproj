@@ -85,6 +85,12 @@
     <Compile Include="..\FullCalendar\Entities\Duration.cs">
       <Link>Entities\Duration.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Entities\Event.cs">
+      <Link>Entities\Event.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\EventCollection.cs">
+      <Link>Entities\EventCollection.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Entities\EventConstraint.cs">
       <Link>Entities\EventConstraint.cs</Link>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Enums\DateAlignment.cs">
       <Link>Enums\DateAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\EventCollectionType.cs">
+      <Link>Enums\EventCollectionType.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Enums\GenericView.cs">
       <Link>Enums\GenericView.cs</Link>
@@ -193,6 +202,9 @@
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EnumPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\EnumPropertyParser.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EventCollectionPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\EventCollectionPropertyParser.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EventSourcesPropertyParser.cs">
       <Link>Infrastructure\PropertyParsers\EventSourcesPropertyParser.cs</Link>
     </Compile>
@@ -231,6 +243,9 @@
     </Compile>
     <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableDuration.cs">
       <Link>Serialization\SerializableObjects\SerializableDuration.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableEvent.cs">
+      <Link>Serialization\SerializableObjects\SerializableEvent.cs</Link>
     </Compile>
     <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableEventSource.cs">
       <Link>Serialization\SerializableObjects\SerializableEventSource.cs</Link>

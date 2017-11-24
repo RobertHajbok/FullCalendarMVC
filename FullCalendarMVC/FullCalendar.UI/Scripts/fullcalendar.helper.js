@@ -104,7 +104,7 @@
         unselect: { name: 'unselect', type: 'callback' },
 
         // Event Data
-        events: { name: 'events', type: 'string' },
+        events: { name: 'events', type: 'custom' },
         eventsources: { name: 'eventSources', type: 'custom' },
         alldaydefault: { name: 'allDayDefault', type: 'boolean' },
         startparam: { name: 'startParam', type: 'string' },
@@ -293,6 +293,31 @@
                             try {
                                 obj[key][childKey] = parseFunctionData(obj[key][childKey]);
                             } catch (e) { }
+                        }
+                    });
+                });
+                return obj;
+            case 'events':
+                var obj = null;
+                try {
+                    return parseFunctionData(data);
+                } catch (e) { }
+                try {
+                    obj = parseObjectData(data);
+                } catch (e) {
+                    return data;
+                }
+                Object.keys(obj).forEach(function (key) {
+                    Object.keys(obj[key]).forEach(function (childKey) {
+                        if (obj[key][childKey] && childKey == 'constraint') {
+                            try {
+                                obj[key][childKey] = parseObjectData(obj[key][childKey]);
+                            } catch (e) { }
+                        } else if (obj[key][childKey] && childKey == 'additionalFields') {
+                            Object.keys(obj[key][childKey]).forEach(function (additionalField) {
+                                obj[key][additionalField] = obj[key][childKey][additionalField];
+                            });
+                            obj[key][childKey] = undefined;
                         }
                     });
                 });

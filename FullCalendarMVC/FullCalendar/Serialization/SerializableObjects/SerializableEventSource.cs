@@ -1,5 +1,8 @@
 ﻿namespace FullCalendar.Serialization.SerializableObjects
 {
+    /// <summary>
+    /// Class used to serialize EventSource objects. This is needed because NullPropertiesConverter is not working on object types.
+    /// </summary>
     public class SerializableEventSource
     {
         public int id { get; set; }
@@ -16,13 +19,13 @@
 
         public bool editable { get; set; }
 
-        public bool startEditable { get; set; } = true;
+        public bool startEditable { get; set; }
 
-        public bool durationEditable { get; set; } = true;
+        public bool durationEditable { get; set; }
 
         public string rendering { get; set; }
 
-        public bool overlap { get; set; } = true;
+        public bool overlap { get; set; }
 
         public object constraint { get; set; }
 

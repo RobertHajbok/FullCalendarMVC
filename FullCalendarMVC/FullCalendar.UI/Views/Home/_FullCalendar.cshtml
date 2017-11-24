@@ -14,7 +14,31 @@
     settings.AllDaySlot = false;
     settings.Selectable = true;
     settings.SlotDuration = TimeSpan.FromMinutes(15);
-    settings.Events = Url.Action("GetDiaryEvents", "Home");
+    settings.Events = Events.AsJsonFeed(Url.Action("GetDiaryEvents", "Home"));
+    //settings.Events = Events.AsFunction("function () { alert('GET'); }");
+    //settings.Events = Events.AsArray(new List<Event>
+    //{
+    //    new Event("Title", DateTime.Now)
+    //    {
+    //        Id = 1,
+    //        AllDay = false,
+    //        End = DateTime.Now.AddHours(1),
+    //        Url = "https://www.google.co.uk/",
+    //        ClassName = "test-class",
+    //        Constraint = new EventConstraint(new BusinessHour
+    //        {
+    //            Dow = new List<DayOfWeek> { DayOfWeek.Thursday, DayOfWeek.Friday },
+    //            Start = TimeSpan.FromHours(10),
+    //            End = TimeSpan.FromHours(15)
+    //        }),
+    //        Color = Color.DarkRed,
+    //        AdditionalFields = new Dictionary<string, string>
+    //        {
+    //            { "description", "this is the description" },
+    //            { "other", "this is another additional field" }
+    //        }
+    //    }
+    //});
     //settings.EventSources = new List<EventSource>
     //{
     //    new EventSource

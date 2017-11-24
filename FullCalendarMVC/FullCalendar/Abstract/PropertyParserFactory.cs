@@ -19,6 +19,8 @@ namespace FullCalendar.Abstract
             else if (property.Name == nameof(FullCalendarParameters.WeekNumberCalculation) || property.Name == nameof(FullCalendarParameters.DropAccept) ||
                 property.Name == nameof(FullCalendarParameters.EventLimitClick) || property.Name == nameof(FullCalendarParameters.EventLimitText))
                 propertyParser = new FunctionPropertyParser(property);
+            else if (property.PropertyType == typeof(EventCollection))
+                propertyParser = new EventCollectionPropertyParser(property);
             else if (property.PropertyType == typeof(ClientSideEvents))
                 propertyParser = new ClientSideEventsPropertyParser(property);
             else if (property.PropertyType == typeof(Dictionary<string, CustomButton>))
