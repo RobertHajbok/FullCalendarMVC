@@ -241,7 +241,7 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 | eventBorderColor              |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventTextColor                |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | nextDayThreshold              |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| eventOrder                    |                                                                                | ![#f03c15](https://placehold.it/13/f03c15/000000?text=+) not supported       |
+| eventOrder                    | All 4 versions supported as array                                              | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventRenderWait               |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventRender (callback)        |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | eventAfterRender (callback)   |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |

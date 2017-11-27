@@ -658,6 +658,17 @@ namespace FullCalendar
         public TimeSpan NextDayThreshold { get; set; }
 
         /// <summary>
+        /// Determines the vertical ordering events that have the same dates / times.
+        /// By default, FullCalendar decides that events with longer durations and earlier start times are sorted above other events. However, events often have the same exact start time and duration, which is especially true for all-day events. By default, when this happens, events are sorted alphabetically by title. eventOrder provides the ability to override this behavior.
+        /// This setting accepts a few different arguments:
+        /// (1) a name of an Event Object property, like "title". This can be the name of a non-standard field. Sorting will happen in ascending order. If prefixed with a minus sign like "-title", sorting will happen in descending order.
+        /// (2) a comma-separated string of property names, like "title,propA,-propB".
+        /// (3) a function that accepts two arguments and returns -1 or 1, similar to sort's compare function.
+        /// (4) an array of property names and functions like [ "title", "-propA", myFunc ].
+        /// </summary>
+        public string[] EventOrder { get; set; }
+
+        /// <summary>
         /// The amount of milliseconds to wait after an operation, before rendering events.
         /// When this value is specified as a millisecond number value, the calendar will begin to wait after any operation that might result in an event rerendering, such as renderEvent and updateEvent. After this time has passed, the calendar will render all events together. This reduces the number of rerenders, for performance reasons.
         /// This setting is experimental. It is turned off by default.

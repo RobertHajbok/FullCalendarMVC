@@ -123,6 +123,7 @@
         eventbordercolor: { name: 'eventBorderColor', type: 'string' },
         eventtextcolor: { name: 'eventTextColor', type: 'string' },
         nextdaythreshold: { name: 'nextDayThreshold', type: 'duration' },
+        eventorder: { name: 'eventOrder', type: 'custom' },
         eventrenderwait: { name: 'eventRenderWait', type: 'integer' },
         eventrender: { name: 'eventRender', type: 'callback' },
         eventafterrender: { name: 'eventAfterRender', type: 'callback' },
@@ -165,7 +166,7 @@
                 calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter);
                 $(calendars[i]).removeAttr("data-fc-" + item.substring(2));
             });
-            console.log(calendarObj);
+            //console.log(calendarObj);
             $(calendars[i]).fullCalendar(calendarObj);
         }
     });
@@ -194,12 +195,7 @@
                 parseCallbackData(JSON.parse(data.replace(/\'/g, '"')).function);
             case 'callback/string':
             case 'function/string':
-                var value = JSON.parse(data.replace(/\'/g, '"')).function;
-                try {
-                    return parseFunctionData(value);
-                } catch (e) {
-                    return value;
-                }
+                return parseFunctionStringData(JSON.parse(data.replace(/\'/g, '"')).function);
             case 'function/object':
                 var returnValue = null;
                 try {
@@ -247,6 +243,14 @@
 
     function parseFunctionData(data) {
         return eval('(' + data + ')');
+    }
+
+    function parseFunctionStringData(data) {
+        try {
+            return parseFunctionData(data);
+        } catch (e) {
+            return data;
+        }
     }
 
     function parseCallbackData(data) {
@@ -326,6 +330,15 @@
                         }
                     });
                 });
+                return obj;
+            case 'eventOrder':
+                var obj = parseObjectData(data);
+                if (obj.length == 1) {
+                    return parseFunctionStringData(obj[0]);
+                }
+                for (i = 0; i < obj.length; i++) {
+                    obj[i] = parseFunctionStringData(obj[i]);
+                }
                 return obj;
         }
     }

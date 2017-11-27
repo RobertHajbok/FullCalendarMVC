@@ -7,24 +7,34 @@
     @Scripts.Render("~/bundles/scripts")
     @Styles.Render("~/bundles/styles")
     @*<script>
-            var EventClick = function (calEvent, jsEvent, view) {
-                alert('Event: ' + calEvent.title);
-                alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-                alert('View: ' + view.name);
+        var EventClick = function (calEvent, jsEvent, view) {
+            alert('Event: ' + calEvent.title);
+            alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+            alert('View: ' + view.name);
 
-                // change the border color just for fun
-                $(this).css('border-color', 'red');
-            };
+            // change the border color just for fun
+            $(this).css('border-color', 'red');
+        };
 
-            var EventResize = function (event, delta, revertFunc) {
-                alert(event.title + " end is now " + event.end.format());
+        var EventResize = function (event, delta, revertFunc) {
+            alert(event.title + " end is now " + event.end.format());
 
-                if (!confirm("is this okay?")) {
-                    revertFunc();
-                }
-
+            if (!confirm("is this okay?")) {
+                revertFunc();
             }
-        </script>*@
+        }
+
+        var EventOrder = function (a, b) {
+            if (a.id < b.id) {
+                return -1;
+            }
+            if (a.title > b.title) {
+                return 1;
+            }
+            // a must be equal to b
+            return 0;
+        }
+    </script>*@
 </head>
 <body>
     <div class="header">
