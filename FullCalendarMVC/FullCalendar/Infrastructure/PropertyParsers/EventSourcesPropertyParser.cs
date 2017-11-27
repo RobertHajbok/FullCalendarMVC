@@ -36,6 +36,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
             dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(eventSources.Select(x => new SerializableEventSource
             {
                 id = x.Id,
+                events = x.Events?.AsSerializableObject(),
                 color = x.Color != default(Color) ? x.Color.ToHexString() : null,
                 backgroundColor = x.BackgroundColor != default(Color) ? x.BackgroundColor.ToHexString() : null,
                 borderColor = x.BorderColor != default(Color) ? x.BorderColor.ToHexString() : null,

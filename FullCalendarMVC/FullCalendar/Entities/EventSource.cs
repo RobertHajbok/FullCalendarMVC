@@ -6,6 +6,8 @@ namespace FullCalendar
     {
         public int Id { get; set; }
 
+        public EventCollection Events { get; set; }
+
         public Color Color { get; set; }
 
         public Color BackgroundColor { get; set; }

@@ -7,6 +7,8 @@
     {
         public int id { get; set; }
 
+        public object events { get; set; }
+
         public string color { get; set; }
 
         public string backgroundColor { get; set; }

@@ -153,19 +153,19 @@
         dropaccept: { name: 'dropAccept', type: 'function/string' },
         drop: { name: 'drop', type: 'callback' },
         eventreceive: { name: 'eventReceive', type: 'callback' }
-    }
+    };
 
     $(function () {
         var calendars = $('.fc');
         for (i = 0; i < calendars.length; i++) {
             var calendarObj = {};
             var data = $(calendars[i]).data();
-            for (item in data) {
-                var calendarParameter = fullCalendarParameters[item.substring(2).toLowerCase()]
+            Object.keys(data).forEach(function (item) {
+                var calendarParameter = fullCalendarParameters[item.substring(2).toLowerCase()];
                 calendarObj[calendarParameter.name] = parseData(data[item], calendarParameter);
                 $(calendars[i]).removeAttr("data-fc-" + item.substring(2));
-            }
-            //console.log(calendarObj);
+            });
+            console.log(calendarObj);
             $(calendars[i]).fullCalendar(calendarObj);
         }
     });
@@ -225,7 +225,7 @@
             }
             else {
                 return parseObjectData(data);
-            };
+            }
         } catch (e) {
             console.error(e);
             return null;
@@ -239,7 +239,7 @@
             }
             else {
                 return parseFunctionData(data);
-            };
+            }
         } catch (e) {
             return null;
         }
@@ -268,28 +268,30 @@
                 Object.keys(obj).forEach(function (key) {
                     objectToReturn[key] = new Object();
                     Object.keys(obj[key]).forEach(function (childKey) {
-                        if (obj[key][childKey] && childKey == 'text')
+                        if (obj[key][childKey] && childKey === 'text') {
                             objectToReturn[key][childKey] = obj[key][childKey];
-                        else if (obj[key][childKey] && childKey == 'click')
+                        } else if (obj[key][childKey] && childKey === 'click') {
                             objectToReturn[key][childKey] = parseFunctionData(obj[key][childKey]);
-                        else if (obj[key][childKey] !== null)
+                        } else if (obj[key][childKey] !== null) {
                             objectToReturn[key][childKey] = parseBooleanObjectData(obj[key][childKey]);
+                        }
                     });
                 });
                 return objectToReturn;
             case 'height':
             case 'contentHeight':
-                if (data === 'auto' || data === 'parent')
+                if (data === 'auto' || data === 'parent') {
                     return data;
-                else if (data.match(/px$/))
+                } else if (data.match(/px$/)) {
                     return parseInt(data.slice(0, -2));
-                else
+                } else {
                     return parseFunctionData(data);
+                }
             case 'views':
                 var obj = parseObjectData(data);
                 Object.keys(obj).forEach(function (key) {
                     Object.keys(obj[key]).forEach(function (childKey) {
-                        if (obj[key][childKey] && childKey == 'visibleRange') {
+                        if (obj[key][childKey] && childKey === 'visibleRange') {
                             try {
                                 obj[key][childKey] = parseFunctionData(obj[key][childKey]);
                             } catch (e) { }
@@ -298,41 +300,21 @@
                 });
                 return obj;
             case 'events':
-                var obj = null;
-                try {
-                    return parseFunctionData(data);
-                } catch (e) { }
-                try {
-                    obj = parseObjectData(data);
-                } catch (e) {
-                    return data;
-                }
-                Object.keys(obj).forEach(function (key) {
-                    Object.keys(obj[key]).forEach(function (childKey) {
-                        if (obj[key][childKey] && childKey == 'constraint') {
-                            try {
-                                obj[key][childKey] = parseObjectData(obj[key][childKey]);
-                            } catch (e) { }
-                        } else if (obj[key][childKey] && childKey == 'additionalFields') {
-                            Object.keys(obj[key][childKey]).forEach(function (additionalField) {
-                                obj[key][additionalField] = obj[key][childKey][additionalField];
-                            });
-                            obj[key][childKey] = undefined;
-                        }
-                    });
-                });
-                return obj;
+                return parseCustomEventObject(data);
             case 'eventSources':
                 var obj = parseObjectData(data);
                 Object.keys(obj).forEach(function (key) {
                     Object.keys(obj[key]).forEach(function (childKey) {
-                        if (obj[key][childKey] && childKey == 'constraint') {
+                        if (obj[key][childKey] && childKey === 'constraint') {
                             try {
                                 obj[key][childKey] = parseObjectData(obj[key][childKey]);
                             } catch (e) { }
-                        } else if (obj[key][childKey] && (childKey == 'eventDataTransform' || childKey == 'success' || childKey == 'error')) {
+                        } else if (obj[key][childKey] && (childKey === 'eventDataTransform' || childKey === 'success' || childKey === 'error')) {
                             obj[key][childKey] = parseCallbackData(obj[key][childKey]);
-                        } else if (obj[key][childKey] && childKey == 'data') {
+                        } else if (obj[key][childKey] && childKey === 'events') {
+                            obj[key][childKey] = parseCustomEventObject(obj[key][childKey]);
+                        }
+                        else if (obj[key][childKey] && childKey === 'data') {
                             var returnValue = null;
                             try {
                                 returnValue = parseFunctionData(obj[key][childKey]);
@@ -346,5 +328,32 @@
                 });
                 return obj;
         }
+    }
+
+    function parseCustomEventObject(data) {
+        var obj = null;
+        try {
+            return parseFunctionData(data);
+        } catch (e) { }
+        try {
+            obj = parseObjectData(data);
+        } catch (e) {
+            return data;
+        }
+        Object.keys(obj).forEach(function (key) {
+            Object.keys(obj[key]).forEach(function (childKey) {
+                if (obj[key][childKey] && childKey === 'constraint') {
+                    try {
+                        obj[key][childKey] = parseObjectData(obj[key][childKey]);
+                    } catch (e) { }
+                } else if (obj[key][childKey] && childKey === 'additionalFields') {
+                    Object.keys(obj[key][childKey]).forEach(function (additionalField) {
+                        obj[key][additionalField] = obj[key][childKey][additionalField];
+                    });
+                    obj[key][childKey] = undefined;
+                }
+            });
+        });
+        return obj;
     }
 }(jQuery));
