@@ -207,7 +207,7 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
 | on / off                      | Added Name and CssClass properties to enable selectors client-side             | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | -----------------------       | ------------------------------------------------------                         | ------------------                                                         |
 | Event Object                  |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
-| Event Source Object           | Google Calendar feed not supported yet                                         | ![#ffd700](https://placehold.it/13/ffd700/000000?text=+) partially supported |
+| Event Source Object           |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | events (as an array)          |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | events (as a json feed)       | Might need to add some AJAX parameters to Extended Form                        | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
 | events (as a function)        |                                                                                | ![#008000](https://placehold.it/13/008000/000000?text=+) supported           |
