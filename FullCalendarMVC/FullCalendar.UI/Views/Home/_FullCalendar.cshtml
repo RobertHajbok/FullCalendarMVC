@@ -16,9 +16,10 @@
     settings.SlotDuration = TimeSpan.FromMinutes(15);
     settings.Events = Events.AsJsonFeed(Url.Action("GetDiaryEvents", "Home"));
     //settings.Events = Events.AsFunction("function () { alert('GET'); }");
+    //settings.Events = Events.AsGoogleCalendarFeed("abcd1234@group.calendar.google.com");
     //settings.Events = Events.AsArray(new List<Event>
     //{
-    //    new Event("Title", DateTime.Now)
+    //    new Event
     //    {
     //        Id = 1,
     //        AllDay = false,
@@ -36,7 +37,10 @@
     //        {
     //            { "description", "this is the description" },
     //            { "other", "this is another additional field" }
-    //        }
+    //        },
+    //        Title = "Title",
+    //        Start = DateTime.Now
+    //        GoogleCalendarId = "abcd1234@group.calendar.google.com"
     //    }
     //});
     //settings.EventSources = new List<EventSource>
@@ -353,4 +357,5 @@
     //    }
     //};
     //settings.EventOrder = new string[] { "start", "EventOrder" };
+    //settings.GoogleCalendarApiKey = "<YOUR API KEY>";
 })

@@ -4,6 +4,7 @@
     {
         Array,
         JsonFeed,
-        Function
+        Function,
+        GoogleCalendarFeed
     }
 }

@@ -12,7 +12,7 @@ namespace FullCalendar
 
         public bool? AllDay { get; set; }
 
-        public DateTime Start { get; set; }
+        public DateTime? Start { get; set; }
 
         public DateTime? End { get; set; }
 
@@ -40,12 +40,8 @@ namespace FullCalendar
 
         public Color TextColor { get; set; }
 
-        public Dictionary<string, string> AdditionalFields { get; set; }
+        public string GoogleCalendarId { get; set; }
 
-        public Event(string title, DateTime start)
-        {
-            Title = title;
-            Start = start;
-        }
+        public Dictionary<string, string> AdditionalFields { get; set; }
     }
 }

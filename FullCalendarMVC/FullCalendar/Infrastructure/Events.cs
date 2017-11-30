@@ -15,7 +15,7 @@ namespace FullCalendar
         /// <returns>An <see cref="EventCollection"/> object</returns>
         public static EventCollection AsJsonFeed(string url)
         {
-            return new EventCollection(url, false);
+            return new EventCollection(url, EventCollectionType.JsonFeed);
         }
 
         /// <summary>
@@ -39,7 +39,12 @@ namespace FullCalendar
         /// <returns></returns>
         public static EventCollection AsFunction(string function)
         {
-            return new EventCollection(function, true);
+            return new EventCollection(function, EventCollectionType.Function);
+        }
+
+        public static EventCollection AsGoogleCalendarFeed(string googleCalendarId)
+        {
+            return new EventCollection(googleCalendarId, EventCollectionType.GoogleCalendarFeed);
         }
     }
 }

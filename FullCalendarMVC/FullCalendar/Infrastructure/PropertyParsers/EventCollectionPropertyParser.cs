@@ -22,6 +22,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
             if (value == null)
                 return;
 
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
             EventCollection eventCollection = (EventCollection)value;
             switch (eventCollection.Type)
             {
@@ -29,9 +30,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                     if (eventCollection.Events == null || !eventCollection.Events.Any())
                         return;
 
-                    JavaScriptSerializer serializer = new JavaScriptSerializer();
                     serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-
                     dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(eventCollection.SerializableEventArray()).ToSingleQuotes());
                     break;
                 case EventCollectionType.JsonFeed:
@@ -39,6 +38,9 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                     break;
                 case EventCollectionType.Function:
                     dictionary.Add("data-fc-" + _property.Name, eventCollection.Function);
+                    break;
+                case EventCollectionType.GoogleCalendarFeed:
+                    dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(new { googleCalendarId = eventCollection.GoogleCalendarId }).ToSingleQuotes());
                     break;
             }
         }

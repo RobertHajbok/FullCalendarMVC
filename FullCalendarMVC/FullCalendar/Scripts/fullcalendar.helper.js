@@ -1,5 +1,8 @@
 ﻿(function ($) {
     var fullCalendarParameters = {
+        // Google Calendar
+        googlecalendarapikey: { name: 'googleCalendarApiKey', type: 'string' },
+
         // General Display
         header: { name: 'header', type: 'object' },
         footer: { name: 'footer', type: 'object' },

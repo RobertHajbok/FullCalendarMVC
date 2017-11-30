@@ -6,6 +6,15 @@ namespace FullCalendar
 {
     public class FullCalendarParameters
     {
+        #region Google Calendar
+
+        /// <summary>
+        /// FullCalendar can display events from a public Google Calendar. Google Calendar can serve as a backend that manages and persistently stores event data (a feature that FullCalendar currently lacks).
+        /// </summary>
+        public string GoogleCalendarApiKey { get; set; }
+
+        #endregion
+
         #region General Display
 
         /// <summary>
@@ -729,7 +738,7 @@ namespace FullCalendar
         /// <summary>
         /// Limits event dragging and resizing to certain windows of time.
         /// </summary>
-        public EventConstraint EventConstraint { get; set;}
+        public EventConstraint EventConstraint { get; set; }
 
         /// <summary>
         /// For touch devices, the amount of time the user most hold down before an event becomes draggable or a date becomes selectable.

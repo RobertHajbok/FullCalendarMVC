@@ -15,19 +15,24 @@ namespace FullCalendar
 
         public string Function { get; private set; }
 
+        public string GoogleCalendarId { get; private set; }
+
         public EventCollectionType Type { get; private set; }
 
-        public EventCollection(string str, bool isFunction)
+        public EventCollection(string str, EventCollectionType type)
         {
-            if (isFunction)
+            Type = type;
+            switch (type)
             {
-                Url = str;
-                Type = EventCollectionType.JsonFeed;
-            }
-            else
-            {
-                Function = str;
-                Type = EventCollectionType.Function;
+                case EventCollectionType.JsonFeed:
+                    Url = str;
+                    break;
+                case EventCollectionType.Function:
+                    Function = str;
+                    break;
+                case EventCollectionType.GoogleCalendarFeed:
+                    GoogleCalendarId = str;
+                    break;
             }
         }
 
@@ -49,6 +54,11 @@ namespace FullCalendar
                     return Url;
                 case EventCollectionType.Function:
                     return Function;
+                case EventCollectionType.GoogleCalendarFeed:
+                    return new
+                    {
+                        googleCalendarId = GoogleCalendarId
+                    };
                 default:
                     return null;
             }
@@ -61,7 +71,7 @@ namespace FullCalendar
                 id = x.Id,
                 title = x.Title,
                 allDay = x.AllDay,
-                start = x.Start.ToString("s"),
+                start = x.Start?.ToString("s"),
                 end = x.End?.ToString("s"),
                 url = x.Url,
                 className = x.ClassName,
@@ -81,6 +91,7 @@ namespace FullCalendar
                 backgroundColor = x.BackgroundColor != default(Color) ? x.BackgroundColor.ToHexString() : null,
                 borderColor = x.BorderColor != default(Color) ? x.BorderColor.ToHexString() : null,
                 textColor = x.TextColor != default(Color) ? x.TextColor.ToHexString() : null,
+                googleCalendarId = x.GoogleCalendarId,
                 additionalFields = x.AdditionalFields
             });
         }

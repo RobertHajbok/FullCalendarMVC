@@ -41,6 +41,8 @@ namespace FullCalendar.Serialization.SerializableObjects
 
         public string textColor { get; set; }
 
+        public string googleCalendarId { get; set; }
+
         public Dictionary<string, string> additionalFields { get; set; }
     }
 }
