@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Web.Script.Serialization;
+﻿using FullCalendar.Interfaces;
+using System.Collections.Generic;
 
 namespace FullCalendar
 {
-    public class DayNames
+    public class DayNames : ISerializableObject
     {
         public string Sunday { get; set; }
 
@@ -19,14 +19,13 @@ namespace FullCalendar
 
         public string Saturday { get; set; }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
-            IEnumerable<string> dayNames = new List<string>
+            return new List<string>
             {
                 Sunday ?? "undefined", Monday ?? "undefined", Tuesday ?? "undefined", Wednesday ?? "undefined",
                 Thursday ?? "undefined", Friday ?? "undefined", Saturday ?? "undefined"
             };
-            return new JavaScriptSerializer().Serialize(dayNames).ToSingleQuotes();
         }
     }
 }

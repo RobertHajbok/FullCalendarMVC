@@ -1,9 +1,11 @@
 ﻿using FullCalendar.Infrastructure.PropertyParsers;
 using FullCalendar.Interfaces;
+using FullCalendar.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
+using System.Web.Script.Serialization;
 
 namespace FullCalendar.Abstract
 {
@@ -37,7 +39,7 @@ namespace FullCalendar.Abstract
                 propertyParser = new ThemeSystemPropertyParser(property);
             else if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
                 propertyParser = new BoolPropertyParser(property);
-            else if (property.PropertyType.BaseType == typeof(Enum) || Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)
+            else if (Nullable.GetUnderlyingType(property.PropertyType)?.IsEnum == true)
                 propertyParser = new EnumPropertyParser(property);
             else if (property.PropertyType == typeof(TimeSpan))
                 propertyParser = new TimeSpanPropertyParser(property);
@@ -58,7 +60,11 @@ namespace FullCalendar.Abstract
             else if (property.PropertyType.IsArray)
                 propertyParser = new ArrayPropertyParser(property);
             else
-                propertyParser = new ObjectPropertyParser(property);
+            {
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
+                propertyParser = new ObjectPropertyParser(property, serializer);
+            }
 
             return propertyParser;
         }

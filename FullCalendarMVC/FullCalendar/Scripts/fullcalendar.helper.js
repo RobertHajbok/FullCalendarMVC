@@ -200,11 +200,10 @@
             case 'function/string':
                 return parseFunctionStringData(JSON.parse(data.replace(/\'/g, '"')).function);
             case 'function/object':
-                var returnValue = null;
+                var returnValue = parseObjectData(data);
                 try {
-                    returnValue = parseFunctionData(data);
+                    returnValue = parseFunctionData(returnValue);
                 } catch (e) {
-                    returnValue = parseObjectData(data);
                 } finally {
                     return returnValue;
                 }

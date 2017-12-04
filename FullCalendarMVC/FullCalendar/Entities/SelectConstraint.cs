@@ -1,11 +1,10 @@
-﻿using FullCalendar.Serialization;
+﻿using FullCalendar.Interfaces;
 using FullCalendar.Serialization.SerializableObjects;
 using System;
-using System.Web.Script.Serialization;
 
 namespace FullCalendar
 {
-    public class SelectConstraint
+    public class SelectConstraint : ISerializableObject
     {
         public string EventId { get; private set; }
 
@@ -31,19 +30,17 @@ namespace FullCalendar
             BusinessHours = businessHours;
         }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
             if (EventId != null)
-                return new JavaScriptSerializer().Serialize(EventId).ToSingleQuotes();
+                return EventId;
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-            return serializer.Serialize(new SerializableBusinessHour
+            return new SerializableBusinessHour
             {
                 dow = BusinessHours.Dow,
                 start = BusinessHours.Start != null && BusinessHours.Start != default(TimeSpan) ? BusinessHours.Start.ToString(@"hh\:mm") : null,
                 end = BusinessHours.End != null && BusinessHours.End != default(TimeSpan) ? BusinessHours.End.ToString(@"hh\:mm") : null
-            }).ToSingleQuotes();
+            };
         }
     }
 }

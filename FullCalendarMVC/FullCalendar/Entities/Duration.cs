@@ -1,10 +1,9 @@
-﻿using FullCalendar.Serialization;
+﻿using FullCalendar.Interfaces;
 using FullCalendar.Serialization.SerializableObjects;
-using System.Web.Script.Serialization;
 
 namespace FullCalendar
 {
-    public class Duration
+    public class Duration : ISerializableObject
     {
         public int Days { get; set; }
 
@@ -12,16 +11,14 @@ namespace FullCalendar
 
         public int Months { get; set; }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-            return serializer.Serialize(new SerializableDuration
+            return new SerializableDuration
             {
                 days = Days,
                 weeks = Weeks,
                 months = Months
-            }).ToSingleQuotes();
+            };
         }
     }
 }

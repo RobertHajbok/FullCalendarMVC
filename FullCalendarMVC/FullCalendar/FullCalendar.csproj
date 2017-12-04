@@ -119,6 +119,7 @@
     <Compile Include="Infrastructure\PropertyParsers\StringPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs" />
     <Compile Include="Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs" />
+    <Compile Include="Interfaces\ISerializableObject.cs" />
     <Compile Include="Serialization\SerializableObjects\SerializableBusinessHour.cs" />
     <Compile Include="Interfaces\IPropertyParser.cs" />
     <Compile Include="Entities\MonthNames.cs" />

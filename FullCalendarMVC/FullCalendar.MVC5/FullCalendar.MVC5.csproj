@@ -241,6 +241,9 @@
     <Compile Include="..\FullCalendar\Interfaces\IPropertyParser.cs">
       <Link>Interfaces\IPropertyParser.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Interfaces\ISerializableObject.cs">
+      <Link>Interfaces\ISerializableObject.cs</Link>
+    </Compile>
     <Compile Include="..\FullCalendar\Serialization\NullPropertiesConverter.cs">
       <Link>Serialization\NullPropertiesConverter.cs</Link>
     </Compile>

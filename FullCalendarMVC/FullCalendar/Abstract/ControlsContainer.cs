@@ -1,8 +1,8 @@
-﻿using System.Web.Script.Serialization;
+﻿using FullCalendar.Interfaces;
 
 namespace FullCalendar
 {
-    public abstract class ControlsContainer
+    public abstract class ControlsContainer : ISerializableObject
     {
         public ControlsBuilder Left { get; set; }
 
@@ -10,16 +10,14 @@ namespace FullCalendar
 
         public ControlsBuilder Right { get; set; }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
-            object jsonString = new
+            return new
             {
                 left = Left?.ToString(),
                 center = Center?.ToString(),
                 right = Right?.ToString()
             };
-
-            return new JavaScriptSerializer().Serialize(jsonString).ToSingleQuotes();
         }
     }
 }

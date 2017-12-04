@@ -1,9 +1,9 @@
-﻿using System;
-using System.Web.Script.Serialization;
+﻿using FullCalendar.Interfaces;
+using System;
 
 namespace FullCalendar
 {
-    public class VisibleRange
+    public class VisibleRange : ISerializableObject
     {
         public DateTime Start { get; private set; }
 
@@ -31,16 +31,16 @@ namespace FullCalendar
             Function = function;
         }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
             if (Function != null)
                 return Function;
 
-            return new JavaScriptSerializer().Serialize(new
+            return new
             {
                 start = Start.ToString("yyyy-MM-dd"),
                 end = End.ToString("yyyy-MM-dd")
-            }).ToSingleQuotes();
+            };
         }
     }
 }

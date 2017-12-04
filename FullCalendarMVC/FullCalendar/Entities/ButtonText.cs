@@ -1,8 +1,8 @@
-﻿using System.Web.Script.Serialization;
+﻿using FullCalendar.Interfaces;
 
 namespace FullCalendar
 {
-    public class ButtonText
+    public class ButtonText : ISerializableObject
     {
         public string Today { get; set; }
 
@@ -11,29 +11,29 @@ namespace FullCalendar
         public string Week { get; set; }
 
         public string Day { get; set; }
-   
+
         public string List { get; set; }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
             // This trick is done because if today is sent as null, the text of the button will be 'undefined'
             if (!string.IsNullOrEmpty(Today))
-                return new JavaScriptSerializer().Serialize(new
+                return new
                 {
                     today = Today,
                     month = Month,
                     week = Week,
                     day = Day,
                     list = List
-                }).ToSingleQuotes();
+                };
             else
-                return new JavaScriptSerializer().Serialize(new
+                return new
                 {
                     month = Month,
                     week = Week,
                     day = Day,
                     list = List
-                }).ToSingleQuotes();
+                };
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCalendar", "FullCalendar\FullCalendar.csproj", "{39765B45-204B-4A0E-BF04-EBD8A15EFF3A}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCalendar.MVC5", "FullCalendar.MVC5\FullCalendar.MVC5.csproj", "{4DB5F2ED-B32D-4DC6-BBC8-178E14EE056C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCalendar.UI", "FullCalendar.UI\FullCalendar.UI.csproj", "{0AE84599-68CC-40A4-82BA-207CB229F56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCalendar.Tests", "FullCalendar.Tests\FullCalendar.Tests.csproj", "{11EA7EA4-1782-4458-90E7-A5F122E76A38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0AE84599-68CC-40A4-82BA-207CB229F56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE84599-68CC-40A4-82BA-207CB229F56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AE84599-68CC-40A4-82BA-207CB229F56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11EA7EA4-1782-4458-90E7-A5F122E76A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11EA7EA4-1782-4458-90E7-A5F122E76A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11EA7EA4-1782-4458-90E7-A5F122E76A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11EA7EA4-1782-4458-90E7-A5F122E76A38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

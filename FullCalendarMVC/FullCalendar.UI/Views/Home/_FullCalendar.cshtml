@@ -39,7 +39,7 @@
     //            { "other", "this is another additional field" }
     //        },
     //        Title = "Title",
-    //        Start = DateTime.Now
+    //        Start = DateTime.Now,
     //        GoogleCalendarId = "abcd1234@group.calendar.google.com"
     //    }
     //});
@@ -67,9 +67,11 @@
     //        Id = 2,
     //        Events = Events.AsArray(new List<Event>
     //        {
-    //            new Event("Title", DateTime.Now)
+    //            new Event
     //            {
     //                Id = 1,
+    //                Title = "Title",
+    //                Start = DateTime.Now,
     //                AllDay = false,
     //                End = DateTime.Now.AddHours(1),
     //                Url = "https://www.google.co.uk/",
@@ -121,7 +123,7 @@
     //    Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
     //            .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
     //    Center = new ControlsBuilder().AddTitle(),
-    //    Right = new ControlsBuilder("month,agendaWeek ").AddView(CalendarView.AgendaDay)
+    //    Right = new ControlsBuilder("month,agendaWeek ").AddView(AvailableView.AgendaDay)
     //};
     //settings.IsRTL = true;
     //settings.FixedWeekCount = false;

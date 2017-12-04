@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Web.Script.Serialization;
+﻿using FullCalendar.Interfaces;
+using System.Collections.Generic;
 
 namespace FullCalendar
 {
-    public class MonthNames
+    public class MonthNames : ISerializableObject
     {
         public string January { get; set; }
 
@@ -29,15 +29,14 @@ namespace FullCalendar
 
         public string December { get; set; }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
-            IEnumerable<string> monthNames = new List<string>
+            return new List<string>
             {
                 January ?? "undefined", February ?? "undefined", March ?? "undefined", April ?? "undefined",
                 May ?? "undefined", June ?? "undefined", July ?? "undefined", August ?? "undefined",
                 September?? "undefined", October?? "undefined", November?? "undefined", December?? "undefined"
             };
-            return new JavaScriptSerializer().Serialize(monthNames).ToSingleQuotes();
         }
     }
 }

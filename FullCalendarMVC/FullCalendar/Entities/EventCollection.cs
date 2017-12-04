@@ -1,4 +1,5 @@
 ﻿using FullCalendar.Extensions;
+using FullCalendar.Interfaces;
 using FullCalendar.Serialization.SerializableObjects;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Linq;
 
 namespace FullCalendar
 {
-    public class EventCollection
+    public class EventCollection : ISerializableObject
     {
         public string Url { get; private set; }
 

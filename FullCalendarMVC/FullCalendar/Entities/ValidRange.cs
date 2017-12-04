@@ -1,11 +1,10 @@
-﻿using FullCalendar.Serialization;
+﻿using FullCalendar.Interfaces;
 using FullCalendar.Serialization.SerializableObjects;
 using System;
-using System.Web.Script.Serialization;
 
 namespace FullCalendar
 {
-    public class ValidRange
+    public class ValidRange : ISerializableObject
     {
         public DateTime? Start { get; private set; }
 
@@ -42,18 +41,16 @@ namespace FullCalendar
             Function = function;
         }
 
-        public override string ToString()
+        public object AsSerializableObject()
         {
             if (Function != null)
                 return Function;
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-            return serializer.Serialize(new SerializableValidRange
+            return new SerializableValidRange
             {
                 start = Start != null && Start != default(DateTime) ? Start.Value.ToString("yyyy-MM-dd") : null,
                 end = End != null && End != default(DateTime) ? End.Value.ToString("yyyy-MM-dd") : null
-            }).ToSingleQuotes();
+            };
         }
     }
 }
