@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
-using System.Web.Script.Serialization;
 
 namespace FullCalendar.Abstract
 {
@@ -17,22 +16,22 @@ namespace FullCalendar.Abstract
 
             if (property.Name == nameof(FullCalendarParameters.ButtonIcons) || property.Name == nameof(FullCalendarParameters.ThemeButtonIcons) ||
                 property.Name == nameof(FullCalendarParameters.BootstrapGlyphicons))
-                propertyParser = new ButtonIconsPropertyParser(property);
+                propertyParser = new ButtonIconsPropertyParser(property, SerializationHelpers.GetSerializer());
             else if (property.Name == nameof(FullCalendarParameters.WeekNumberCalculation) || property.Name == nameof(FullCalendarParameters.DropAccept) ||
                 property.Name == nameof(FullCalendarParameters.EventLimitClick) || property.Name == nameof(FullCalendarParameters.EventLimitText))
-                propertyParser = new FunctionPropertyParser(property);
+                propertyParser = new FunctionPropertyParser(property, SerializationHelpers.GetSerializer());
             else if (property.PropertyType == typeof(EventCollection))
-                propertyParser = new EventCollectionPropertyParser(property);
+                propertyParser = new EventCollectionPropertyParser(property, SerializationHelpers.GetSerializer(true));
             else if (property.PropertyType == typeof(ClientSideEvents))
-                propertyParser = new ClientSideEventsPropertyParser(property);
+                propertyParser = new ClientSideEventsPropertyParser(property, SerializationHelpers.GetSerializer());
             else if (property.PropertyType == typeof(Dictionary<string, CustomButton>))
-                propertyParser = new CustomButtonsPropertyParser(property);
+                propertyParser = new CustomButtonsPropertyParser(property, SerializationHelpers.GetSerializer());
             else if (property.PropertyType == typeof(Dictionary<string, View>))
-                propertyParser = new CustomViewPropertyParser(property);
+                propertyParser = new CustomViewPropertyParser(property, SerializationHelpers.GetSerializer(true));
             else if (property.PropertyType == typeof(IEnumerable<BusinessHour>))
-                propertyParser = new BusinessHoursPropertyParser(property);
+                propertyParser = new BusinessHoursPropertyParser(property, SerializationHelpers.GetSerializer(true));
             else if (property.PropertyType == typeof(IEnumerable<EventSource>))
-                propertyParser = new EventSourcesPropertyParser(property);
+                propertyParser = new EventSourcesPropertyParser(property, SerializationHelpers.GetSerializer(true));
             else if (property.PropertyType == typeof(DayOfWeek))
                 propertyParser = new DayOfWeekPropertyParser(property);
             else if (property.PropertyType == typeof(ThemeSystem))
@@ -58,13 +57,9 @@ namespace FullCalendar.Abstract
             else if (property.PropertyType == typeof(Unit))
                 propertyParser = new UnitPropertyParser(property);
             else if (property.PropertyType.IsArray)
-                propertyParser = new ArrayPropertyParser(property);
+                propertyParser = new ArrayPropertyParser(property, SerializationHelpers.GetSerializer());
             else
-            {
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
-                serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-                propertyParser = new ObjectPropertyParser(property, serializer);
-            }
+                propertyParser = new ObjectPropertyParser(property, SerializationHelpers.GetSerializer(true));
 
             return propertyParser;
         }

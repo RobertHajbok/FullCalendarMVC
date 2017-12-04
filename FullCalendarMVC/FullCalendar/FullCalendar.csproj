@@ -130,6 +130,7 @@
     <Compile Include="Serialization\SerializableObjects\SerializableEventSource.cs" />
     <Compile Include="Serialization\SerializableObjects\SerializableValidRange.cs" />
     <Compile Include="Serialization\SerializableObjects\SerializableView.cs" />
+    <Compile Include="Serialization\SerializationHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bundleconfig.json" />

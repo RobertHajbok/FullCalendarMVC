@@ -262,6 +262,9 @@
     <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableView.cs">
       <Link>Serialization\SerializableObjects\SerializableView.cs</Link>
     </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializationHelpers.cs">
+      <Link>Serialization\SerializationHelpers.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

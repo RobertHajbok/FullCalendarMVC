@@ -8,10 +8,12 @@ namespace FullCalendar.Infrastructure.PropertyParsers
     public class ClientSideEventsPropertyParser : IPropertyParser
     {
         private PropertyInfo _property;
+        private JavaScriptSerializer _serializer;
 
-        public ClientSideEventsPropertyParser(PropertyInfo property)
+        public ClientSideEventsPropertyParser(PropertyInfo property, JavaScriptSerializer serializer)
         {
             _property = property;
+            _serializer = serializer;
         }
 
         public void AddPropertyToDictionary(FullCalendarParameters fullCalendarParameters, ref Dictionary<string, string> dictionary)
@@ -23,15 +25,15 @@ namespace FullCalendar.Infrastructure.PropertyParsers
             foreach (var property in typeof(ClientSideEvents).GetProperties())
             {
                 object callbackValue = property.GetValue(fullCalendarParameters.ClientSideEvents, null);
-                if(!string.IsNullOrEmpty(callbackValue?.ToString()))
+                if (!string.IsNullOrEmpty(callbackValue?.ToString()))
                 {
                     object jsonString = new
                     {
                         function = callbackValue
                     };
 
-                    dictionary.Add("data-fc-" + property.Name, new JavaScriptSerializer().Serialize(jsonString).ToSingleQuotes());
-                }                
+                    dictionary.Add("data-fc-" + property.Name, _serializer.Serialize(jsonString).ToSingleQuotes());
+                }
             }
         }
     }

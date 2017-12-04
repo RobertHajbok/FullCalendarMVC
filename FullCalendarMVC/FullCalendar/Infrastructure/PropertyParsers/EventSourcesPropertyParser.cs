@@ -1,6 +1,5 @@
 ﻿using FullCalendar.Extensions;
 using FullCalendar.Interfaces;
-using FullCalendar.Serialization;
 using FullCalendar.Serialization.SerializableObjects;
 using System;
 using System.Collections.Generic;
@@ -14,10 +13,12 @@ namespace FullCalendar.Infrastructure.PropertyParsers
     public class EventSourcesPropertyParser : IPropertyParser
     {
         private PropertyInfo _property;
+        private JavaScriptSerializer _serializer;
 
-        public EventSourcesPropertyParser(PropertyInfo property)
+        public EventSourcesPropertyParser(PropertyInfo property, JavaScriptSerializer serializer)
         {
             _property = property;
+            _serializer = serializer;
         }
 
         public void AddPropertyToDictionary(FullCalendarParameters fullCalendarParameters, ref Dictionary<string, string> dictionary)
@@ -30,10 +31,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
             if (!eventSources.Any())
                 return;
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-
-            dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(eventSources.Select(x => new SerializableEventSource
+            dictionary.Add("data-fc-" + _property.Name, _serializer.Serialize(eventSources.Select(x => new SerializableEventSource
             {
                 id = x.Id,
                 events = x.Events?.AsSerializableObject(),

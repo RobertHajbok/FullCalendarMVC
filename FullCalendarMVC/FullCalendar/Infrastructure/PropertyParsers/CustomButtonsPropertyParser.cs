@@ -8,10 +8,12 @@ namespace FullCalendar.Infrastructure.PropertyParsers
     public class CustomButtonsPropertyParser : IPropertyParser
     {
         private PropertyInfo _property;
+        private JavaScriptSerializer _serializer;
 
-        public CustomButtonsPropertyParser(PropertyInfo property)
+        public CustomButtonsPropertyParser(PropertyInfo property, JavaScriptSerializer serializer)
         {
             _property = property;
+            _serializer = serializer;
         }
 
         public void AddPropertyToDictionary(FullCalendarParameters fullCalendarParameters, ref Dictionary<string, string> dictionary)
@@ -34,7 +36,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                 serializedData.Add(button.Key, data);
             }
 
-            dictionary.Add("data-fc-" + _property.Name, new JavaScriptSerializer().Serialize(serializedData).ToSingleQuotes());
+            dictionary.Add("data-fc-" + _property.Name, _serializer.Serialize(serializedData).ToSingleQuotes());
         }
     }
 }

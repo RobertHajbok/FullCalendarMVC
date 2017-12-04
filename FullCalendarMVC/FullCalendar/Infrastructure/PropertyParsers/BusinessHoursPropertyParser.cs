@@ -1,5 +1,4 @@
 ﻿using FullCalendar.Interfaces;
-using FullCalendar.Serialization;
 using FullCalendar.Serialization.SerializableObjects;
 using System;
 using System.Collections.Generic;
@@ -12,10 +11,12 @@ namespace FullCalendar.Infrastructure.PropertyParsers
     public class BusinessHoursPropertyParser : IPropertyParser
     {
         private PropertyInfo _property;
+        private JavaScriptSerializer _serializer;
 
-        public BusinessHoursPropertyParser(PropertyInfo property)
+        public BusinessHoursPropertyParser(PropertyInfo property, JavaScriptSerializer serializer)
         {
             _property = property;
+            _serializer = serializer;
         }
 
         public void AddPropertyToDictionary(FullCalendarParameters fullCalendarParameters, ref Dictionary<string, string> dictionary)
@@ -31,10 +32,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                 return;
             }
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-
-            dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(businessHours.Select(x => new SerializableBusinessHour
+            dictionary.Add("data-fc-" + _property.Name, _serializer.Serialize(businessHours.Select(x => new SerializableBusinessHour
             {
                 dow = x.Dow,
                 start = x.Start != null && x.Start != default(TimeSpan) ? x.Start.ToString(@"hh\:mm") : null,

@@ -10,10 +10,12 @@ namespace FullCalendar.Infrastructure.PropertyParsers
     public class EventCollectionPropertyParser : IPropertyParser
     {
         private PropertyInfo _property;
+        private JavaScriptSerializer _serializer;
 
-        public EventCollectionPropertyParser(PropertyInfo property)
+        public EventCollectionPropertyParser(PropertyInfo property, JavaScriptSerializer serializer)
         {
             _property = property;
+            _serializer = serializer;
         }
 
         public void AddPropertyToDictionary(FullCalendarParameters fullCalendarParameters, ref Dictionary<string, string> dictionary)
@@ -22,7 +24,6 @@ namespace FullCalendar.Infrastructure.PropertyParsers
             if (value == null)
                 return;
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
             EventCollection eventCollection = (EventCollection)value;
             switch (eventCollection.Type)
             {
@@ -30,8 +31,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                     if (eventCollection.Events == null || !eventCollection.Events.Any())
                         return;
 
-                    serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-                    dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(eventCollection.SerializableEventArray()).ToSingleQuotes());
+                    dictionary.Add("data-fc-" + _property.Name, _serializer.Serialize(eventCollection.SerializableEventArray()).ToSingleQuotes());
                     break;
                 case EventCollectionType.JsonFeed:
                     dictionary.Add("data-fc-" + _property.Name, eventCollection.Url);
@@ -40,7 +40,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                     dictionary.Add("data-fc-" + _property.Name, eventCollection.Function);
                     break;
                 case EventCollectionType.GoogleCalendarFeed:
-                    dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(new { googleCalendarId = eventCollection.GoogleCalendarId }).ToSingleQuotes());
+                    dictionary.Add("data-fc-" + _property.Name, _serializer.Serialize(new { googleCalendarId = eventCollection.GoogleCalendarId }).ToSingleQuotes());
                     break;
             }
         }

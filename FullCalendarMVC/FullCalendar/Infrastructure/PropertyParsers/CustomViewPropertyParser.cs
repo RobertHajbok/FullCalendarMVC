@@ -1,5 +1,4 @@
 ﻿using FullCalendar.Interfaces;
-using FullCalendar.Serialization;
 using FullCalendar.Serialization.SerializableObjects;
 using System.Collections.Generic;
 using System.Reflection;
@@ -10,10 +9,12 @@ namespace FullCalendar.Infrastructure.PropertyParsers
     public class CustomViewPropertyParser : IPropertyParser
     {
         private PropertyInfo _property;
+        private JavaScriptSerializer _serializer;
 
-        public CustomViewPropertyParser(PropertyInfo property)
+        public CustomViewPropertyParser(PropertyInfo property, JavaScriptSerializer serializer)
         {
             _property = property;
+            _serializer = serializer;
         }
 
         public void AddPropertyToDictionary(FullCalendarParameters fullCalendarParameters, ref Dictionary<string, string> dictionary)
@@ -57,9 +58,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
                 serializedData.Add(view.Key, data);
             }
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            serializer.RegisterConverters(new JavaScriptConverter[] { new NullPropertiesConverter() });
-            dictionary.Add("data-fc-" + _property.Name, serializer.Serialize(serializedData).ToSingleQuotes());
+            dictionary.Add("data-fc-" + _property.Name, _serializer.Serialize(serializedData).ToSingleQuotes());
         }
     }
 }
