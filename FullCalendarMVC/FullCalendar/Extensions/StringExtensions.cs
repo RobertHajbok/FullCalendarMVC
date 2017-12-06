@@ -15,7 +15,10 @@ namespace FullCalendar
         /// <returns>Text with double quotes replaced with single quotes</returns>
         public static string ToSingleQuotes(this string text)
         {
-            return Regex.Replace(text, @"\\\\|\\(""|')|(""|')", match => {
+            if (string.IsNullOrEmpty(text))
+                return text;
+            return Regex.Replace(text, @"\\\\|\\(""|')|(""|')", match =>
+            {
                 if (match.Groups[1].Value == "\"") return "\""; // Unescape \"
                 if (match.Groups[2].Value == "\"") return "'";  // Replace " with '
                 if (match.Groups[2].Value == "'") return "\\'"; // Escape '
@@ -30,6 +33,8 @@ namespace FullCalendar
         /// <returns>The initial text with first character changed to lower-case</returns>
         public static string FirstCharToLower(this string text)
         {
+            if (string.IsNullOrEmpty(text))
+                return text;
             return text.First().ToString().ToLower() + text.Substring(1);
         }
     }

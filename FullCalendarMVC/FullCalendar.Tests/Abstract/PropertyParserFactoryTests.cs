@@ -1,4 +1,5 @@
-﻿using FullCalendar.Infrastructure.PropertyParsers;
+﻿using FluentAssertions;
+using FullCalendar.Infrastructure.PropertyParsers;
 using FullCalendar.Interfaces;
 using NUnit.Framework;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.GoogleCalendarApiKey));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         #endregion
@@ -28,7 +29,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Header));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -36,7 +37,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Footer));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -44,7 +45,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.CustomButtons));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(CustomButtonsPropertyParser)));
+            propertyParser.Should().BeOfType<CustomButtonsPropertyParser>();
         }
 
         [Test]
@@ -52,7 +53,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ButtonIcons));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ButtonIconsPropertyParser)));
+            propertyParser.Should().BeOfType<ButtonIconsPropertyParser>();
         }
 
         [Test]
@@ -60,7 +61,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ThemeSystem));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ThemeSystemPropertyParser)));
+            propertyParser.Should().BeOfType<ThemeSystemPropertyParser>();
         }
 
         [Test]
@@ -68,7 +69,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ThemeButtonIcons));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ButtonIconsPropertyParser)));
+            propertyParser.Should().BeOfType<ButtonIconsPropertyParser>();
         }
 
         [Test]
@@ -76,7 +77,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.BootstrapGlyphicons));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ButtonIconsPropertyParser)));
+            propertyParser.Should().BeOfType<ButtonIconsPropertyParser>();
         }
 
         [Test]
@@ -84,7 +85,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.FirstDay));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(DayOfWeekPropertyParser)));
+            propertyParser.Should().BeOfType<DayOfWeekPropertyParser>();
         }
 
         [Test]
@@ -92,7 +93,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.IsRTL));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -100,7 +101,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Weekends));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -108,7 +109,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.HiddenDays));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ArrayPropertyParser)));
+            propertyParser.Should().BeOfType<ArrayPropertyParser>();
         }
 
         [Test]
@@ -116,7 +117,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.FixedWeekCount));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -124,7 +125,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.WeekNumbers));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -132,7 +133,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.WeekNumbersWithinDays));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -140,7 +141,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.WeekNumberCalculation));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(FunctionPropertyParser)));
+            propertyParser.Should().BeOfType<FunctionPropertyParser>();
         }
 
         [Test]
@@ -148,7 +149,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.BusinessHours));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BusinessHoursPropertyParser)));
+            propertyParser.Should().BeOfType<BusinessHoursPropertyParser>();
         }
 
         [Test]
@@ -156,7 +157,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ShowNonCurrentDates));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -164,7 +165,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Height));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(UnitPropertyParser)));
+            propertyParser.Should().BeOfType<UnitPropertyParser>();
         }
 
         [Test]
@@ -172,7 +173,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ContentHeight));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(UnitPropertyParser)));
+            propertyParser.Should().BeOfType<UnitPropertyParser>();
         }
 
         [Test]
@@ -180,7 +181,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.AspectRatio));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(DoublePropertyParser)));
+            propertyParser.Should().BeOfType<DoublePropertyParser>();
         }
 
         [Test]
@@ -188,7 +189,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.HandleWindowResize));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -196,7 +197,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.WindowResizeDelay));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         [Test]
@@ -204,7 +205,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventLimit));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -212,7 +213,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventLimitClick));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(FunctionPropertyParser)));
+            propertyParser.Should().BeOfType<FunctionPropertyParser>();
         }
 
         #endregion
@@ -224,7 +225,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Timezone));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -232,7 +233,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Now));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(DateTimePropertyParser)));
+            propertyParser.Should().BeOfType<DateTimePropertyParser>();
         }
 
         #endregion
@@ -244,7 +245,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Views));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(CustomViewPropertyParser)));
+            propertyParser.Should().BeOfType<CustomViewPropertyParser>();
         }
 
         [Test]
@@ -252,7 +253,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DefaultView));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         #endregion
@@ -264,7 +265,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.AllDaySlot));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -272,7 +273,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.AllDayText));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -280,7 +281,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SlotDuration));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -288,7 +289,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SlotLabelFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -296,7 +297,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SlotLabelInterval));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -304,7 +305,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SnapDuration));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -312,7 +313,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ScrollTime));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -320,7 +321,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.MinTime));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -328,7 +329,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.MaxTime));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -336,7 +337,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SlotEventOverlap));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         #endregion
@@ -348,7 +349,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ListDayFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -356,7 +357,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ListDayAltFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -364,7 +365,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.NoEventsMessage));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         #endregion
@@ -376,7 +377,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DefaultDate));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(DateTimePropertyParser)));
+            propertyParser.Should().BeOfType<DateTimePropertyParser>();
         }
 
         [Test]
@@ -384,7 +385,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.NowIndicator));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -392,7 +393,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.VisibleRange));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -400,7 +401,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ValidRange));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -408,7 +409,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DateIncrement));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -416,7 +417,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DateAlignment));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(EnumPropertyParser)));
+            propertyParser.Should().BeOfType<EnumPropertyParser>();
         }
 
         [Test]
@@ -424,7 +425,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Duration));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -432,7 +433,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DayCount));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         #endregion
@@ -444,7 +445,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Locale));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -452,7 +453,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.TimeFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -460,7 +461,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ColumnFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -468,7 +469,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.TitleFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -476,7 +477,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ButtonText));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -484,7 +485,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.MonthNames));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -492,7 +493,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.MonthNamesShort));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -500,7 +501,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DayNames));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -508,7 +509,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DayNamesShort));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -516,7 +517,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.WeekNumberTitle));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -524,7 +525,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DisplayEventTime));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -532,7 +533,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DisplayEventEnd));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -540,7 +541,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventLimitText));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(FunctionPropertyParser)));
+            propertyParser.Should().BeOfType<FunctionPropertyParser>();
         }
 
         [Test]
@@ -548,7 +549,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DayPopoverFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         #endregion
@@ -560,7 +561,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.NavLinks));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         #endregion
@@ -572,7 +573,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Selectable));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -580,7 +581,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SelectHelper));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -588,7 +589,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.UnselectAuto));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -596,7 +597,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.UnselectCancel));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -604,7 +605,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SelectOverlap));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -612,7 +613,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SelectConstraint));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -620,7 +621,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SelectMinDistance));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         [Test]
@@ -628,7 +629,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.SelectLongPressDelay));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         #endregion
@@ -640,7 +641,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Events));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(EventCollectionPropertyParser)));
+            propertyParser.Should().BeOfType<EventCollectionPropertyParser>();
         }
 
         [Test]
@@ -648,7 +649,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventSources));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(EventSourcesPropertyParser)));
+            propertyParser.Should().BeOfType<EventSourcesPropertyParser>();
         }
 
         [Test]
@@ -656,7 +657,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.AllDayDefault));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -664,7 +665,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.StartParam));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -672,7 +673,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EndParam));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -680,7 +681,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.TimezoneParam));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -688,7 +689,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.LazyFetching));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -696,7 +697,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DefaultTimedEventDuration));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -704,7 +705,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DefaultAllDayEventDuration));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -712,7 +713,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ForceEventDuration));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         #endregion
@@ -724,7 +725,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventColor));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ColorPropertyParser)));
+            propertyParser.Should().BeOfType<ColorPropertyParser>();
         }
 
         [Test]
@@ -732,7 +733,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventBackgroundColor));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ColorPropertyParser)));
+            propertyParser.Should().BeOfType<ColorPropertyParser>();
         }
 
         [Test]
@@ -740,7 +741,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventBorderColor));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ColorPropertyParser)));
+            propertyParser.Should().BeOfType<ColorPropertyParser>();
         }
 
         [Test]
@@ -748,7 +749,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventTextColor));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ColorPropertyParser)));
+            propertyParser.Should().BeOfType<ColorPropertyParser>();
         }
 
         [Test]
@@ -756,7 +757,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.NextDayThreshold));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(TimeSpanPropertyParser)));
+            propertyParser.Should().BeOfType<TimeSpanPropertyParser>();
         }
 
         [Test]
@@ -764,7 +765,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventOrder));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ArrayPropertyParser)));
+            propertyParser.Should().BeOfType<ArrayPropertyParser>();
         }
 
         [Test]
@@ -772,7 +773,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventRenderWait));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         #endregion
@@ -784,7 +785,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Editable));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -792,7 +793,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventStartEditable));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -800,7 +801,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventDurationEditable));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -808,7 +809,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DragRevertDuration));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         [Test]
@@ -816,7 +817,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DragOpacity));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(FloatPropertyParser)));
+            propertyParser.Should().BeOfType<FloatPropertyParser>();
         }
 
         [Test]
@@ -824,7 +825,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DragScroll));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -832,7 +833,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventOverlap));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -840,7 +841,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventConstraint));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ObjectPropertyParser)));
+            propertyParser.Should().BeOfType<ObjectPropertyParser>();
         }
 
         [Test]
@@ -848,7 +849,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.LongPressDelay));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         [Test]
@@ -856,7 +857,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.EventLongPressDelay));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(IntegerPropertyParser)));
+            propertyParser.Should().BeOfType<IntegerPropertyParser>();
         }
 
         #endregion
@@ -868,7 +869,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Droppable));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(BoolPropertyParser)));
+            propertyParser.Should().BeOfType<BoolPropertyParser>();
         }
 
         [Test]
@@ -876,7 +877,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.DropAccept));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(FunctionPropertyParser)));
+            propertyParser.Should().BeOfType<FunctionPropertyParser>();
         }
 
         #endregion
@@ -887,7 +888,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.Name));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
         [Test]
@@ -895,7 +896,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.CssClass));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(StringPropertyParser)));
+            propertyParser.Should().BeOfType<StringPropertyParser>();
         }
 
 
@@ -904,7 +905,7 @@ namespace FullCalendar.Abstract.Tests
         {
             PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ClientSideEvents));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
-            Assert.That(propertyParser, Is.TypeOf(typeof(ClientSideEventsPropertyParser)));
+            propertyParser.Should().BeOfType<ClientSideEventsPropertyParser>();
         }
     }
 }

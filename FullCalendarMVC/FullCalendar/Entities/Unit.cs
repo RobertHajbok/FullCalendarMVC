@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FullCalendar
+﻿namespace FullCalendar
 {
     public class Unit
     {
