@@ -17,7 +17,7 @@ namespace FullCalendar.Infrastructure.PropertyParsers
         public void AddPropertyToDictionary(FullCalendarParameters fullCalendarParameters, ref Dictionary<string, string> dictionary)
         {
             object value = _property.GetValue(fullCalendarParameters, null);
-            if (value != null && (TimeSpan)value != default(TimeSpan))
+            if ((TimeSpan)value != default(TimeSpan))
                 dictionary.Add("data-fc-" + _property.Name, ((TimeSpan)value).TotalMilliseconds.ToString());
         }
     }

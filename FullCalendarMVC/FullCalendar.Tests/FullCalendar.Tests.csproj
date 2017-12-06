@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
@@ -73,6 +74,25 @@
     <Compile Include="Entities\VisibleRangeTests.cs" />
     <Compile Include="Extensions\ColorExtensionsTests.cs" />
     <Compile Include="Extensions\StringExtensionsTests.cs" />
+    <Compile Include="Infrastructure\ControlsBuilderTests.cs" />
+    <Compile Include="Infrastructure\EventsTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ArrayPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\BoolPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\BusinessHoursPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ButtonIconsPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ClientSideEventsPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ColorPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\CustomButtonsPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\CustomViewPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\DateTimePropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\DayOfWeekPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\DoublePropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\EnumPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\FloatPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\FunctionPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\IntegerPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\StringPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\TimeSpanPropertyParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
