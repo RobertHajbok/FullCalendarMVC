@@ -33,13 +33,12 @@
             {
                 case HeaderSeparator.Adjacent:
                     _buildedString += ",";
-                    return this;
+                    break;
                 case HeaderSeparator.Gap:
                     _buildedString += " ";
-                    return this;
-                default:
-                    return this;
+                    break;
             }
+            return this;
         }
 
         /// <summary>

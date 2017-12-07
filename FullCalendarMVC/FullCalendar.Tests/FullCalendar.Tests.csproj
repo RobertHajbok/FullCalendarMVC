@@ -42,12 +42,34 @@
     <Reference Include="FluentAssertions.Core, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentAssertions.4.19.4\lib\net40\FluentAssertions.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.9.0\lib\net40\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.50813.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
@@ -74,6 +96,7 @@
     <Compile Include="Entities\VisibleRangeTests.cs" />
     <Compile Include="Extensions\ColorExtensionsTests.cs" />
     <Compile Include="Extensions\StringExtensionsTests.cs" />
+    <Compile Include="FullCalendarHelperTests.cs" />
     <Compile Include="Infrastructure\ControlsBuilderTests.cs" />
     <Compile Include="Infrastructure\EventsTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\ArrayPropertyParserTests.cs" />
@@ -88,12 +111,19 @@
     <Compile Include="Infrastructure\PropertyParsers\DayOfWeekPropertyParserTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\DoublePropertyParserTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\EnumPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\EventCollectionPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\EventSourcesPropertyParserTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\FloatPropertyParserTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\FunctionPropertyParserTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\IntegerPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ObjectPropertyParserTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\StringPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\ThemeSystemPropertyParserTests.cs" />
     <Compile Include="Infrastructure\PropertyParsers\TimeSpanPropertyParserTests.cs" />
+    <Compile Include="Infrastructure\PropertyParsers\UnitPropertyParserTests.cs" />
+    <Compile Include="Mocks\ScriptIgnoreAttributeMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\NullPropertiesConverterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
