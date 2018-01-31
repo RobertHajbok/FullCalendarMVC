@@ -71,7 +71,9 @@
         // Text/Time Customization
         locale: { name: 'locale', type: 'string' },
         timeformat: { name: 'timeFormat', type: 'string' },
-        columnformat: { name: 'columnFormat', type: 'string' },
+        columnheaderformat: { name: 'columnHeaderFormat', type: 'string' },
+        columnheadertext: { name: 'columnHeaderText', type: 'function/string' },
+        columnheaderhtml: { name: 'columnHeaderHtml', type: 'function/string' },
         titleformat: { name: 'titleFormat', type: 'string' },
         buttontext: { name: 'buttonText', type: 'object' },
         monthnames: { name: 'monthNames', type: 'array' },

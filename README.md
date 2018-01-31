@@ -1,5 +1,5 @@
 ### What is FullCalendarMVC?
-FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalendar/fullcalendar). Current supported version is 3.5.1.
+FullCalendarMVC is a HTML helper for [FullCalendar](https://github.com/fullcalendar/fullcalendar). Currently supported version is 3.8.0.
 
 ### Where can I get it?
 First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [FullCalendar.MVC5](https://www.nuget.org/packages/FullCalendar.MVC5/) from the package manager console:

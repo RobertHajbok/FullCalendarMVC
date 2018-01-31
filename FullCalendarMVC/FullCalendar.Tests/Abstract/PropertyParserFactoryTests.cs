@@ -457,11 +457,27 @@ namespace FullCalendar.Abstract.Tests
         }
 
         [Test]
-        public void GetPropertyParser_ColumnFormatIsSent_StringPropertyParserIsCreated()
+        public void GetPropertyParser_ColumnHeaderFormatIsSent_StringPropertyParserIsCreated()
         {
-            PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ColumnFormat));
+            PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ColumnHeaderFormat));
             IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
             propertyParser.Should().BeOfType<StringPropertyParser>();
+        }
+
+        [Test]
+        public void GetPropertyParser_ColumnHeaderTextIsSent_FunctionPropertyParserIsCreated()
+        {
+            PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ColumnHeaderText));
+            IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
+            propertyParser.Should().BeOfType<FunctionPropertyParser>();
+        }
+
+        [Test]
+        public void GetPropertyParser_ColumnHeaderHtmlIsSent_FunctionPropertyParserIsCreated()
+        {
+            PropertyInfo property = typeof(FullCalendarParameters).GetProperties().Single(x => x.Name == nameof(FullCalendarParameters.ColumnHeaderHtml));
+            IPropertyParser propertyParser = PropertyParserFactory.GetPropertyParser(property);
+            propertyParser.Should().BeOfType<FunctionPropertyParser>();
         }
 
         [Test]

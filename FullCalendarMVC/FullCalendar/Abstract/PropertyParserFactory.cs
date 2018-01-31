@@ -18,7 +18,8 @@ namespace FullCalendar.Abstract
                 property.Name == nameof(FullCalendarParameters.BootstrapGlyphicons))
                 propertyParser = new ButtonIconsPropertyParser(property, SerializationHelpers.GetSerializer());
             else if (property.Name == nameof(FullCalendarParameters.WeekNumberCalculation) || property.Name == nameof(FullCalendarParameters.DropAccept) ||
-                property.Name == nameof(FullCalendarParameters.EventLimitClick) || property.Name == nameof(FullCalendarParameters.EventLimitText))
+                property.Name == nameof(FullCalendarParameters.EventLimitClick) || property.Name == nameof(FullCalendarParameters.EventLimitText) ||
+                property.Name == nameof(FullCalendarParameters.ColumnHeaderText) || property.Name == nameof(FullCalendarParameters.ColumnHeaderHtml))
                 propertyParser = new FunctionPropertyParser(property, SerializationHelpers.GetSerializer());
             else if (property.PropertyType == typeof(EventCollection))
                 propertyParser = new EventCollectionPropertyParser(property, SerializationHelpers.GetSerializer(true));

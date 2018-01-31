@@ -413,8 +413,24 @@ namespace FullCalendar
         /// Determines the text that will be displayed on the calendar's column headings.
         /// Each view has a specific default. Get fine-tuned control with View-Specific Options. A single string alone will set the value for all views.
         /// The default values will change based on the current locale.
+        /// If you need programmatic control, use columnHeaderText or columnHeaderHtml instead.
         /// </summary>
-        public string ColumnFormat { get; set; }
+        public string ColumnHeaderFormat { get; set; }
+
+        /// <summary>
+        /// Programmatically generates text that will be displayed on the calendar's column headings.
+        /// This function will will receive a moment object that represents a single column's date and must return a string to be displayed.
+        /// The text will be escaped before being inserted into the DOM. You do not need to worry about escaping HTML entities.
+        /// If you are simply stringifying a date with a formatting string, using ColumnHeaderFormat is more elegant.
+        /// If you need to generate HTML, use ColumnHeaderHtml instead.
+        /// </summary>
+        public string ColumnHeaderText { get; set; }
+
+        /// <summary>
+        /// Programmatically generates HTML that will be injected on the calendar's column headings.
+        /// This function will will receive a moment object that represents a single column's date and must return an HTML string to be injected.
+        /// </summary>
+        public string ColumnHeaderHtml { get; set; }
 
         /// <summary>
         /// Determines the text that will be displayed in the header's title.
