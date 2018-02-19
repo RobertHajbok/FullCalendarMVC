@@ -76,7 +76,7 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
     settings.AllDaySlot = false;
     settings.Selectable = true;
     settings.SlotDuration = TimeSpan.FromMinutes(15);
-    settings.Events = Url.Action("GetDiaryEvents", "Home");
+    settings.Events = Events.AsJsonFeed(Url.Action("GetDiaryEvents", "Home"));
 })
 ```
 
