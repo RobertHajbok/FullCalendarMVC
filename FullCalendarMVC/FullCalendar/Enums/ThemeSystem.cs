@@ -4,6 +4,7 @@
     {
         Standard,
         Bootstrap3,
+        Bootstrap4,
         JqueryUI
     }
 }

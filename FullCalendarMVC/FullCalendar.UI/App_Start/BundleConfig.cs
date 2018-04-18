@@ -9,10 +9,12 @@ namespace FullCalendar.UI
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery-ui-{version}.js",
-                "~/Scripts/qTip/jquery.qtip.js",
+                "~/Scripts/qTip/jquery.qtip.js",                
                 "~/Scripts/moment.js",
                 "~/Scripts/fullcalendar*",
-                "~/Scripts/locale-all.js"
+                "~/Scripts/locale-all.js",
+                "~/Scripts/popper.js",
+                "~/Scripts/bootstrap.js"
                 ));
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
