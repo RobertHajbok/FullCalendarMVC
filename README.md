@@ -15,7 +15,7 @@ PM> Install-Package FullCalendar.MVC4
 ```
 
 ### How to use it?
-- Reference the script and CSS files in your Bundle.config:
+- Reference the script and CSS files in BundleConfig.cs:
 
 ``` csharp
 public static void RegisterBundles(BundleCollection bundles)
