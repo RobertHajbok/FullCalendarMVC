@@ -69,9 +69,9 @@ public JsonResult GetDiaryEvents(DateTime start, DateTime end)
         Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
                     .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
         Center = new ControlsBuilder().AddTitle(),
-        Right = new ControlsBuilder("month,agendaWeek ").AddView(CalendarView.AgendaDay)
+        Right = new ControlsBuilder("month,agendaWeek ").AddView(AvailableView.AgendaDay)
     };
-    settings.DefaultView = CalendarView.AgendaDay;
+    settings.DefaultView = AvailableView.AgendaDay.ToString();
     settings.Editable = true;
     settings.AllDaySlot = false;
     settings.Selectable = true;
